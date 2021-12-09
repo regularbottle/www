@@ -6,9 +6,10 @@
             $sql = 'select * from nazioni';
             $result = mysqli_query($connection, $sql) or exit('Error '.mysqli_error($connection));
         ?>    
-        <?php while ($row = mysqli_fetch_array($result)) { ?>
-        <option value="<?php echo $row['Nazione']; ?>">
-        <?php echo $row['Nazione']; ?></option> <?php } ?>          
+        <?php
+        while ($row = mysqli_fetch_array($result)) { ?>
+            <option value="<?php echo $row['Nazione']; ?>">
+            <?php echo $row['Nazione']; ?></option> <?php } ?>
         <?php mysqli_close($connection); ?>
     </body>
 </html>

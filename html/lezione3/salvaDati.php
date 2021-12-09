@@ -6,7 +6,7 @@
             $surname = $_GET['surname'];
             $nation = $_GET['nation'];
             $province = $_GET['province'];
-            $dateofbirth = $_GET['dateofbirth'];
+            $dateOfBirth = $_GET['dateOfBirth'];
             $gender = $_GET['gender'];
 
             $connection = mysqli_connect('localhost', 'root', '', 'csv_db') or exit('Error '.mysqli_error($connection));
@@ -22,7 +22,7 @@
                  'Cognome: ', $surname, '<br>',
                  'Luogo di nascità: ', $nation, ' Codice Fisco: ', $codFiscoNat['0'],'<br>',
                  'Comune: ', $province, ' Codice Fisco: ', $codFiscoCom['0'], '<br>',
-                 'Data di nascita: ', $dateofbirth, '<br>',
+                 'Data di nascita: ', $dateOfBirth, '<br>',
                  'Sesso: ', $gender;
         ?>
     </body>
