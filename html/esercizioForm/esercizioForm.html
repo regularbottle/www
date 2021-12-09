@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>esercizioForm</title>
+</head>
+<body>
+<div class="item" id="form">
+    <h2>Form</h2>
+    <h3>Introduzione</h3>
+    <h4>Tag form ad attributi</h4>
+    <form name="anagrafica" action="./salvaDati.php" method="GET" id="anagrafica">
+        <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <label for="name">Inserisci qui il tuo nome: </label
+            ><input type="text" name="name" id="name" /><br />
+            <label for="surname">Inserisci qui il tuo cognome: </label
+            ><input type="text" name="surname" id="surname" /><br />
+            <label>Sesso></label>
+            <label for="male">maschio</label
+            ><input type="radio" name="gender" id="male" value="Male" />
+            <label for="female">femmina</label
+            ><input type="radio" name="gender" id="female" value="Female"/><br />
+            <label for="nation">Luogo di nascita:</label>
+            <input list="nations" name="nation" id="nation" />
+            <datalist id="nations">
+                <?php include 'populateNat.php';?></datalist
+            ><br />
+            <label for="dateOfBirth">Data di Nascita</label
+            ><input type="date" name="dateOfBirth" id="dateOfBirth" /><br />
+        </fieldset>
+        <fieldset>
+            <legend>Password personale</legend>
+            <label for="password">Inserisci la password </label><input type="password" name="password" id="password">
+        </fieldset>
+        <fieldset>
+            <legend>Dati Personali</legend>
+            <label>Patente </label>
+            <input type="checkbox" name="auto" id="auto" value="auto"/>
+            <label for="auto">auto</label>
+            <input type="checkbox" name="moto" id="moto" value="moto"/>
+            <label for="moto">moto</label>
+            <input type="checkbox" name="aereo" id="aereo" value="aereo"/>
+            <label for="aereo">aereo</label><br>
+            <label for="classe">Classe</label><input list="classes" name="classe" id="classe"/>
+            <datalist id="classes">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+            </datalist>
+            <br>
+            <label for="textArea"></label><textarea id="textArea" name="textArea" rows="10" cols="80">Inserisci qui i tuoi commenti
+            </textarea><br>
+            <input type="submit" value="submit"/>
+            <input type="reset" name="reset" id="reset" value="reset"/>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
