@@ -12,11 +12,12 @@
 
   $ppiccolo = $numeri['0'];
   for ($i = 0; $i < $limite; ++$i) {
-      if ($ppiccolo > $numeri[$i + 1]) {
-          $ppiccolo = $numeri[$i + 1];
-      }
+    if ($ppiccolo > $numeri[$i + 1]) {
+      $ppiccolo = $numeri[$i + 1];
+    }
   }
   echo "<br>Il numero piu' piccolo e' ", $ppiccolo;
   ?>
 </body>
+
 </html>
