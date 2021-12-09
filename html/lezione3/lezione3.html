@@ -55,7 +55,7 @@
 
         <h3 id="miotitolo" style="margin-top: 32px">Multimedia</h3>
         <h4>Tag img ed attributi</h4>
-        <img src="fiori.jpg" alt="Fiori" width="400px" />
+        <img src="fiori.jpg" alt="Fiori"/>
         <h4>Tag audio ed attributi</h4>
         <audio src="meme.mp3" controls></audio>
         <h4>Tag video ed attributi</h4>
@@ -66,7 +66,7 @@
         <h2>Mappe di Immagine</h2>
         <h3>Mappa</h3>
         <h4>Tag map ed attributi</h4>
-        <img
+        <img alt="spiaggia"
           src="https://i.picsum.photos/id/199/400/400.jpg?hmac=dubKLBc9PH-41dZHvK-vlc70tc7m3aOaOI8YuhFx1cI"
           usemap="#image-map"
         />
@@ -102,7 +102,7 @@
         <h2>Form</h2>
         <h3>Introduzione</h3>
         <h4>Tag form ad attributi</h4>
-        <form name="anagrafica" action="salvaDati.php" method="GET" enctype="">
+        <form name="anagrafica" action="salvaDati.php" method="GET">
           <fieldset>
             <legend>Dati Anagrafici</legend>
             <label for="name">Nome: </label><input type="text" name="name" id="name" /><br>
@@ -116,11 +116,11 @@
             
             <label for="province">Comune</label>
             <input list="province" name="province" id="province">                       
-            <datalist id="province">
+            <datalist id="provinces">
               <?php include 'populatePro.php';?>  
             </datalist><br>
             
-            <label for="dateofbirth">Data di Nascita<input type="date" name="dateofbirth" id="dateofbirth" /><br />
+            <label for="dateofbirth">Data di Nascita</label><input type="date" name="dateofbirth" id="dateofbirth" /><br />
             <label for="male">Male</label><input type="radio" name="gender" id="male" value="Male" />
             <label for="female">Female</label><input type="radio" name="gender" id="female" value="Female" /><br />
             <input type="submit" value="Invia i Dati" />
