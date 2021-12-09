@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Serve per dirgli di usare i caratteri standard UTF-8 per essere visualizzati correttamente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Serve per dire al browser di occupare tutta il display/viewport del dispositivo-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Serve per rendere compatibile il tutto con IE-Edge-->
+    <meta name="author" content="Calin" />
+    <meta name="description" content="Prima Lezione di HTML5" />
+    <!--Serve per fare lo snippet di descrizione per i motori di ricerca-->
+    <title>HTML5 Lezione 1</title>
+    <link rel="icon" href="favicon.ico" />
+    <!--L'iconcina visualizzata nella TAB-->
+  </head>
+  <body>
+    <h1>Lezione 1 - Introduzione</h1>
+    <div name="primo elemento" title="appare come tooltip">elemento di blocco 1 (div)</div>
+    <!--l'attributo tile fa apparire il tooltip-->
+    <section name="secondo elemento">elemento di blocco 2 (section)</section>
+    <span name="terzo">elemento in linea 1</span>
+    <!--Se l'atributo non ha uno spazio posso non mettere i ""-->
+    <span style="color: red">elemento in linea 2</span>
+    <span id="span3" class="mySpan" draggable="true">elemento in linea 3</span>
+    <section lang="en" onclick="console.log('pagina caricata')">block element 3 (section)</section>
+    <div data-cap="47923" data-indirizzo="piazza garibaldi 5">Mia Sezione Residenza</div>
+    <!--Gli diamo un attributo non standard tramite "data-" si leggono con document.getElementById(adress).dataset-->
+    <h3>Sotto titolo</h3>
+    <p class="testo verde" style="color: green">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+      industry's standard dummy text ever since the 1500s
+    </p>
+
+    <!-- 
+        <script>
+            i script è meglio metterli tutti alla fine del body in quanto interomperebbero la renderizzazione in caso contrario
+            document.write("Ciao Mondo!")
+        </script>
+        -->
+
+    <!-- SLIDE 36 -->
+  </body>
+</html>

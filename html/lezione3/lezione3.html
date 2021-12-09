@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Serve per dirgli di usare i caratteri standard UTF-8 per essere visualizzati correttamente-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Serve per dire al browser di occupare tutta il display/viewport del dispositivo-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Serve per rendere compatibile il tutto con IE-Edge-->
+    <meta name="author" content="Calin" />
+    <meta name="description" content="Terza Lezione di HTML5" />
+    <!--Serve per fare lo snippet di descrizione per i motori di ricerca-->
+    <title>HTML5 Lezione 3</title>
+    <link rel="icon" href="favicon.ico" />
+    <!--L'iconcina visualizzata nella TAB-->
+    <style>
+      .container {
+        display: flex;
+        justify-content: flex-start;
+      }
+      @media all and (max-width: 800px) {
+        .container {
+          justify-content: space-around;
+        }
+      }
+
+      @media all and (max-width: 500px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+
+      .item {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lezione 3 - Continuo tag di HTML5</h1>
+    <div class="container">
+      <div class="item" id="link">
+        <h2>Link</h2>
+        <h3>Container di Link</h3>
+        <h4>Tag a href ed attributi</h4>
+        <ul id="containerLink">
+          <li><a href="https://www.google.com">Google</a></li>
+          <li><a href="#miotitolo">Mio Titolo</a></li>
+          <li>
+            <a href="lezione3a.html#miotitolo" accesskey="c" target="_blank" rel="follow"
+              >Lezione 3A - Mio Titolo (Alt-C) @Nuova Finestra +crawler</a
+            >
+          </li>
+        </ul>
+
+        <h3 id="miotitolo" style="margin-top: 32px">Multimedia</h3>
+        <h4>Tag img ed attributi</h4>
+        <img src="fiori.jpg" alt="Fiori" width="400px" />
+        <h4>Tag audio ed attributi</h4>
+        <audio src="meme.mp3" controls></audio>
+        <h4>Tag video ed attributi</h4>
+        <video src="meme.mp4" controls autoplay loop width="400px"></video>
+      </div>
+      <!--fine colonna 1 link e  multimedia-->
+      <div class="item" id="mappeDiImmagine">
+        <h2>Mappe di Immagine</h2>
+        <h3>Mappa</h3>
+        <h4>Tag map ed attributi</h4>
+        <img
+          src="https://i.picsum.photos/id/199/400/400.jpg?hmac=dubKLBc9PH-41dZHvK-vlc70tc7m3aOaOI8YuhFx1cI"
+          usemap="#image-map"
+        />
+        <map name="image-map">
+          <area
+            target="_blank"
+            alt="Beach"
+            title="Beach"
+            href="https://en.wikipedia.org/wiki/beach"
+            coords="3,395,399,280"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Sea"
+            title="Sea"
+            href="https://en.wikipedia.org/wiki/sea"
+            coords="2,273,396,219"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Sky"
+            title="Sky"
+            href="https://en.wikipedia.org/wiki/sky"
+            coords="11,198,383,13"
+            shape="rect"
+          />
+        </map>        
+      </div>
+      <!--fine colonna 2 mappe di immagini-->
+      <div class="item" id="form">
+        <h2>Form</h2>
+        <h3>Introduzione</h3>
+        <h4>Tag form ad attributi</h4>
+        <form name="anagrafica" action="salvaDati.php" method="GET" enctype="">
+          <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <label for="name">Nome: </label><input type="text" name="name" id="name" /><br>
+            <label for="surname">Cognome: </label><input type="text" name="surname" id="surname" /><br />
+            
+            <label for="nation">Luogo di nascita</label>
+            <input list="nations" name="nation" id="nation">                       
+            <datalist id="nations">
+              <?php include 'populateNat.php';?>  
+            </datalist><br>
+            
+            <label for="province">Comune</label>
+            <input list="province" name="province" id="province">                       
+            <datalist id="province">
+              <?php include 'populatePro.php';?>  
+            </datalist><br>
+            
+            <label for="dateofbirth">Data di Nascita<input type="date" name="dateofbirth" id="dateofbirth" /><br />
+            <label for="male">Male</label><input type="radio" name="gender" id="male" value="Male" />
+            <label for="female">Female</label><input type="radio" name="gender" id="female" value="Female" /><br />
+            <input type="submit" value="Invia i Dati" />
+          </fieldset>
+        </form>
+      </div>
+      <!--fine colonna 3 form-->
+    </div>
+  </body>
+</html>
