@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="continued lesson">
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="prima pausa">
+      <change afterPath="$PROJECT_DIR$/php/lezione3/switch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/lezione3/if.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/lezione3/if.php" afterDir="false" />
     </list>
@@ -85,7 +86,7 @@
       <workItem from="1639123561363" duration="1841000" />
       <workItem from="1639125461814" duration="47000" />
       <workItem from="1639125704231" duration="173000" />
-      <workItem from="1639126289850" duration="2380000" />
+      <workItem from="1639126289850" duration="7586000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -101,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639126445301</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="prima pausa">
+      <created>1639128917782</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639128917782</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added php file" />
     <MESSAGE value="continued lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="continued lesson" />
+    <MESSAGE value="prima pausa" />
+    <option name="LAST_COMMIT_MESSAGE" value="prima pausa" />
   </component>
 </project>

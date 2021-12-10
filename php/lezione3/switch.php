@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP - Lezione 3 - If</title>
+    <title>PHP - Lezione 3 - Switch</title>
     <style>
         .container {
             display: flex;
@@ -29,23 +29,23 @@
     </style>
 </head>
 <body>
-<div class="container" id="lezione3If">
-    <div class="item" id="if">
+<div class="container" id="lezione3Switch">
+    <div class="item" id="switch">
         <?php
-        $a = 1;
-        $b = 2;
-
-        if ($a>$b) {
-            echo "$a maggiore $b";
-        } else if ($a == $b) {
-            echo "$a uguale $b";
-        } else {
-            echo "$a minore $b";
+        try {
+            $a = 1;
+        } catch (Exception $e) {
         }
-        echo "<br>fine";
+
+        switch ($a) {
+            case 0: echo "0!<br>"; break;
+            case 1: echo "1!<br>"; break;
+            case 2: echo "2!<br>"; break;
+        }
+        echo "fine";
         ?>
     </div>
-    <div class="item" id="esercizio2If">
+    <!--<div class="item" id="esercizio2Switch">
         <?php
         //date due var a e b fare in modo che a sia maggiore di b
         try {
@@ -66,7 +66,7 @@
         echo "Ora i valori sono <ol type=\"a\"><li>$a</li><li>$b</li></ol>";
         ?>
     </div>
-    <div class="item" id="esercizio3If">
+    <div class="item" id="esercizio3Switch">
         <?php
         try {
             $totale = random_int(1, 1000);
@@ -97,7 +97,7 @@
         }
         ?>
     </div>
-    <div class="item" id="esercizio4If">
+    <div class="item" id="esercizio4Switch">
         <?php
         try {
             $x = random_int(1, 100);
@@ -115,8 +115,7 @@
             echo "Non puoi accedere a questo corso perché hai $x anni";
         }
         ?>
-    </div>
+    </div>-->
 </div>
 </body>
 </html>
-
