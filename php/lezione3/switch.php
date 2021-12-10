@@ -33,16 +33,15 @@
     <div class="item" id="switch">
         <?php
         try {
-            $a = 1;
+            $a = random_int(1, 100);
         } catch (Exception $e) {
         }
-
+        echo "Il numero vale: $a<br>";
         switch ($a) {
-            case 0: echo "0!<br>"; break;
-            case 1: echo "1!<br>"; break;
-            case 2: echo "2!<br>"; break;
+            case $a<50: echo "Il numero è minore di 50!<br>"; break;
+            case ($a>=50) && ($a<=60): echo "Il numero è compreso tra 50 e 60!<br>"; break;
+            default: echo "Niente!<br>"; break;
         }
-        echo "fine";
         ?>
     </div>
     <!--<div class="item" id="esercizio2Switch">
