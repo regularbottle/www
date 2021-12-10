@@ -32,16 +32,32 @@
 <div class="container" id="lezione3Switch">
     <div class="item" id="switch">
         <?php
-        try {
-            $a = random_int(1, 100);
-        } catch (Exception $e) {
+        function month(int $mese): string
+        {
+            switch($mese) {
+                case 1: return "Gennaio";
+                case 2: return "Febbraio";
+                case 3: return "Marzo";
+                case 4: return "Aprile";
+                case 5: return "Maggio";
+                case 6: return "Giugno";
+                case 7: return "Luglio";
+                case 8: return "Agosto";
+                case 9: return "Settembre";
+                case 10: return "Ottobre";
+                case 11: return "Novembre";
+                case 12: return "Dicembre";
+            } return "";
         }
-        echo "Il numero vale: $a<br>";
-        switch ($a) {
-            case $a<50: echo "Il numero è minore di 50!<br>"; break;
-            case ($a>=50) && ($a<=60): echo "Il numero è compreso tra 50 e 60!<br>"; break;
-            default: echo "Niente!<br>"; break;
+
+        $mese = date("m");
+        echo "Il mese corrente è: ".month($mese)."<br>";
+        switch ($mese) {
+            case 11: case 4:case 6:case 9: $giorniDelMese = 30; break;
+            case 2:  $giorniDelMese = 28; if(!(date("y")%4)) $giorniDelMese++; break; //verifica se è bisestile
+            default: $giorniDelMese = 31; break;
         }
+        echo "Il numero di giorni del mese di ".month($mese)." = $giorniDelMese!<br>"
         ?>
     </div>
     <!--<div class="item" id="esercizio2Switch">
