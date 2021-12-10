@@ -22,12 +22,22 @@
             <label for="female">femmina</label
             ><input type="radio" name="gender" id="female" value="Female"/><br />
             <label for="nation">Luogo di nascita:</label>
-            <input list="nations" name="nation" id="nation" />
-            <datalist id="nations">
-                <?php include 'populateNat.php';?></datalist
-            ><br />
+            <select id="nation">
+                <optgroup label="UE">
+                    <option>Italia</option>
+                    <option>Germania</option>
+                    <option>Belgio</option>
+                    <option>Olanda</option>
+                </optgroup>
+                <optgroup label="Extra UE">
+                    <option>Tunisia</option>
+                    <option>Algeria</option>
+                    <option>Libia</option>
+                </optgroup>
+            </select>
             <label for="dateOfBirth">Data di Nascita</label
             ><input type="date" name="dateOfBirth" id="dateOfBirth" /><br />
+            <label for="idCard">Carta d'identità </label><input type="file" name="idCard" id="idCard" /><br />
         </fieldset>
         <fieldset>
             <legend>Password personale</legend>
@@ -35,6 +45,7 @@
         </fieldset>
         <fieldset>
             <legend>Dati Personali</legend>
+            <label for="telefono">Telefono</label><input type="tel" id="telefono" name="telefono"><br>
             <label>Patente </label>
             <input type="checkbox" name="auto" id="auto" value="auto"/>
             <label for="auto">auto</label>
@@ -49,8 +60,13 @@
                 <option value="3">
             </datalist>
             <br>
-            <label for="textArea"></label><textarea id="textArea" name="textArea" rows="10" cols="80">Inserisci qui i tuoi commenti
+            <label for="textArea"></label><textarea id="textArea" name="textArea" rows="10" cols="50">Inserisci qui i tuoi commenti
             </textarea><br>
+            <label for="comfort">Comfort</label><input type="range" id="comfort" name="comfort" min="1" max="5">
+            <label for="posizione">Posizione</label><input type="range" id="posizione" name="posizione" min="1" max="5">
+            <label for="prezzo">Prezzo</label><input type="range" id="prezzo" name="prezzo" min="1" max="5">
+            <label for="cortesia">Cortesia del personale</label><input type="range" id="cortesia" name="cortesia" min="1" max="5">
+
             <input type="submit" value="submit"/>
             <input type="reset" name="reset" id="reset" value="reset"/>
         </fieldset>
