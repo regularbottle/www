@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/www.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/lezione3/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/lezione3/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/lezione3/if.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/806b9cc0-68b7-46c3-9d99-0d0a18c43e76.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/806b9cc0-68b7-46c3-9d99-0d0a18c43e76/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/lezione2/variabili.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/lezione2/variabili.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,20 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="225MNaNikiqAJyXBiKX4COmt84n" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,11 +66,16 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/php/lezione3" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\php\lezione3" />
+      <recent name="C:\xampp\htdocs\www\php\lezione2" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,8 +89,19 @@
       <workItem from="1639123053556" duration="207000" />
       <workItem from="1639123282420" duration="32000" />
       <workItem from="1639123400722" duration="139000" />
-      <workItem from="1639123561363" duration="854000" />
+      <workItem from="1639123561363" duration="1841000" />
+      <workItem from="1639125461814" duration="47000" />
+      <workItem from="1639125704231" duration="173000" />
+      <workItem from="1639126289850" duration="84000" />
     </task>
+    <task id="LOCAL-00001" summary="added php file">
+      <created>1639124680678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639124680678</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,7 +118,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added php file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added php file" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="546" y="169" key="#CLI_Interpreters" timestamp="1639124794766">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="546" y="169" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1639124794766" />
     <state x="221" y="326" key="#SQL_Dialects" timestamp="1639123914516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -103,17 +143,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="389" width="707" height="577" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639123259835" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1639123248677">
+    <state x="637" y="243" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1639125724136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1639123248677" />
-    <state x="461" y="157" key="SettingsEditor" timestamp="1639123541350">
+    <state x="637" y="243" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639125724136" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1639124785861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="157" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1639123541350" />
-    <state x="737" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639123677274">
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1639124785861" />
+    <state x="769" y="426" key="NewPhpFileDialog" timestamp="1639124903778">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="737" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1639123677274" />
+    <state x="769" y="426" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1639124903778" />
+    <state x="461" y="157" key="SettingsEditor" timestamp="1639125429970">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="157" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1639125429970" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1639124685187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1639124685187" />
+    <state x="737" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639124639125">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="737" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1639124639125" />
   </component>
 </project>

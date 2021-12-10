@@ -55,7 +55,7 @@
         echo "<hr>";
         $orario = date("H");
         //prima delle 13 orario_pausa=12 
-        //alrimenti orario_pausa=17
+        //altrimenti orario_pausa=17
         $orario_pausa = ($orario < 13)? 12 : 17;
         $pausa=( ($orario == $orario_pausa )?"pausa":"lezione");
         echo "è ore di fare ".$pausa;
