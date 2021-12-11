@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="second pause">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/lezione3/switch.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/lezione3/switch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/esercizioForm/esercizioForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/esercizioForm/esercizioForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +37,9 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,12 +54,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/php/lezione3" />
-    <property name="settings.editor.selected.configurable" value="proofread" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\xampp\htdocs\www\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -86,6 +90,11 @@
       <workItem from="1639125461814" duration="47000" />
       <workItem from="1639125704231" duration="173000" />
       <workItem from="1639126289850" duration="10721000" />
+      <workItem from="1639140220905" duration="171000" />
+      <workItem from="1639140404513" duration="119000" />
+      <workItem from="1639240545816" duration="5975000" />
+      <workItem from="1639249250486" duration="1261000" />
+      <workItem from="1639250534244" duration="2543000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -140,11 +149,16 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added php file" />
     <MESSAGE value="continued lesson" />
     <MESSAGE value="prima pausa" />
     <MESSAGE value="if ended, switch introduction" />
     <MESSAGE value="second pause" />
     <option name="LAST_COMMIT_MESSAGE" value="second pause" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

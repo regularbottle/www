@@ -1,76 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>esercizioForm</title>
-</head>
-<body>
-<div class="item" id="form">
-    <h2>Form</h2>
-    <h3>Introduzione</h3>
-    <h4>Tag form ad attributi</h4>
-    <form name="anagrafica" action="./salvaDati.php" method="GET" id="anagrafica">
-        <fieldset>
-            <legend>Dati Anagrafici</legend>
-            <label for="name">Inserisci qui il tuo nome: </label
-            ><input type="text" name="name" id="name" /><br />
-            <label for="surname">Inserisci qui il tuo cognome: </label
-            ><input type="text" name="surname" id="surname" /><br />
-            <label>Sesso></label>
-            <label for="male">maschio</label
-            ><input type="radio" name="gender" id="male" value="Male" />
-            <label for="female">femmina</label
-            ><input type="radio" name="gender" id="female" value="Female"/><br />
-            <label for="nation">Luogo di nascita:</label>
-            <select id="nation">
-                <optgroup label="UE">
-                    <option>Italia</option>
-                    <option>Germania</option>
-                    <option>Belgio</option>
-                    <option>Olanda</option>
-                </optgroup>
-                <optgroup label="Extra UE">
-                    <option>Tunisia</option>
-                    <option>Algeria</option>
-                    <option>Libia</option>
-                </optgroup>
-            </select>
-            <label for="dateOfBirth">Data di Nascita</label
-            ><input type="date" name="dateOfBirth" id="dateOfBirth" /><br />
-            <label for="idCard">Carta d'identità </label><input type="file" name="idCard" id="idCard" /><br />
-        </fieldset>
-        <fieldset>
-            <legend>Password personale</legend>
-            <label for="password">Inserisci la password </label><input type="password" name="password" id="password">
-        </fieldset>
-        <fieldset>
-            <legend>Dati Personali</legend>
-            <label for="telefono">Telefono</label><input type="tel" id="telefono" name="telefono"><br>
-            <label>Patente </label>
-            <input type="checkbox" name="auto" id="auto" value="auto"/>
-            <label for="auto">auto</label>
-            <input type="checkbox" name="moto" id="moto" value="moto"/>
-            <label for="moto">moto</label>
-            <input type="checkbox" name="aereo" id="aereo" value="aereo"/>
-            <label for="aereo">aereo</label><br>
-            <label for="classe">Classe</label><input list="classes" name="classe" id="classe"/>
-            <datalist id="classes">
-                <option value="1">
-                <option value="2">
-                <option value="3">
-            </datalist>
-            <br>
-            <label for="textArea"></label><textarea id="textArea" name="textArea" rows="10" cols="50">Inserisci qui i tuoi commenti
-            </textarea><br>
-            <label for="comfort">Comfort</label><input type="range" id="comfort" name="comfort" min="1" max="5">
-            <label for="posizione">Posizione</label><input type="range" id="posizione" name="posizione" min="1" max="5">
-            <label for="prezzo">Prezzo</label><input type="range" id="prezzo" name="prezzo" min="1" max="5">
-            <label for="cortesia">Cortesia del personale</label><input type="range" id="cortesia" name="cortesia" min="1" max="5">
+  <meta charset="UTF-8" />
+  <title>Accedi</title>
+  <style>
 
-            <input type="submit" value="submit"/>
-            <input type="reset" name="reset" id="reset" value="reset"/>
-        </fieldset>
-    </form>
+    label{
+      float: left;
+      width: 200px;
+    }
+
+    textarea{
+      margin-left: 200px;
+      width: 250px;
+      height: 150px;
+    }
+
+    br{
+      clear: left;
+    }
+
+    .allButtons{
+      margin-left: 120px;
+      margin-top: 5px;
+      width: 90px;
+    }
+
+    .descriptionLabel {
+      width: 90px;
+      float: none;
+    }
+
+    .boxes{
+      width: 1em;
+    }
+
+    .container {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .container button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+
+    .container button:hover {
+      background-color: #ddd;
+    }
+
+    .itemContent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <button class="itemLinks" onclick="openTab(event, 'Accedi')" id="defaultOpen">
+    Accedi
+  </button>
+  <button class="itemLinks" onclick="openTab(event, 'Registrati')">
+    Registrati
+  </button>
 </div>
+
+<div id="Accedi" class="itemContent">
+  <h2>Accedi</h2>
+  <form name="accediForm" action="./controllaDati.php" method="POST" id="accediForm">
+    <fieldset>
+      <legend>Accedi</legend>
+      <label for="emailAccedi">Email: </label><input type="email" id="emailAccedi" name="emailAccedi" required /><br />
+      <label for="passwordAccedi">Inserisci la password: </label><input type="password" name="passwordAccedi" id="passwordAccedi" required /><br />
+      <input type="submit" value="Accedi" id="tastoAccedi" class="allButtons"/>
+    </fieldset>
+  </form>
+</div>
+
+<div id="Registrati" class="itemContent">
+  <h2>Registrati</h2>
+  <form name="anagrafica" action="./salvaDati.php" method="GET" id="anagrafica">
+    <fieldset>
+      <legend>Dati Anagrafici</legend>
+      <label for="name">Inserisci qui il tuo nome: </label><input type="text" name="name" id="name" required /><br />
+      <label for="surname">Inserisci qui il tuo cognome: </label><input type="text" name="surname" id="surname" required /><br />
+      <label>Sesso: </label>
+      <input type="radio" name="gender" id="male" value="Male" /><label for="male" class="descriptionLabel">maschio</label>
+      <input type="radio" name="gender" id="female" value="Female" /><label for="female" class="descriptionLabel">femmina</label><br />
+      <label for="nation">Luogo di nascita:</label>
+      <select id="nation">
+        <optgroup label="UE">
+          <option value="Italia">Italia</option>
+          <option value="Germania">Germania</option>
+          <option value="Belgio">Belgio</option>
+          <option value="Olanda">Olanda</option>
+        </optgroup>
+        <optgroup label="Extra UE">
+          <option value="Tunisia">Tunisia</option>
+          <option value="Algeria">Algeria</option>
+          <option value="Libia">Libia</option>
+        </optgroup>
+      </select>
+      <br />
+      <label for="dateOfBirth">Data di Nascita: </label><input type="date" name="dateOfBirth" id="dateOfBirth" /><br />
+      <label for="idCard">Carta d'identità: </label><input type="file" name="idCard" id="idCard" /><br />
+    </fieldset>
+
+    <fieldset>
+      <legend>Password personale</legend>
+      <label for="password">Inserisci la password </label><input type="password" name="password" id="password"/>
+    </fieldset>
+
+    <fieldset>
+      <legend>Dati Personali</legend>
+      <label for="telefono">Telefono: </label><input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /><br />
+      <label for="email">Email: </label><input type="email" id="email" name="email" required /><br />
+      <label for="numeriPari">Numero PARI preferito: </label>
+      <input type="number" id="numeriPari" name="numeriPari" value="0" min="0" max="100" step="2" /><br />
+      <label for="numeriDispari">Numero DISPARI preferito: </label>
+      <input type="number" id="numeriDispari" name="numeriDispari" value="1" min="1" max="99" step="2" /><br />
+      <label>Patente: </label>
+      <input type="checkbox" name="auto" id="auto" value="auto" class="boxes"/>
+      <label for="auto" class="descriptionLabel">auto</label>
+      <input type="checkbox" name="moto" id="moto" value="moto" class="boxes"/>
+      <label for="moto" class="descriptionLabel">moto</label>
+      <input type="checkbox" name="aereo" id="aereo" value="aereo" class="boxes"/>
+      <label for="aereo" class="descriptionLabel">aereo</label> <br />
+      <label for="classe">Classe: </label>
+      <select id="classe">
+        <option selected disabled hidden>Seleziona la classe</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <br />
+      <label for="textArea"></label>
+      <textarea id="textArea" name="textArea">Inserisci qui i tuoi commenti</textarea>
+      <br />
+      <label for="comfort">Comfort</label><input type="range" id="comfort" name="comfort" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
+      <label for="posizione">Posizione</label><input type="range" id="posizione" name="posizione" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
+      <label for="prezzo">Prezzo</label><input type="range" id="prezzo" name="prezzo" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
+      <label for="cortesia">Cortesia del personale</label><input type="range" id="cortesia" name="cortesia" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
+      <input type="submit" name="submitButton" id="submitButton" value="Submit" class="allButtons"/>
+      <input type="reset" name="resetButton" id="resetButton" value="Reset" class="allButtons"/>
+    </fieldset>
+  </form>
+</div>
+<script>
+  document.getElementById("defaultOpen").click();
+  function openTab(evt, functionName) {
+    let i, itemContent, itemLinks;
+
+    itemContent = document.getElementsByClassName("itemContent");
+    for (i = 0; i < itemContent.length; i++) {
+      itemContent[i].style.display = "none";
+    }
+
+    itemLinks = document.getElementsByClassName("itemLinks");
+    for (i = 0; i < itemLinks.length; i++) {
+      itemLinks[i].className = itemLinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(functionName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
 </body>
 </html>
