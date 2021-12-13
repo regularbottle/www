@@ -58,6 +58,8 @@
             default: $giorniDelMese = 31; break;
         }
         echo "Il numero di giorni del mese di ".month($mese)." = $giorniDelMese!<br>"
+
+        //quanti giorni mancano a capodanno?
         ?>
     </div>
     <!--<div class="item" id="esercizio2Switch">

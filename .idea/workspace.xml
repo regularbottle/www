@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="second pause">
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="ended lesson">
+      <change afterPath="$PROJECT_DIR$/html/lezione4/lezione4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/esercizioForm/esercizioForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/esercizioForm/esercizioForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/lezione3/switch.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/lezione3/switch.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +32,18 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="2" />
+    <option name="projectConfigVersion" value="4" />
   </component>
   <component name="JsBowerSettings">
     <bower-package value="" />
@@ -57,6 +65,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -89,7 +98,7 @@
       <workItem from="1639123561363" duration="1841000" />
       <workItem from="1639125461814" duration="47000" />
       <workItem from="1639125704231" duration="173000" />
-      <workItem from="1639126289850" duration="10721000" />
+      <workItem from="1639126289850" duration="11009000" />
       <workItem from="1639140220905" duration="171000" />
       <workItem from="1639140404513" duration="119000" />
       <workItem from="1639240545816" duration="5975000" />
@@ -131,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639134979856</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ended lesson">
+      <created>1639137231980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639137231980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +171,8 @@
     <MESSAGE value="prima pausa" />
     <MESSAGE value="if ended, switch introduction" />
     <MESSAGE value="second pause" />
-    <option name="LAST_COMMIT_MESSAGE" value="second pause" />
+    <MESSAGE value="ended lesson" />
+    <option name="LAST_COMMIT_MESSAGE" value="ended lesson" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
