@@ -6,15 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: auto;
+        }
+    </style>
+
 </head>
 <body>
 
     <?php
-    function correctNumber(int $a) {
-        switch ($a) {
-            case $a<=1: return "alle unità";
-            default: return "alla $a decina";
-        }
+    function correctNumber(int $a): string
+    {
+        if ($a<=1) return "alle unità";
+        else return "alla $a decina";
     }
 
     $a = 10;
@@ -109,16 +120,26 @@
     }
     echo "<hr>";
     //fine 8
-
-    for ($i=10; $i<100; $i++) {
-        if (!(($i) % 2)) echo "<td>".($i)." PARI <br>";
-        else echo "<td>".($i)." DISPARI <br>";
-    }
-
-    echo "</table>";
-        for ($i=10; $i<=30; $i++) {
-            if (($i % 2)) echo " ".$i."<br>";
+    $numero = 10;
+    echo "<table>";
+    for ($iRow = 0; $iRow < 9; $iRow++) {
+        echo "<tr>";
+        for ($iColumn = 0; $iColumn < 10; $iColumn++) {
+            echo "<td>";
+            if (!(($numero % 2))) echo ($numero)." PARI ";
+            else echo ($numero)." DISPARI ";
+            echo "</td>";
+            $numero++;
         }
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    echo "<br>";
+
+    for ($i=10; $i<=30; $i++) {
+        if (($i % 2)) echo " ".$i." ";
+    }
 
     echo "<hr>";
     //fine 9
