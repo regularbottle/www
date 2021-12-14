@@ -149,6 +149,17 @@
     }
     echo "<hr>";
     //fine 10
+
+    //stampare l'elenco dei giorni che mancano a natale  solo se siamo nel mese di dicembre
+    $dataCorrente = date('d');
+    $dataTarget = 25;
+    if (date('m') == 12) {
+        while ($dataCorrente < $dataTarget) {
+            echo "Oggi è il $dataCorrente di ".date('M').", mancano ".($dataTarget-$dataCorrente)." giorni a natale! <br>";
+            $dataCorrente++;
+        }
+    }
+    echo "Oggi è natale, Tanti auguri!";
     ?>
 </body>
 </html>

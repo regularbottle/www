@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finished exForm">
-      <change afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="first break php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,6 +65,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql.8&#10;mariadb" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -90,13 +98,14 @@
       <workItem from="1639123561363" duration="1841000" />
       <workItem from="1639125461814" duration="47000" />
       <workItem from="1639125704231" duration="173000" />
-      <workItem from="1639126289850" duration="10721000" />
+      <workItem from="1639126289850" duration="11009000" />
       <workItem from="1639140220905" duration="171000" />
       <workItem from="1639140404513" duration="119000" />
       <workItem from="1639240545816" duration="5975000" />
       <workItem from="1639249250486" duration="1261000" />
       <workItem from="1639250534244" duration="2543000" />
-      <workItem from="1639404273778" duration="4779000" />
+      <workItem from="1639390418228" duration="4239000" />
+      <workItem from="1639394815740" duration="404000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -133,7 +142,35 @@
       <option name="project" value="LOCAL" />
       <updated>1639134979856</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ended lesson">
+      <created>1639137231980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639137231980</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lesson 4 - first break">
+      <created>1639387132303</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639387132303</updated>
+    </task>
+    <task id="LOCAL-00008" summary="lesson 4 - second break">
+      <created>1639392713739</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639392713739</updated>
+    </task>
+    <task id="LOCAL-00009" summary="first break php">
+      <created>1639473399326</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639473399326</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +194,11 @@
     <MESSAGE value="prima pausa" />
     <MESSAGE value="if ended, switch introduction" />
     <MESSAGE value="second pause" />
-    <option name="LAST_COMMIT_MESSAGE" value="second pause" />
+    <MESSAGE value="ended lesson" />
+    <MESSAGE value="lesson 4 - first break" />
+    <MESSAGE value="lesson 4 - second break" />
+    <MESSAGE value="first break php" />
+    <option name="LAST_COMMIT_MESSAGE" value="first break php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
