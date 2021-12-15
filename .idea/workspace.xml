@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="first break php">
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finish lesson php">
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/facebook.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +107,7 @@
       <workItem from="1639250534244" duration="2543000" />
       <workItem from="1639390418228" duration="4239000" />
       <workItem from="1639394815740" duration="404000" />
+      <workItem from="1639556121933" duration="4371000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -170,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639473399326</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="finish lesson php">
+      <created>1639482888474</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1639482888474</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +207,8 @@
     <MESSAGE value="lesson 4 - first break" />
     <MESSAGE value="lesson 4 - second break" />
     <MESSAGE value="first break php" />
-    <option name="LAST_COMMIT_MESSAGE" value="first break php" />
+    <MESSAGE value="finish lesson php" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish lesson php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
