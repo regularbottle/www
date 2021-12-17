@@ -28,6 +28,20 @@
         else return "alla $a decina";
     }
 
+    function isPrime(int $a): bool
+    {
+        $primo = 0;
+        for ($i = 0; $i <= $a; $i++) {
+            if ($i!=0) {
+                if (!($a % $i))  {
+                    $primo++;
+                }
+            }
+        }
+        if ($primo <=2) return true;
+        return false;
+    }
+
     $a = 10;
     $b = 20;
     $media = ($a+$b) / 2;
@@ -103,6 +117,11 @@
     if (preg_match('~^\p{Lu}~u', $testo)) echo "La prima lettera della parola $testo è maiuscola!";
     else echo "La prima lettera della parola $testo non è maiuscola!";
     echo "<hr>";
+
+    $testo = "ciao!";
+    if ($testo[0] >= 'A' && $testo[0]<='Z') echo "La prima lettera della parola $testo è maiuscola!";
+    else echo "La prima lettera della parola $testo non è maiuscola!";
+    echo "<hr>";
     //fine 8
 
     $x = 1555;
@@ -125,7 +144,8 @@
     for ($iRow = 0; $iRow < 9; $iRow++) {
         echo "<tr>";
         for ($iColumn = 0; $iColumn < 10; $iColumn++) {
-            echo "<td>";
+            if (isPrime($numero)) echo "<td style='background-color: rosybrown'>";
+            else echo "<td>";
             if (!(($numero % 2))) echo ($numero)." PARI ";
             else echo ($numero)." DISPARI ";
             echo "</td>";
@@ -150,7 +170,9 @@
     echo "<hr>";
     //fine 10
 
-    //stampare l'elenco dei giorni che mancano a natale  solo se siamo nel mese di dicembre
+    //stampare l'elenco dei giorni che mancano a natale solo se siamo nel mese di dicembre
+    $dataProva =
+
     $dataCorrente = date('d');
     $dataTarget = 25;
     if (date('m') == 12) {
@@ -159,7 +181,85 @@
             $dataCorrente++;
         }
     }
-    echo "Oggi è natale, Tanti auguri!";
+    echo "Oggi è natale, Tanti auguri!<hr>";
+    //fine natale
+
+    //calcolare ed elencare per quali numeri è divisibile il numero mem in $numero
+    $numero = 205;
+    $primo = 0;
+    echo "I divisori di $numero sono: ";
+    for ($i = 0; $i <= $numero; $i++) {
+        if ($i!=0) {
+            if (!($numero % $i))  {
+                echo "$i ";
+                $primo++;
+            }
+        }
+    }
+    if ($primo <=2) echo "<br>$numero è un numero primo";
+
+    echo "<br>I divisori di $numero sono: ";
+    for ($i = $numero; $i != 0; $i--) {
+        if (!($numero % $i))  {
+            echo "$i ";
+        }
+    }
+    echo "<hr>";
+
+    //fare l'ex di prima da $inizio a $fine
+    $inizio = 1;
+    $fine = 30;
+    for ($numero = $inizio; $numero<=$fine; $numero++) {
+        echo "<br>I divisori di $numero sono: ";
+        for ($i = 0; $i <= $numero; $i++) {
+            if ($i!=0) if (!($numero % $i))  {
+                echo "$i ";
+            }
+        }
+        if (isPrime($numero)) echo " è un numero primo";
+    }
+    echo "<hr>";
+
+    //tabellina
+    $numero = 10;
+    echo "<table><tr style='background-color: palegoldenrod'><td></td>"; for ($i = 1; $i <=$numero;$i++) echo "<td>$i</td>";
+    for ($iRow = 1; $iRow <= $numero; $iRow++) {
+        echo "<tr><td style='background-color: palegoldenrod'>$iRow</td>";
+        for ($iColumn = 1; $iColumn <= $numero; $iColumn++) {
+            echo "<td>".($iRow*$iColumn)."</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table><br><hr>";
+
+    //esercizio 2 di esercizi-cicli-array.doc
+    $votoStudenti = [100, 20, 50, 70, 90, 80, 66, 89, 99, 101, 101];
+    $postiSpecializzandi = 4;
+    $mediaSufficienti = 0;
+    for ($i = 0; $i < count($votoStudenti); $i++) {
+        if ($votoStudenti[$i] >= 60) {
+            echo "<strong>".$votoStudenti[$i]."</strong> ";
+            $votoSufficiente[] = $votoStudenti[$i];
+            $mediaSufficienti += $votoStudenti[$i];
+            if ($votoStudenti[$i] >= 80) {
+                $specializzandi[] = $votoStudenti[$i];
+            }
+            if ($votoStudenti[$i] == 101) {
+                $lodi[] = $votoStudenti[$i];
+                }
+            }
+        else {
+            echo $votoStudenti[$i]." ";
+        }
+    }
+    echo "<table style='border: 1px solid black; border-collapse: collapse'><td>Sono state assegnate ".count($lodi)." lodi</td></table>";
+
+    echo "<br>La media delle sufficienze è ".($mediaSufficienti/count($votoSufficiente));
+    echo "<br>Gli specializzandi ammessi sono ";
+    if ((count($specializzandi) > $postiSpecializzandi)) echo $postiSpecializzandi.", rimangono in lista d'attesa il ".((count($specializzandi) - $postiSpecializzandi) * 10)."% di coloro che hanno i requisiti necessari";
+    else echo count($specializzandi);
+
+
     ?>
 </body>
 </html>

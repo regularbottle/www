@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finish lesson php">
-      <change afterPath="$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/calin-furculita/facebook.png" afterDir="false" />
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finish verifica html">
+      <change afterPath="$PROJECT_DIR$/php/lezione5/array.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +41,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="4" />
@@ -107,7 +115,9 @@
       <workItem from="1639250534244" duration="2543000" />
       <workItem from="1639390418228" duration="4239000" />
       <workItem from="1639394815740" duration="404000" />
-      <workItem from="1639556121933" duration="4371000" />
+      <workItem from="1639556121933" duration="4611000" />
+      <workItem from="1639571107908" duration="764000" />
+      <workItem from="1639730058093" duration="11222000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -179,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639482888474</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finish verifica html">
+      <created>1639560635473</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639560635474</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +225,8 @@
     <MESSAGE value="lesson 4 - second break" />
     <MESSAGE value="first break php" />
     <MESSAGE value="finish lesson php" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish lesson php" />
+    <MESSAGE value="finish verifica html" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish verifica html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
