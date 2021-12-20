@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finish verifica html">
-      <change afterPath="$PROJECT_DIR$/php/lezione5/array.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/eserciziPhp/ex-cicli-array.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
     </list>
@@ -117,7 +117,8 @@
       <workItem from="1639394815740" duration="404000" />
       <workItem from="1639556121933" duration="4611000" />
       <workItem from="1639571107908" duration="764000" />
-      <workItem from="1639730058093" duration="11222000" />
+      <workItem from="1639730058093" duration="11259000" />
+      <workItem from="1639987726185" duration="2283000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -196,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639560635474</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="finish verifica html">
+      <created>1639742639600</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639742639600</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

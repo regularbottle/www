@@ -232,10 +232,33 @@
     }
     echo "</table><br><hr>";
 
-    //esercizio 2 di esercizi-cicli-array.doc
-    $votoStudenti = [100, 20, 50, 70, 90, 80, 66, 89, 99, 101, 101];
+    //esercizio uno di esercizi-cicli-array.dom
+    $inizio = -10;
+    $ripetizioni = 20;
+
+    for ($i = 50; $i>(50-$ripetizioni); $i--) {
+        echo "$i ";
+    }
+    echo "<br>";
+    if ($inizio>0) {
+        for ($i = $inizio; $i>0; $i--) {
+        if ($i == date('j')) echo ($i-1)."<span style='color: red'><strong>$i</strong></span>".($i+1)."<br>";
+        else echo ($i-1)."<span style='color: red'>$i</span>".($i+1)."<br>";
+        }
+    } else {
+        for ($i = $inizio; $i<0; $i++) {
+            echo ($i-1)."<span style='color: red'>$i</span>".($i+1)."<br>";
+        }
+    }
+    echo "<hr>";
+
+    //esercizio due di esercizi-cicli-array.doc
+    $votoStudenti = [100, 20, 50, 70, 90, 80, 66, 89, 99, 101, 101, 89];
     $postiSpecializzandi = 4;
     $mediaSufficienti = 0;
+    $lodi = [];
+    $specializzandi = [];
+    $votoSufficiente = [];
     for ($i = 0; $i < count($votoStudenti); $i++) {
         if ($votoStudenti[$i] >= 60) {
             echo "<strong>".$votoStudenti[$i]."</strong> ";
@@ -243,22 +266,23 @@
             $mediaSufficienti += $votoStudenti[$i];
             if ($votoStudenti[$i] >= 80) {
                 $specializzandi[] = $votoStudenti[$i];
-            }
-            if ($votoStudenti[$i] == 101) {
-                $lodi[] = $votoStudenti[$i];
+                if ($votoStudenti[$i] == 101) {
+                    $lodi[] = $votoStudenti[$i];
                 }
             }
+        }
         else {
             echo $votoStudenti[$i]." ";
         }
     }
     echo "<table style='border: 1px solid black; border-collapse: collapse'><td>Sono state assegnate ".count($lodi)." lodi</td></table>";
 
-    echo "<br>La media delle sufficienze è ".($mediaSufficienti/count($votoSufficiente));
-    echo "<br>Gli specializzandi ammessi sono ";
-    if ((count($specializzandi) > $postiSpecializzandi)) echo $postiSpecializzandi.", rimangono in lista d'attesa il ".((count($specializzandi) - $postiSpecializzandi) * 10)."% di coloro che hanno i requisiti necessari";
-    else echo count($specializzandi);
+    echo "<br>La media delle sufficienze è ".number_format(($mediaSufficienti/count($votoSufficiente)));
 
+    echo "<br>Il numero di persone con i requisiti neccessari è: ".count($specializzandi);
+    echo "<br>Gli specializzandi ammessi sono ";
+    if ((count($specializzandi) > $postiSpecializzandi)) echo $postiSpecializzandi.", rimangono in lista d'attesa il ".number_format(((count($specializzandi) - $postiSpecializzandi) * 100) / count($specializzandi))."% di coloro che hanno i requisiti necessari";
+    else echo count($specializzandi);
 
     ?>
 </body>
