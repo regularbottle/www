@@ -138,7 +138,8 @@
         echo "Il numero $x non è compreso tra $a e $b!";
     }
     echo "<hr>";
-    //fine 8
+    //fine 9
+
     $numero = 10;
     echo "<table>";
     for ($iRow = 0; $iRow < 9; $iRow++) {
@@ -162,17 +163,15 @@
     }
 
     echo "<hr>";
-    //fine 9
+    //fine 10
 
     for ($i=1; $i<=100; $i++) {
         if (!($i % 7)) echo "Il numero $i è un multiplo di 7!<br>";
     }
     echo "<hr>";
-    //fine 10
+    //fine 11
 
     //stampare l'elenco dei giorni che mancano a natale solo se siamo nel mese di dicembre
-    $dataProva =
-
     $dataCorrente = date('d');
     $dataTarget = 25;
     if (date('m') == 12) {
@@ -186,17 +185,15 @@
 
     //calcolare ed elencare per quali numeri è divisibile il numero mem in $numero
     $numero = 205;
-    $primo = 0;
     echo "I divisori di $numero sono: ";
     for ($i = 0; $i <= $numero; $i++) {
         if ($i!=0) {
             if (!($numero % $i))  {
                 echo "$i ";
-                $primo++;
             }
         }
     }
-    if ($primo <=2) echo "<br>$numero è un numero primo";
+    if (isPrime($numero)) echo "<br>$numero è un numero primo";
 
     echo "<br>I divisori di $numero sono: ";
     for ($i = $numero; $i != 0; $i--) {
@@ -281,7 +278,11 @@
 
     echo "<br>Il numero di persone con i requisiti neccessari è: ".count($specializzandi);
     echo "<br>Gli specializzandi ammessi sono ";
-    if ((count($specializzandi) > $postiSpecializzandi)) echo $postiSpecializzandi.", rimangono in lista d'attesa il ".number_format(((count($specializzandi) - $postiSpecializzandi) * 100) / count($specializzandi))."% di coloro che hanno i requisiti necessari";
+    if ((count($specializzandi) > $postiSpecializzandi)) {
+        echo $postiSpecializzandi.", rimangono in lista d'attesa il "
+            .number_format(((count($specializzandi) - $postiSpecializzandi) * 100) / count($specializzandi)).
+            "% di coloro che hanno i requisiti necessari";
+    }
     else echo count($specializzandi);
 
     ?>
