@@ -269,7 +269,7 @@
             }
         }
         else {
-            echo $votoStudenti[$i]." ";
+            echo "<i>".$votoStudenti[$i]."</i> ";
         }
     }
     echo "<table style='border: 1px solid black; border-collapse: collapse'><td>Sono state assegnate ".count($lodi)." lodi</td></table>";
@@ -285,8 +285,58 @@
     }
     else echo count($specializzandi);
 
+    echo "<hr>";
+
+    //esercizi di quando non c'ero
+    //1
+    $persone = ["Rossi", "Verdi", "Gialli"];
+    $persona = "Verdi";
+    $minimo = $persona[0];
+    $trovato = false;
+    $posizione = 0;
+    for ($i=0; $i<count($persone); $i++) {
+        $sfondo = "#808080";
+        if ($i%3==0) $sfondo = "#A9A9A9";
+        else if ($i%3==1) $sfondo = "#DDDDDD";
+        echo "<div style='background-color: $sfondo'>".$persone[$i]."</div>";
+
+        if ($persona == $persone[$i]) {
+            $trovato = true;
+            $posizione = $i+1;
+        }
+
+        if ($persone[$i]<$minimo) $minimo = $persone[$i];
+    }
+    //2
+    if ($trovato) echo "</br>Trovato $persona in posizione $posizione";
+    else echo "Non ho trovato $persona nella lista";
+    //3
+    if (date("i") == 30) {
+        $persone[] = "Nuovi";
+        echo "<br>E' stato inserito Nuovi nella lista di attesa con posizione ".count($persone);
+    }
+    //4
+    echo "<br>In ordine alfabetico il primo in lista di attesa è $minimo";
+    //5
+    $numero_persone = count($persone);
+    $persone_giorno = 1;
+    $ore_lavorate = date("H") - 8;
+    $minuti_lavorati = date("i");
+    if ($numero_persone>$persone_giorno) {
+            echo "<br>Rimangono in lista d'attesa il "
+            .number_format((($numero_persone - $persone_giorno) * 100) / $numero_persone, 2).
+            "% di persone";
+    }
+    else echo "<br>".$numero_persone;
+
+    if ((date("H"))>13) {
+        $gestite_ora = ($numero_persone <= $persone_giorno)?$numero_persone:$persone_giorno;
+    } else {
+        if ($ore_lavorate < 0) $gestite_ora = 0;
+        else  $gestite_ora = ($ore_lavorate * 6) + floor($minuti_lavorati/10);
+    }
+
+    echo "<br>Abbiamo gestito $gestite_ora persone sino a ora";
     ?>
 </body>
 </html>
-
-

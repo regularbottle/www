@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finish exForArray">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" afterDir="false" />
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="cleaning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
     </list>
@@ -131,7 +130,8 @@
       <workItem from="1639730058093" duration="11259000" />
       <workItem from="1639987726185" duration="3010000" />
       <workItem from="1639996050233" duration="2523000" />
-      <workItem from="1640076902080" duration="1043000" />
+      <workItem from="1640076902080" duration="3871000" />
+      <workItem from="1640246125704" duration="5519000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639990160356</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="cleaning">
+      <created>1640077975183</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1640077975183</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +262,8 @@
     <MESSAGE value="finish lesson php" />
     <MESSAGE value="finish verifica html" />
     <MESSAGE value="finish exForArray" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish exForArray" />
+    <MESSAGE value="cleaning" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
