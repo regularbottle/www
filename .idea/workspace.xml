@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="cleaning">
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="new ex">
+      <change afterPath="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/eserciziPhp/esercizi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,12 +92,16 @@
       <recent name="C:\xampp\htdocs\www\php\lezione2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.calin-furculita.php">
+    <configuration name="calin-furculita.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php">
+      <method v="2" />
+    </configuration>
     <configuration name="esercizi.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/php/eserciziPhp/esercizi.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.calin-furculita.php" />
         <item itemvalue="PHP Script.esercizi.php" />
       </list>
     </recent_temporary>
@@ -131,7 +135,7 @@
       <workItem from="1639987726185" duration="3010000" />
       <workItem from="1639996050233" duration="2523000" />
       <workItem from="1640076902080" duration="3871000" />
-      <workItem from="1640246125704" duration="5519000" />
+      <workItem from="1640246125704" duration="9139000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -231,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640077975183</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="new ex">
+      <created>1640251947391</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1640251947391</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +274,8 @@
     <MESSAGE value="finish verifica html" />
     <MESSAGE value="finish exForArray" />
     <MESSAGE value="cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning" />
+    <MESSAGE value="new ex" />
+    <option name="LAST_COMMIT_MESSAGE" value="new ex" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
