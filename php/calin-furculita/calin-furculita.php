@@ -35,9 +35,18 @@
         }
     }
 
+    function daysPassed(int $mese, int $giorni): int
+    {
+        $passati = 0;
+        for ($i = 0; $i<$mese-1; $i++) {
+            $passati += nrDaysMonth($i+1);
+        }
+        return $passati + $giorni;
+    }
+
     $temperatura_media = 0;
     $giorni_menozero = 0;
-    $giorni_passati = floor((((date("m") - 1) * 365/12) + date("d")));
+    $giorni_passati = daysPassed(date('m'),date('d'));
     for ($i = 0; $i<$giorni_passati; $i++) {
         $temperature[] = rand(-10,30);
         $temperatura_media += $temperature[$i];
@@ -47,7 +56,7 @@
     echo "La Temperatura media dell'anno è ".number_format($temperatura_media/count($temperature), 2);
     echo "<br>Ci sono stati $giorni_menozero giorni con temperature sotto lo zero<br>";
     $indice_totale = 0;
-    for ($i_mese = 0; $i_mese < 12; $i_mese++) {
+    for ($i_mese = 0; $i_mese < date('m'); $i_mese++) {
         $temperatura_media_mese = 0;
         echo "Per il mese di ".month($i_mese + 1)." le temperature sono<ol style='list-style-type: decimal'>";
         for ($i = 0; $i < nrDaysMonth(($i_mese+1)); $i++) {

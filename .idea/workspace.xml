@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="new ex">
-      <change afterPath="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php" afterDir="false" />
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finisehd test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +135,7 @@
       <workItem from="1639987726185" duration="3010000" />
       <workItem from="1639996050233" duration="2523000" />
       <workItem from="1640076902080" duration="3871000" />
-      <workItem from="1640246125704" duration="9139000" />
+      <workItem from="1640246125704" duration="10330000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640251947391</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="finisehd test">
+      <created>1640255602266</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1640255602266</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +282,8 @@
     <MESSAGE value="finish exForArray" />
     <MESSAGE value="cleaning" />
     <MESSAGE value="new ex" />
-    <option name="LAST_COMMIT_MESSAGE" value="new ex" />
+    <MESSAGE value="finisehd test" />
+    <option name="LAST_COMMIT_MESSAGE" value="finisehd test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
