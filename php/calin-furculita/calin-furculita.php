@@ -24,7 +24,8 @@
             case 10: return "Ottobre";
             case 11: return "Novembre";
             case 12: return "Dicembre";
-        } return "";
+            default: return "";
+        }
     }
     function nrDaysMonth(int $mese): int
     {
@@ -58,7 +59,7 @@
     $indice_totale = 0;
     for ($i_mese = 0; $i_mese < date('m'); $i_mese++) {
         $temperatura_media_mese = 0;
-        echo "Per il mese di ".month($i_mese + 1)." le temperature sono<ol style='list-style-type: decimal'>";
+        echo "Per il mese di ".month($i_mese + 1)." le temperature sono:<ol style='list-style-type: decimal;'>";
         for ($i = 0; $i < nrDaysMonth(($i_mese+1)); $i++) {
             if ($indice_totale<$giorni_passati) {
                 echo "<li> la temperatura era " .$temperature[$indice_totale]. "°C</li>";
@@ -66,7 +67,6 @@
                 $indice_totale++;
             }
         }
-
         echo "</ol>La temperatura media di ".month($i_mese+1)." è ".number_format($temperatura_media_mese/nrDaysMonth($i_mese+1), 2)."°C<br>";
     }
 ?>
