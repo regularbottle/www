@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lezione 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Il CSS</h1>
+    <h2 id="titolo2" class="rosso">Id Classi ed Elementi</h2>
+    <nav>
+        <ul id="menu-principale">
+            <li>Home</li>
+            <li>Chi Siamo</li>
+            <li>Azienda</li>
+            <li>Contatti</li>
+        </ul>
+    </nav>
+    <section id="news">
+        <article>
+            <h3>Primo Piano: I Selettori</h3>
+            <p>Bootstrap includes six default breakpoints, sometimes referred to as grid tiers, for building
+                responsively. These breakpoints can be customized if you’re using our source Sass files.</p>
+            <p>Il secondo paragrafo</p>
+            <blockquote>
+                <h3>Tratto da Repubblica</h3>
+            </blockquote>
+            <footer>
+                <small data-author="Giovanni">Autore: Giovanni</small>
+            </footer>
+        </article>
+    </section>
+    <section id="mercato">
+        <article>
+            <h3>Primo Piano: Le Aziende</h3>
+            <p>Un’azienda (ramo d'azienda se si tratta di una parte della medesima, solitamente preposta ad attività
+                specifiche) in economia aziendale, è un'organizzazione di beni e capitale umano finalizzata alla
+                soddisfazione di bisogni umani attraverso la produzione, la distribuzione o il consumo di beni
+                economici e servizi verso clienti, strutturata secondo una certa organizzazione aziendale e
+                amministrata secondo una certa amministrazione aziendale (governance) da parte del management
+                aziendale.</p>
+            <footer>
+                <small data-author="Rita">Autore: Rita</small>
+            </footer>
+        </article>
+    </section>
+    <section id="quadrati">
+        <div id="1">uno</div>
+        <div id="2">due</div>
+        <div id="3">tre</div>
+    </section>
+    <a href="#top" class="link-custom">Torna in alto</a>
+
+    <table>
+        <thead>
+            <th>prima</th>
+            <th>seconda</th>
+            <th>terza</th>
+        </thead>
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td>1.3</td>
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+        </tr>
+    </table>
+    <ul id="submenu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <section id="sequenza">
+        <div class="normale">ciao</div>
+        <div class="normale"></div>
+        <div>lunedì</div>
+    </section>
+    <section>
+        <h2>I Tuoi Dati:</h2>
+        <form action="invia-dati.php">
+            <fieldset>
+                <legend>Dati di Accesso:</legend>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="xxx@yyy.zzz">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </fieldset>
+            <fieldset>
+                <legend>Cliente letto da DB</legend>
+                <label for="id">ID:</label>
+                <input type="text" name="id" id="id" value="5" disabled>
+            </fieldset>
+            <fieldset>
+                <legend>Interessi Personali</legend>
+                <input type="checkbox" name="sport" id="sport">
+                <label for="sport">Sport</label>
+                <input type="checkbox" name="cinema" id="cinema">
+                <label for="cinema">Cinema</label>
+                <input type="checkbox" name="viaggi" id="viaggi">
+                <label for="viaggi">Viaggi</label>
+                <input type="checkbox" name="giochi" id="giochi">
+                <label for="giochi">Giochi</label>
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <footer>
+            <small>Copyright by IFTS</small>
+        </footer>
+    </section>
+</body>
+</html>
