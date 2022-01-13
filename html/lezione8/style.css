@@ -101,7 +101,8 @@ div{
     background-position: center;
 }
 #background div:nth-child(3){
-    background-color: ;
+    background-image: url("./small.png");
+    background-repeat: repeat;
 }
 @media screen and (min-width: 992px){
     #background div{
