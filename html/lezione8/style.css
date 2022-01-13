@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+/*#prima-section > div:first-child{
+    background-color: aquamarine;
+}
+#prima-section > div:hover{
+    background-color: lime;
+}
+#prima-section div:nth-child(4),
+#prima-section > div:nth-child(5){
+    background-color: magenta;
+}
+input:checked + label{
+    background-color: red;
+}
+div::before{
+    content: "-";
+} */
+div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 16px;
+    margin: 16px auto;
+}
+#uno{
+    box-sizing: border-box;
+}
+#due{
+    margin-top: 32px;
+}
+#alto{
+    /*essendo in linea non prende la proprietà height*/
+    height: 500px;
+    border: 1px solid black;
+}
+
+#section-due{
+    border: 2px solid salmon;
+    /*height: 200px;*/
+}
+#div-section-due{
+    border: 2px solid lime;
+    height: 50%;
+}
+#article-uno{
+    min-height: 100px;
+    padding: 16px;
+    border: 2px solid pink;
+}
