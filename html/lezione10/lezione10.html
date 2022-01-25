@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Lezione 10</title>
+</head>
+<body>
+<!--    <h1>Il mio Sito</h1>-->
+<!--    <nav class="sticky">Il mio Menù</nav>-->
+<!--    <div class="container" id="container">-->
+<!--        <div class="container" id="primo"></div>-->
+<!--        <div class="container" id="middle"></div>-->
+<!--        <div class="container" id="secondo"></div>-->
+<!--    </div>-->
+<section class="header" id="logo">
+    <nav class="menu" id="top-menu-mobile-left">
+        <ul>
+            <li><p>Home</p></li>
+            <li><p>Prodotti</p></li>
+        </ul>
+    </nav>
+    <img src="logo.png" alt="logo">
+    <nav class="menu" id="top-menu-mobile-right">
+        <ul>
+            <li><p>Chi Siamo</p></li>
+            <li><p>Contatti</p></li>
+        </ul>
+    </nav>
+    <nav class="menu" id="top-menu">
+        <ul>
+            <li><p>Home</p></li>
+            <li><p>Prodotti</p></li>
+            <li><p>Chi siamo</p></li>
+            <li><p>Contatti</p></li>
+        </ul>
+    </nav>
+</section>
+<header id="banner"></header>
+<section class="container" id="azienda">
+    <div id="testo-azienda">
+        <h2>Da oltre 30 anni sul mercato</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <div id="immagine-azienda">
+        <img src="azienda.jpg" alt="immagine-azienda">
+    </div>
+</section>
+<!-- Impostare altezza 180px e 100% del contenitore.
+     Impostare un'immagine di background.
+     Sopra al background dovrà essere presente una pellicola scura.
+     Il titolo dovrà apparire in modo centrato sia verticalmente che orizzontalmente nel suo
+     contenitore (display: flex, justify-content: center, align-items: center).
+     Impostare al motto un margin-top + bottom di 16px.
+
+-->
+<section id="motto-azienda">
+    <div id="wrapper">
+        <h3><cite>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</cite></h3>
+    </div>
+</section>
+<section class="container" id="servizi">
+    <h2>I Nostri Servizi</h2>
+    <div id="servizi-article">
+        <article class="servizio">
+            <i class="fas fa-hand-sparkles fa-3x"></i>
+            <header>
+                <h3>Sanificazione</h3>
+            </header>
+            <p>
+                La sanificazione ambientale è un'operazione mirata a eliminare a fondo qualsiasi batterio
+            </p>
+            <button>Scopri di più</button>
+        </article>
+        <article class="servizio">
+            <i class="fas fa-people-carry fa-3x"></i>
+            <header>
+                <h3>Trasloco</h3>
+            </header>
+            <p>
+                La sanificazione ambientale è un'operazione mirata a eliminare a fondo qualsiasi batterio
+            </p>
+            <button>Scopri di più</button>
+        </article>
+        <article class="servizio">
+            <i class="fas fa-truck-loading fa-3x"></i>
+            <header>
+                <h3>Scarico</h3>
+            </header>
+            <p>
+                La sanificazione ambientale è un'operazione mirata a eliminare a fondo qualsiasi batterio
+            </p>
+            <button>Scopri di più</button>
+        </article>
+        <article class="servizio">
+            <i class="fas fa-paint-roller fa-3x"></i>
+            <header>
+                <h3>Facchinaggio</h3>
+            </header>
+            <p>
+                La sanificazione ambientale è un'operazione mirata a eliminare a fondo qualsiasi batterio
+            </p>
+            <button>Scopri di più</button>
+        </article>
+    </div>
+    <section id="gallery" class="container">
+        <h2 class="section">Gli uffici</h2>
+        <div id="grid-1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+</section>
+</body>
+</html>

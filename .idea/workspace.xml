@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,9 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finisehd test">
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finished lesson?">
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/805-2160x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/lezione10/azienda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/lezione10/footer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/lezione10/lezione10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/lezione10/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/lezione10/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/lezione10/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/calin-furculita/calin-furculita.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -61,6 +72,9 @@
   </component>
   <component name="PhpDebugGeneral" hide_empty_superglobals="false" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="225MNaNikiqAJyXBiKX4COmt84n" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -78,16 +92,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/lezione10" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\xampp\htdocs\www\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\html\lezione10" />
+      <recent name="C:\xampp\htdocs\www\php" />
       <recent name="C:\xampp\htdocs\www\php\lezione3" />
       <recent name="C:\xampp\htdocs\www\php\lezione2" />
     </key>
@@ -135,7 +154,12 @@
       <workItem from="1639987726185" duration="3010000" />
       <workItem from="1639996050233" duration="2523000" />
       <workItem from="1640076902080" duration="3871000" />
-      <workItem from="1640246125704" duration="10330000" />
+      <workItem from="1640246125704" duration="12219000" />
+      <workItem from="1641802221389" duration="172000" />
+      <workItem from="1641802507432" duration="10032000" />
+      <workItem from="1642667659748" duration="758000" />
+      <workItem from="1643017544981" duration="3136000" />
+      <workItem from="1643098069708" duration="13812000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -249,7 +273,35 @@
       <option name="project" value="LOCAL" />
       <updated>1640255602266</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="finished test">
+      <created>1640256815196</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1640256815196</updated>
+    </task>
+    <task id="LOCAL-00018" summary="finished test">
+      <created>1641803094208</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1641803094208</updated>
+    </task>
+    <task id="LOCAL-00019" summary="finished lesson?">
+      <created>1641813257881</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1641813257881</updated>
+    </task>
+    <task id="LOCAL-00020" summary="finished lesson?">
+      <created>1643025343543</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1643025343543</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +335,9 @@
     <MESSAGE value="cleaning" />
     <MESSAGE value="new ex" />
     <MESSAGE value="finisehd test" />
-    <option name="LAST_COMMIT_MESSAGE" value="finisehd test" />
+    <MESSAGE value="finished test" />
+    <MESSAGE value="finished lesson?" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished lesson?" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
