@@ -9,7 +9,7 @@ $studenti = array ($studente1, $studente2);
 2. Ripetere il punto 1 per 100 volte
 3. Visualizzare i dati degli studenti del corso IFTS, in forma tabellare.
 4. Visualizzare i dati degli studenti promossi (con voto sufficiente) di qualsiasi corso.
-5. Nell’elenco del punto precedente aggiungere un link sul nome del corso.
+5. Nell’elenco del punto precedente aggiungere un link sul nome del corso.*/
 
 function corso(int $corso): string
 {
@@ -62,7 +62,7 @@ foreach ($studenti as $v1) {
 echo "</tbody></table>";
 
 
-Esercizio 2
+/*Esercizio 2
 Creare un file php in cui siano definiti 3 array come quelli riportati sotto
 (considerarli solo come esempio ed effettuare i calcoli come se non si conoscessero i valori memorizzati),
 poi svolgere le operazioni richieste
