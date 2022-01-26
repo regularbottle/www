@@ -1,182 +1,113 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5</title>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        thead {
-            background-color: rgb(255, 69, 0);
-        }
-        tfoot {
-            background-color: rgb(60, 190, 200);
-        }
-    </style>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Calin Furculita</title>
 </head>
 <body>
-<hgroup>
-    <h1>HTML5</h1>
-    <h2>Verifica Tag e Form</h2>
-</hgroup>
-<nav>
-    <h2 id="Sommario">Sommario</h2>
+<section id="logo">
+    <img src="logo.png" alt="logo">
+</section>
+<nav id="top-menu">
     <ul>
-        <li><a href="#Sommario">Sommario</a> </li>
-        <li><a href="#Tabella">Tabella</a> </li>
-        <li><a href="#Form">Form</a> </li>
-        <li><a href="#HTML5TagSemantici">HTML5 Tag Semantici</a> </li>
+        <li><a href="#logo">Home |</a></li>
+        <li><a href="#chi-siamo"> Chi Siamo |</a></li>
+        <li><a href="#contatti"> Contatti |</a></li>
     </ul>
 </nav>
-<hr>
-<section id="Tabella">
-    <h2>Sezione 1: Tabella</h2>
-    <table id="tabellaNutrizionale">
-        <caption>
-            <h3>La tabella Nutrizionale</h3>
-        </caption>
-        <thead>
-        <tr>
-            <th>Valori Medi</th>
-            <th>Per 100g</th>
-            <th>Per Porzione (8,7g)</th>
-            <th>Dettagli</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="oddRow">
-            <td>Valore energetico</td>
-            <td>1191 kj<br>474 kcal</td>
-            <td>173 kj<br>41 kcal</td>
-            <td rowspan="3">Sezione 1</td>
-        </tr>
-        <tr>
-            <td>Grassi<br>di cui acidi saturi</td>
-            <td>18g<br>8,8g</td>
-            <td>1,6g<br>0,8g</td>
-        </tr>
-        <tr class="oddRow">
-            <td>Carboidrati<br>di cui zuccheri</td>
-            <td>70g<br>23,5g</td>
-            <td>6,1g<br>2,0g</td>
-        </tr>
-        <tr>
-            <td>Proteine</td>
-            <td>7g</td>
-            <td>6,6g</td>
-            <td rowspan="2">Sezione 2</td>
-        </tr>
-        <tr class="oddRow">
-            <td>Sale</td>
-            <td>0,270g</td>
-            <td>0,023g</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td colspan="2"><img src="facebook.png" alt="Logo Facebook" width="32px">facebook.com/sararossinutrizionista</td>
-            <td colspan="2"><a href="https://sararossinutrizionista.it">sararossinutrizionista.it</a></td>
-        </tr>
-        <tr>
-        <tr>
-            <td colspan="4"><small>© Dottoressa Nutrizionista Sara Rossi</small></td>
-        </tr>
-        </tfoot>
-    </table>
+<section id="banner">
+    <h1>CSS</h1>
+    <h2>Responsive Web Design</h2>
+    <div>
+        <button>Scopri di Più</button>
+        <button>Contatti</button>
+    </div>
 </section>
-<hr>
-<section id="Form">
-    <h2>Sezione 2: Form</h2>
-    <form name="anagrafica" action="form.php" method="GET" id="myForm">
-        <fieldset>
-            <legend>Dati Anagrafici</legend>
-            <label for="surname">Cognome: </label><input type="text" name="surname" id="surname" placeholder="inp-cognome" autocomplete="off"/>
-            <label for="name">Nome: </label><input type="text" name="name" id="name" placeholder="inp-cognome" autocomplete="off"/>
-        </fieldset>
-        <fieldset>
-            <legend>Dati Residenza</legend>
-            <label for="homeAddress">Indirizzo: </label><input type="text" name="homeAddress" id="homeAddress"/>
-            <label for="homeCAP">CAP: </label><input type="text" name="homeCAP" id="homeCAP"/>
-            <label for="homeLocation">Località: </label><input type="text" name="homeLocation" id="homeLocation"/>
-            <label for="homeProvince">Provincia: </label><input type="text" name="homeProvince" id="homeProvince"/>
-            <label for="nation">Stato: </label>
-            <select id="nation">
-                <optgroup label="Europa">
-                    <option value="Italia">Italia</option>
-                    <option value="Francia">Francia</option>
-                    <option value="Germania">Germania</option>
-                </optgroup>
-                <optgroup label="Asia">
-                    <option value="Cina">Cina</option>
-                    <option value="Thailandia">Thailandia</option>
-                    <option value="Giappone">Giappone</option>
-                </optgroup>
-            </select>
-        </fieldset>
-        <fieldset>
-            <legend>Dati contatto</legend>
-            <label for="personalEmail">Email: </label><input type="email" id="personalEmail" name="personalEmail" required placeholder="inp-email"/>
-            <label for="telefono">Telefono: </label><input type="tel" id="telefono" name="telefono" placeholder="inp-telefono"/>
-        </fieldset>
-        <fieldset>
-            <legend>Dati accesso</legend>
-            <label for="emailAccess">Email: </label><input type="email" id="emailAccess" name="emailAccess" required placeholder="inp-email"/>
-            <label for="passwordAccess">Password: </label><input type="password" name="passwordAccess" id="passwordAccess" required />
-            <label for="confirmAccess">Conferma password: </label><input type="password" name="confirmAccess" id="confirmAccess" required />
-        </fieldset>
-        <fieldset>
-            <legend>Dati personali</legend>
-            <label for="monthYear">Mese + Anno Attuale: </label><input type="month" name="monthYear" id="monthYear"/>
-            <label for="favColor">Colore Preferito: </label><input type="color" name="favColor" id="favColor" />
-            <label for="age">Età: </label><input type="number" id="age" name="age" min="18" max="99"/>
-            <label for="personalBlog">Blog Personale (url): </label><input type="url" name="personalBlog" id="personalBlog" placeholder="inp-url"/>
-        </fieldset>
-        <fieldset>
-            <legend>Dati Gradimento</legend>
-            <label for="grade">Voto</label><input type="range" id="grade" name="grade" min="1" max="10" oninput="this.nextElementSibling.value = this.value"/><output>5</output>
-            <label for="favSport">Sport Preferito</label><input list="favSports" name="favSport" id="favSport" />
-            <datalist id="favSports">
-                <option value="Calcio">Calcio</option>
-                <option value="Tennis">Tennis</option>
-                <option value="Basket">Basket</option>
-                <option value="Nuoto">Nuoto</option>
-            </datalist>
-            <label for="textArea">Commento</label>
-            <textarea id="textArea" name="textArea" cols="50" rows="5" placeholder="Inserisci qui i tuoi commenti"></textarea>
-        </fieldset>
-        <input type="submit" name="submitButton" id="submitButton" value="Submit"/>
-    </form>
+<section class="container" id="servizi">
+    <div>
+        <i class="fab fa-accusoft fa-5x"></i>
+        <h3>Display</h3>
+        <p>As the name says, the theme is designed with minimalism in mind. It's ideal for Designers and Photographers.
+            Minimaluu lets your work speak for itself</p>
+    </div>
+    <div>
+        <i class="fab fa-500px fa-5x"></i>
+        <h3>Display</h3>
+        <p>As the name says, the theme is designed with minimalism in mind. It's ideal for Designers and Photographers.
+            Minimaluu lets your work speak for itself</p>
+
+    </div>
+    <div>
+        <i class="fas fa-align-center fa-5x"></i>
+        <h3>Display</h3>
+        <p>As the name says, the theme is designed with minimalism in mind. It's ideal for Designers and Photographers.
+            Minimaluu lets your work speak for itself</p>
+
+    </div>
 </section>
-<section id="HTML5TagSemantici">
-    <h2>Sezione 3: Html5 Tag</h2>
-    <section>
-        <header>
-            <h3>SOCIAL MEDIA E WEB MARKETING MANAGER</h3>
-        </header>
-        <article>
-            La risorsa ricercata si occuperà in completa autonomia di: Gestione
-            del Sito Web e dei social Network Aziendali (LinkedIn, Facebook, Twitter)
-            Creazione dei contenuti web di testo e di video in ottica SEO Gestione
-            della comunicazione associativa ed organizzativa (Newsletter, email, inviti etc.)
-            "Potrebbe interessarti: https://www.romatoday.it/annunci/social-media-e-web-marketing-manager-3hkbl.job
-            Seguici su Facebook: https://www.facebook.com/pages/RomaToday/41916963809
-        </article>
-        <footer>
-            <details>
-                <summary>Approfondimenti</summary>
-                <a href="calin-furculita.html">News 1</a><br>
-                <a href="calin-furculita.html">News 2</a>
-            </details>
-            <small>Autore: IFTS - Calin Furculita</small>
-        </footer>
+<section class="container" id="chi-siamo">
+    <div>
+        <img src="strumenti-musicali.png">
+    </div>
+    <div>
+        <h2>Chi Siamo</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <button>Scopri di più</button>
+    </div>
+</section>
+<section id="contatti">
+    <section id="pellicola">
+        <div>CONTATTI</div>
+        <div>
+            <form name="contatti" action="form.php" method="post" id="invia-contatti">
+                <label for="nom">Nominativo: <br></label>
+                <input type="text" name="nom" id="nom" placeholder="Nominativo" autocomplete="off"/><br>
+                <label for="mail">e-mail: <br></label>
+                <input type="email" name="mail" id="mail" placeholder="Email"><br>
+                <button>Invia</button>
+            </form>
+        </div>
     </section>
 </section>
+<section id="ragione-sociale">
+    <div>
+        <img src="logosmall.png" alt="logo-small">
+        <h3>Società s.r.l.</h3>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+            some form, by injected humour, or randomised words</p>
+    </div>
+    <div></div>
+    <div></div>
+    <div>
+        <h3>Menù</h3>
+        <ul>
+            <li><a href="#logo">Home</a></li>
+            <li><a href="#chi-siamo">Chi Siamo</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+        <h3>Link</h3>
+        <ul>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
+    </div>
+</section>
+<footer id="indirizzo">
+    <address>Società s.r.l. | via Garibaldi n. 1 | Rimini (RN) | P.IVA 010101010101</address>
+</footer>
 </body>
 </html>

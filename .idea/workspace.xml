@@ -22,16 +22,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finished lesson?">
-      <change afterPath="$PROJECT_DIR$/html/calin-furculita/805-2160x180.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/lezione10/azienda.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/lezione10/footer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/lezione10/lezione10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/lezione10/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/lezione10/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/lezione10/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bef9116-028f-4ca6-9147-65ea837a76ad.xml" afterDir="false" />
+    <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finished lesson 25/01">
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita-1st/calin-furculita.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/logosmall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/parallasse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/strumenti-musicali.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/calin-furculita/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/www.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/www.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/calin-furculita/805-2160x180.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/html/calin-furculita-1st/805-2160x180.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/calin-furculita/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/html/calin-furculita-1st/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/lezione10/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/lezione10/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -62,6 +66,9 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="4" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="JsBowerSettings">
     <bower-package value="" />
@@ -92,7 +99,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/lezione10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/calin-furculita" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -100,15 +107,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\xampp\htdocs\www\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\html\calin-furculita" />
       <recent name="C:\xampp\htdocs\www\html\lezione10" />
       <recent name="C:\xampp\htdocs\www\php" />
       <recent name="C:\xampp\htdocs\www\php\lezione3" />
       <recent name="C:\xampp\htdocs\www\php\lezione2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\www\html\calin-furculita" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.calin-furculita.php">
@@ -159,7 +170,9 @@
       <workItem from="1641802507432" duration="10032000" />
       <workItem from="1642667659748" duration="758000" />
       <workItem from="1643017544981" duration="3136000" />
-      <workItem from="1643098069708" duration="13812000" />
+      <workItem from="1643098069708" duration="14272000" />
+      <workItem from="1643183683177" duration="908000" />
+      <workItem from="1643184639199" duration="8743000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -301,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643025343543</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="finished lesson 25/01">
+      <created>1643112483766</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1643112483766</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +357,8 @@
     <MESSAGE value="finisehd test" />
     <MESSAGE value="finished test" />
     <MESSAGE value="finished lesson?" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished lesson?" />
+    <MESSAGE value="finished lesson 25/01" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished lesson 25/01" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

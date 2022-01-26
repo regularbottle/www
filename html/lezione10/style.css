@@ -1,55 +1,63 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
-.container{
+
+.container {
     width: 90%;
     margin: 100px auto 16px;
 }
+
 .header {
     margin-top: 32px;
     display: flex;
     justify-content: space-evenly;
     align-content: center;
 }
+
 #top-menu {
     display: none;
 }
 
-.menu ul, li{
+.menu ul, li {
     font-size: larger;
     color: white;
 }
+
 .menu li {
     margin-top: 10px;
     border: 2px solid black;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(24,48,50,1) 35%, rgba(53,115,120,1) 79%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(24, 48, 50, 1) 35%, rgba(53, 115, 120, 1) 79%);
     padding: 16px;
     transform: skewY(-5deg);
 }
+
 .menu p {
     text-align: center;
     transform: skewY(5deg);
 }
+
 #logo > img {
     margin-top: 16px;
     max-width: 100px;
     max-height: 100px;
 }
+
 #banner {
     position: absolute;
     top: 0;
     z-index: -1;
     height: 200px;
     width: 100%;
-    background: rgb(3,122,144);
-    background: linear-gradient(180deg, rgba(3,122,144,1) 0%, rgba(17,173,186,1) 45%, rgba(255,255,255,1) 100%);
+    background: rgb(3, 122, 144);
+    background: linear-gradient(180deg, rgba(3, 122, 144, 1) 0%, rgba(17, 173, 186, 1) 45%, rgba(255, 255, 255, 1) 100%);
 }
 
 #immagine-azienda {
     display: flex;
     justify-content: center;
 }
+
 #immagine-azienda > img {
     max-width: 90%;
 }
@@ -83,6 +91,7 @@
     align-items: center;
     z-index: 2;
 }
+
 #wrapper > h3 {
     color: white;
     z-index: 3;
@@ -107,6 +116,7 @@
     align-items: center;
     margin: 1em auto;
 }
+
 .servizio button {
     background-color: white;
     padding: 5px;
@@ -114,6 +124,7 @@
     border-radius: 10px;
     margin-top: 1em;
 }
+
 .servizio h3 {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -123,76 +134,97 @@
     display: grid;
     grid-template-columns: 50% 50%;
 }
-#grid-1 div{
+
+#grid-1 div {
     min-height: 150px;
     background-image: url("footer.jpg");
     background-size: cover;
     background-position: center;
     margin: 5px;
 }
+
 #grid-1 div:nth-child(1) {
     grid-column: span 2;
 }
+
 #grid-1 div:nth-child(2) {
     grid-row: span 2;
 }
+
 #grid-1 div:nth-child(5) {
     grid-column: span 2;
 }
-@media screen and (min-width: 768px){
-    .container{
+
+@media screen and (min-width: 768px) {
+    .container {
         width: 80%;
     }
+
     .header {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
+
     #logo > img {
         margin-top: 8px;
         max-height: 100px;
     }
+
     #top-menu-mobile-left, #top-menu-mobile-right {
         display: none;
     }
+
     #top-menu {
-        display: inline-block;
+        display: none;
     }
+
     .menu {
         margin-top: 20px;
     }
+
     .menu li {
         display: inline-block;
     }
+
     #immagine-azienda > img {
         max-width: 80%;
     }
+
     #azienda {
         flex-direction: row;
     }
+
     #azienda > div {
         width: 50%;
     }
+
     #servizi-article {
         flex-direction: row;
     }
+
     #grid-1 {
         display: grid;
         grid-template-columns: 33% 33% 33%;
     }
+
     #grid-1 div:nth-child(1) {
         grid-column: span 2;
     }
+
     #grid-1 div:nth-child(2) {
         grid-row: span 2;
     }
+
     #grid-1 div:nth-child(3) {
         grid-row: span 2;
     }
+
     #grid-1 div:nth-child(5) {
         grid-column: span 2;
     }
 }
+
 /*.sticky {*/
 /*    position: sticky;*/
 /*    top: 0;*/

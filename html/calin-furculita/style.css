@@ -1,0 +1,213 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto 16px;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#top-menu {
+    display: flex;
+    justify-content: center;
+}
+
+#top-menu ul, #top-menu li {
+    display: inline-block;
+}
+
+#banner {
+    width: 100%;
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner div {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner h1, #banner h2 {
+    color: white;
+    background-color: black;
+}
+
+#banner button {
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    width: 9em;
+    height: 3em;
+}
+
+#servizi {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#servizi div {
+    border: 1px solid black;
+    padding: 2%;
+}
+
+#chi-siamo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chi-siamo  img {
+    max-width: 50%;
+}
+
+#chi-siamo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#chi-siamo button {
+    margin-top: 5px;
+    height: 3em;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#pellicola {
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#contatti {
+    width: 100%;
+    min-height: 300px;
+    background-image: url("parallasse.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contatti div {
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0);
+}
+
+#contatti div:nth-child(1) {
+    border-radius: 5px;
+    border: 1px solid white;
+    width: 300px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#contatti form {
+    padding: 20px;
+    display: inline-block;
+    background-color: salmon;
+    border-radius: 5px;
+}
+
+#invia-contatti label {
+    color: white;
+    background-color: rgba(0,0,0,0);
+}
+#invia-contatti input {
+    height: 30px;
+    width: 292px;
+}
+
+#invia-contatti button {
+    margin-top: 5px;
+    width: 300px;
+}
+
+#ragione-sociale {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#ragione-sociale div, img, h3, ul, li, a, p {
+    background-color: rgba(0,0,0,0);
+}
+
+#ragione-sociale div {
+    width: 75%;
+}
+
+#ragione-sociale h3, #ragione-sociale p, #ragione-sociale a{
+    color: white;
+}
+#ragione-sociale h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#indirizzo {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+    #banner div {
+        flex-direction: row;
+    }
+    #servizi {
+        flex-direction: row;
+    }
+    #chi-siamo{
+        flex-direction: row;
+    }
+    #chi-siamo div {
+        width: 50%;
+    }
+    #pellicola {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #contatti div:nth-child(1) {
+        text-align: center;
+    }
+    #ragione-sociale {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #ragione-sociale div {
+        width: 25%;
+    }
+}
