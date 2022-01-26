@@ -24,8 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6860e700-1ced-485a-9845-d8f44ae581f6" name="Default Changelist" comment="finished verifica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/calin-furculita/calin-furculita.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/calin-furculita/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/calin-furculita/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,7 @@
       <workItem from="1643017544981" duration="3136000" />
       <workItem from="1643098069708" duration="14272000" />
       <workItem from="1643183683177" duration="908000" />
-      <workItem from="1643184639199" duration="11080000" />
+      <workItem from="1643184639199" duration="12286000" />
     </task>
     <task id="LOCAL-00001" summary="added php file">
       <created>1639124680678</created>
@@ -318,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643193700090</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="finished verifica">
+      <created>1643196138062</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1643196138062</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
