@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          referrerpolicy="no-referrer" rel="stylesheet"/>
     <title>Calin Furculita</title>
 </head>
 <body>
 <section id="logo">
-    <img src="logo.png" alt="logo">
+    <img alt="logo" src="logo.png">
 </section>
 <nav id="top-menu">
     <ul>
@@ -73,11 +73,11 @@
     <section id="pellicola">
         <div>CONTATTI</div>
         <div>
-            <form name="contatti" action="form.php" method="post" id="invia-contatti">
+            <form action="form.php" id="invia-contatti" method="post" name="contatti">
                 <label for="nom">Nominativo: <br></label>
-                <input type="text" name="nom" id="nom" placeholder="Nominativo" autocomplete="off"/><br>
+                <input autocomplete="off" id="nom" name="nom" placeholder="Nominativo" type="text"/><br>
                 <label for="mail">e-mail: <br></label>
-                <input type="email" name="mail" id="mail" placeholder="Email"><br>
+                <input id="mail" name="mail" placeholder="Email" type="email"><br>
                 <button>Invia</button>
             </form>
         </div>
@@ -85,7 +85,7 @@
 </section>
 <section id="ragione-sociale">
     <div>
-        <img src="logosmall.png" alt="logo-small">
+        <img alt="logo-small" src="logosmall.png">
         <h3>Società s.r.l.</h3>
         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
             some form, by injected humour, or randomised words</p>

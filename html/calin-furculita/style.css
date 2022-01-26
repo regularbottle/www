@@ -1,8 +1,9 @@
 * {
     font-family: 'Roboto', sans-serif;
+}
+body {
     background-color: #f2f2f2;
 }
-
 .container {
     width: 90%;
     margin: 20px auto 16px;
@@ -68,14 +69,14 @@
     padding: 2%;
 }
 
-#chi-siamo{
+#chi-siamo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#chi-siamo  img {
+#chi-siamo img {
     max-width: 50%;
 }
 
@@ -94,7 +95,7 @@
 }
 
 #pellicola {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     min-height: 300px;
     display: flex;
@@ -116,7 +117,6 @@
 
 #contatti div {
     margin-top: 20px;
-    background-color: rgba(0,0,0,0);
 }
 
 #contatti div:nth-child(1) {
@@ -139,8 +139,8 @@
 
 #invia-contatti label {
     color: white;
-    background-color: rgba(0,0,0,0);
 }
+
 #invia-contatti input {
     height: 30px;
     width: 292px;
@@ -159,17 +159,16 @@
     flex-direction: column;
     justify-content: center;
 }
-#ragione-sociale div, img, h3, ul, li, a, p {
-    background-color: rgba(0,0,0,0);
-}
+
 
 #ragione-sociale div {
     width: 75%;
 }
 
-#ragione-sociale h3, #ragione-sociale p, #ragione-sociale a{
+#ragione-sociale h3, #ragione-sociale p, #ragione-sociale a {
     color: white;
 }
+
 #ragione-sociale h3 {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -184,29 +183,37 @@
     .container {
         width: 80%;
     }
+
     #banner div {
         flex-direction: row;
     }
+
     #servizi {
         flex-direction: row;
     }
-    #chi-siamo{
+
+    #chi-siamo {
         flex-direction: row;
     }
+
     #chi-siamo div {
         width: 50%;
     }
+
     #pellicola {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
     #contatti div:nth-child(1) {
         text-align: center;
     }
+
     #ragione-sociale {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
     #ragione-sociale div {
         width: 25%;
     }
