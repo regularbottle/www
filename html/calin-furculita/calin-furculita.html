@@ -14,78 +14,80 @@
     <title>Calin Furculita</title>
 </head>
 <body>
-<section id="logo">
-    <img alt="logo" src="logo.png">
+<section class="flex" id="logo">
+    <img alt="logo" src="./logo.png">
 </section>
-<nav id="top-menu">
+<nav class="flex" id="top-menu">
     <ul>
         <li><a href="#logo">Home |</a></li>
         <li><a href="#chi-siamo"> Chi Siamo |</a></li>
         <li><a href="#contatti"> Contatti |</a></li>
     </ul>
 </nav>
-<section id="banner">
+<section class="container flex" id="banner">
     <h1>CSS</h1>
     <h2>Responsive Web Design</h2>
-    <div>
+    <div class="flex">
         <button>Scopri di Più</button>
         <button>Contatti</button>
     </div>
 </section>
-<section class="container" id="servizi">
+<section class="container flex" id="servizi">
     <div>
         <i class="fab fa-accusoft fa-5x"></i>
         <h3>Display</h3>
         <p>As the name says, the theme is designed with minimalism in mind. It's ideal for Designers and Photographers.
-            Minimaluu lets your work speak for itself</p>
+            Minimal lets your work speak for itself</p>
     </div>
     <div>
         <i class="fab fa-500px fa-5x"></i>
         <h3>Display</h3>
         <p>As the name says, the theme is designed with minimalism in mind. It's ideal for Designers and Photographers.
-            Minimaluu lets your work speak for itself</p>
+            Minimal lets your work speak for itself</p>
 
     </div>
     <div>
         <i class="fas fa-align-center fa-5x"></i>
         <h3>Display</h3>
         <p>As the name says, the theme is designed with minimalism in mind. It's ideal for Designers and Photographers.
-            Minimaluu lets your work speak for itself</p>
+            Minimal lets your work speak for itself</p>
 
     </div>
 </section>
-<section class="container" id="chi-siamo">
-    <div>
-        <img src="strumenti-musicali.png">
+<section class="container flex" id="chi-siamo">
+    <div class="flex">
+        <img alt="strumenti-musicali" src="./strumenti-musicali.png">
     </div>
-    <div>
+    <div class="flex">
         <h2>Chi Siamo</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
             electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Latraste sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.</p>
         <button>Scopri di più</button>
     </div>
 </section>
-<section id="contatti">
-    <section id="pellicola">
-        <div>CONTATTI</div>
-        <div>
-            <form action="form.php" id="invia-contatti" method="post" name="contatti">
-                <label for="nom">Nominativo: <br></label>
-                <input autocomplete="off" id="nom" name="nom" placeholder="Nominativo" type="text"/><br>
-                <label for="mail">e-mail: <br></label>
-                <input id="mail" name="mail" placeholder="Email" type="email"><br>
-                <button>Invia</button>
-            </form>
-        </div>
+<section id="parallasse">
+    <section id="wrapper">
+        <section class="container flex" id="contatti">
+            <div>CONTATTI</div>
+            <div>
+                <form action="form.php" id="invia-contatti" method="post" name="contatti">
+                    <label for="nom">Nominativo: <br></label>
+                    <input autocomplete="off" id="nom" name="nom" placeholder="Nominativo" type="text"/><br>
+                    <label for="mail">e-mail: <br></label>
+                    <input id="mail" name="mail" placeholder="Email" type="email"><br>
+                    <button>Invia</button>
+                </form>
+            </div>
+        </section>
     </section>
 </section>
-<section id="ragione-sociale">
+<section class="flex" id="ragione-sociale">
     <div>
-        <img alt="logo-small" src="logosmall.png">
+        <img alt="logo-small" src="./logosmall.png">
         <h3>Società s.r.l.</h3>
         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
             some form, by injected humour, or randomised words</p>
@@ -106,7 +108,7 @@
         </ul>
     </div>
 </section>
-<footer id="indirizzo">
+<footer class="flex" id="indirizzo">
     <address>Società s.r.l. | via Garibaldi n. 1 | Rimini (RN) | P.IVA 010101010101</address>
 </footer>
 </body>

@@ -1,20 +1,17 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
     background-color: #f2f2f2;
 }
+
 .container {
     width: 90%;
     margin: 20px auto 16px;
 }
 
-#logo {
-    display: flex;
-    justify-content: center;
-}
-
-#top-menu {
+.flex {
     display: flex;
     justify-content: center;
 }
@@ -28,19 +25,13 @@ body {
     background-color: black;
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-top: 25px;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #banner div {
     background-color: black;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 #banner h1, #banner h2 {
@@ -59,7 +50,6 @@ body {
 }
 
 #servizi {
-    display: flex;
     flex-direction: column;
     text-align: center;
 }
@@ -70,10 +60,8 @@ body {
 }
 
 #chi-siamo {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #chi-siamo img {
@@ -81,10 +69,8 @@ body {
 }
 
 #chi-siamo div {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #chi-siamo button {
@@ -94,18 +80,7 @@ body {
     border-radius: 5px;
 }
 
-#pellicola {
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-}
-
-#contatti {
+#parallasse {
     width: 100%;
     min-height: 300px;
     background-image: url("parallasse.jpg");
@@ -115,22 +90,32 @@ body {
     background-size: cover;
 }
 
-#contatti div {
-    margin-top: 20px;
+#wrapper {
+    width: 100%;
+    min-height: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#contatti {
+    min-height: 300px;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contatti div:nth-child(1) {
     border-radius: 5px;
     border: 1px solid white;
-    width: 300px;
+    width: 70%;
     color: white;
     padding: 20px;
     text-align: center;
     font-weight: bold;
     font-size: 2em;
+    margin-bottom: 20px;
 }
 
-#contatti form {
+#contatti div:nth-child(2) {
+    width: 70%;
     padding: 20px;
     display: inline-block;
     background-color: salmon;
@@ -143,21 +128,19 @@ body {
 
 #invia-contatti input {
     height: 30px;
-    width: 292px;
+    width: 90%;
 }
 
 #invia-contatti button {
     margin-top: 5px;
-    width: 300px;
+    width: 92%;
 }
 
 #ragione-sociale {
     margin-top: 20px;
     padding: 20px;
     background-color: black;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 
@@ -172,11 +155,6 @@ body {
 #ragione-sociale h3 {
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-#indirizzo {
-    display: flex;
-    justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -200,13 +178,19 @@ body {
         width: 50%;
     }
 
-    #pellicola {
+    #contatti {
         flex-direction: row;
         justify-content: space-evenly;
     }
 
     #contatti div:nth-child(1) {
-        text-align: center;
+        width: 70%;
+        margin: 20px;
+        text-align: left;
+    }
+
+    #contatti div:nth-child(2) {
+        width: 30%;
     }
 
     #ragione-sociale {
