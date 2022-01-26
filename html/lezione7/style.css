@@ -24,7 +24,6 @@ h3 + p{
     text-decoration: underline;
 }
 
-/*selettori di attributi*/
 small[data-author]{
     text-transform: uppercase;
     font-style: italic;
@@ -35,7 +34,6 @@ small[data-author="Rita"]{
 small[data-author="Giovanni"]{
     color: blue;
 }
-/*pseudoclassi*/
 ul#menu-principale li:first-child{
     text-decoration: underline;
 }
@@ -82,9 +80,6 @@ div {
 div:empty{
     background-color: crimson;
 }
-#sequenza div:not(.normale){
-    font-size: 2em;
-}
 input:disabled{
     background-color: black;
     color: white;
@@ -95,7 +90,6 @@ input:enabled{
 input:checked + label{
     background-color: red;
 }
-/*media query*/
 @media screen and (min-width: 576px) {
     h1 {
         color: orange;

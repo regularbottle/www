@@ -80,9 +80,9 @@
     //fine 4
 
     $numero = 423;
-    $quantitaCifre = strlen("$numero");
+    $qCifre = strlen("$numero");
 
-    echo "Il numero $numero appartiene ".correctNumber($quantitaCifre);
+    echo "Il numero $numero appartiene ".correctNumber($qCifre);
     echo "<hr>";
     //fine 5
 
@@ -272,7 +272,7 @@
             echo "<i>".$votoStudenti[$i]."</i> ";
         }
     }
-    echo "<table style='border: 1px solid black; border-collapse: collapse'><td>Sono state assegnate ".count($lodi)." lodi</td></table>";
+    echo "<table style='border: 1px solid black; border-collapse: collapse'>Sono state assegnate ".count($lodi)." lodi</table>";
 
     echo "<br>La media delle sufficienze è ".number_format(($mediaSufficienti/count($votoSufficiente)));
 

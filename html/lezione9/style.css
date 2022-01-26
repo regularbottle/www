@@ -3,11 +3,11 @@
     font-family: 'Roboto', sans-serif;
 }
 @font-face{
-    /*src:url('./Oswald-VariableFont_wght.ttf');*/
+    /*src:url('./Oswald-VariableFont_weight.ttf');*/
     font-family:'Oswald';
 }
 body, ul {
-    margin: 0px;
+    margin: 0;
 }
 .container{
     width: 90%;
@@ -24,14 +24,14 @@ body, ul {
 #riferimenti {
     background-color: #01579B;
     overflow: auto;
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 #riferimenti a,#riferimenti i{
     color: white;
 }
 #riferimenti .container{
-    margin-top:0px;
-    margin-bottom:0px;
+    margin-top:0;
+    margin-bottom:0;
 }
 #phone{
     float: left;
@@ -45,7 +45,7 @@ body, ul {
 #top-menu {
     background-color: #1E88E5;
     position: sticky;
-    top:0px;
+    top:0;
     z-index: 10;
 }
 #top-menu ul{
@@ -83,14 +83,14 @@ h1.text-oswald{
     z-index: 2;
 }
 #banner-titoli h2,#banner-titoli h3{
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0 0 0;
     color:white;
 }
 .pellicola {
     width: 100%;
     height: 100%;
     position: absolute;
-    top:0px;
+    top:0;
     background-color: rgba(0, 0, 0, 0.671);
 }
 #banner-titoli button{
@@ -99,7 +99,7 @@ h1.text-oswald{
 }
 /*gallery*/
 #gallery {
-    font-size: 0px;
+    font-size: 0;
 }
 #gallery div{
     width: 100%;
@@ -118,13 +118,7 @@ h1.text-oswald{
 #gallery div:nth-child(3){
     background-image: url('bg3.jpg');
 }
-/* position */
-#position {
-    border: 1px solid black;
-    height: 400px;
-    font-size: 0px;
-    position: relative;
-}
+
 #position div {
     width:150px;
     height: 150px;
@@ -164,12 +158,12 @@ h1.text-oswald{
 
     #top-menu ul li{
         display: inline;
-        padding: 0px 10px;
+        padding: 0 10px;
     }
     #gallery div{
         width: 32%;
         display: inline-block;
-        margin-top: 0px;
+        margin-top: 0;
     }
     #gallery div:nth-child(1),
     #gallery div:nth-child(2){

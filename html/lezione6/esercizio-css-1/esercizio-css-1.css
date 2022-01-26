@@ -4,8 +4,8 @@ h1{
 article#art-1, article#art-3{
     background-color: #0277BD;
 }
-article#art-1 p, article#art-3 p, 
-article#art-1 h1, article#art-1 h2, article#art-1 h3, article#art-1 h4, article#art-1 h5, article#art-1 h6
+article#art-1 p, article#art-3 p,
+article#art-1 h1, article#art-1 h2, article#art-1 h3, article#art-1 h4, article#art-1 h5, article#art-1 h6,
 article#art-3 h1, article#art-3 h2, article#art-3 h3, article#art-3 h4, article#art-3 h5, article#art-3 h6
 {
         color: white;
@@ -35,9 +35,6 @@ ul#menu-footer{
 }
 article p + a {
     color: #FFC107;
-}
-ul li.menu-item{
-    display: inline
 }
 
 @media screen and (min-width:768px){

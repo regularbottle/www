@@ -66,10 +66,10 @@
 
 <body>
 <div class="container">
-  <button class="itemLinks" onclick="openTab(event, 'Accedi')" id="defaultOpen">
+  <button class="itemLinks" id="defaultOpen">
     Accedi
   </button>
-  <button class="itemLinks" onclick="openTab(event, 'Registrati')">
+  <button class="itemLinks">
     Registrati
   </button>
 </div>
@@ -157,22 +157,6 @@
 </div>
 <script>
   document.getElementById("defaultOpen").click();
-  function openTab(evt, functionName) {
-    let i, itemContent, itemLinks;
-
-    itemContent = document.getElementsByClassName("itemContent");
-    for (i = 0; i < itemContent.length; i++) {
-      itemContent[i].style.display = "none";
-    }
-
-    itemLinks = document.getElementsByClassName("itemLinks");
-    for (i = 0; i < itemLinks.length; i++) {
-      itemLinks[i].className = itemLinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(functionName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
 </script>
 </body>
 </html>

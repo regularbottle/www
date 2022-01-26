@@ -47,6 +47,7 @@
 
     $temperatura_media = 0;
     $giorni_menozero = 0;
+    $temperature[] = 0;
     $giorni_passati = daysPassed(date('m'),date('d'));
     for ($i = 0; $i<$giorni_passati; $i++) {
         $temperature[] = rand(-10,30);
