@@ -11,6 +11,7 @@
             display: flex;
             justify-content: flex-start;
         }
+
         @media all and (max-width: 800px) {
             .container {
                 justify-content: space-around;
@@ -35,7 +36,7 @@
         $a = 1;
         $b = 2;
 
-        if ($a>$b) {
+        if ($a > $b) {
             echo "$a maggiore $b";
         } else if ($a == $b) {
             echo "$a uguale $b";
@@ -58,10 +59,10 @@
         }
         echo "I valori iniziali sono <ol type=\"a\"><li>$a</li><li>$b</li></ol>";
         $c = 0;
-        if ($a<$b) {
-            $c=$b;
-            $b=$a;
-            $a=$c;
+        if ($a < $b) {
+            $c = $b;
+            $b = $a;
+            $a = $c;
         }
         echo "Ora i valori sono <ol type=\"a\"><li>$a</li><li>$b</li></ol>";
         ?>
@@ -76,21 +77,21 @@
             $ore = random_int(1, 100);
         } catch (Exception $e) {
         }
-        if ($totale<$ore) {
-            $c=$ore;
-            $ore=$totale;
-            $totale=$c;
+        if ($totale < $ore) {
+            $c = $ore;
+            $ore = $totale;
+            $totale = $c;
         }
 
         $resto = $totale % $ore;
         $servono = ($totale - $resto) / $ore;
 
-        echo "Servono ".$servono." lezioni per finire il corso da $totale ore";
+        echo "Servono " . $servono . " lezioni per finire il corso da $totale ore";
         if ($resto != 0) {
             if ($resto == 1) {
                 echo " facendo $ore ore ogni volta più una lezione da un'ora";
             } else {
-                echo " facendo $ore ore ogni volta più una lezione da ".$resto." ore";
+                echo " facendo $ore ore ogni volta più una lezione da " . $resto . " ore";
             }
         } else {
             echo " facendo $ore ore ogni volta";
@@ -103,13 +104,13 @@
             $x = random_int(1, 100);
         } catch (Exception $e) {
         }
-        if  ((1<=$x) && ($x<=50)) {
+        if ((1 <= $x) && ($x <= 50)) {
             echo "Il numero $x è compreso tra 1 e 50!";
         } else {
             echo "Il numero $x non è compreso tra 1 e 50!";
         }
         echo "<br>";
-        if  ((30>$x) || ($x>40)) {
+        if ((30 > $x) || ($x > 40)) {
             echo "Sei idoneo a fare il corso perché hai $x anni!";
         } else {
             echo "Non puoi accedere a questo corso perché hai $x anni";
