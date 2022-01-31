@@ -12,9 +12,9 @@
 function alternate_colors(int $colori): string
 {
     switch ($colori) {
-        case 1:
+        case 0:
             return "#F0F0F0";
-        case 2:
+        case 1:
             return "#FFFFFF";
         default:
             return "";
@@ -30,7 +30,7 @@ $valore_medio_fatturato = 0;
 $indice_colore = 0;
 
 foreach ($categoria as $item => $value) {
-    echo "<p style='background-color: " . alternate_colors($indice_colore%2 + 1) . "'>Nome: " . $value['nome'] . "</p>";
+    echo "<p style='background-color: " . alternate_colors($indice_colore%2) . "'>Nome: " . $value['nome'] . "</p>";
     $somma_prodotti += $value['n_prodotti'];
     $fatturato[] = [$value['fatturato'], $value['nome']];
     $valore_medio_fatturato += $value['fatturato'];
