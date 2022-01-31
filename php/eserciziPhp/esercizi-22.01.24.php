@@ -38,6 +38,7 @@ for ($i = 3; $i < 97; $i++) {
 }
 $indice_corso = 0;
 $indice_voto = 0;
+
 echo "<table style='border: 1px solid black'><caption><h3>La tabella Nutrizionale</h3></caption><thead><tr><th>Cognome</th><th>Nome</th><th>Corso</th><th>Voto</th></tr></thead><tbody>";
 foreach ($studenti as $v1) {
     echo "<tr>";

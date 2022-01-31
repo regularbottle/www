@@ -20,6 +20,34 @@ function alternate_colors(int $colori): string
             return "";
     }
 }
+function get_L2_Keys(array $array): array
+{
+    $result = array();
+    foreach($array as $sub) {
+        $result = array_merge($result, $sub);
+    }
+    return array_keys($result);
+}
+function print_as_table(array $array, string $nome_tabella)
+{
+    $chiavi = get_L2_Keys($array);
+
+    echo "<table style='border: 1px solid black'>
+            <caption><h3>$nome_tabella</h3></caption>
+            <thead><tr>";
+            for($i = 0; $i<count($chiavi);$i++) {
+               echo "<th>".ucfirst($chiavi[$i])."</th>";
+            }
+    echo "</tr></thead><tbody>";
+    foreach ($array as $v1) {
+        echo "<tr>";
+        foreach ($v1 as $v2) {
+            echo "<td style='border: 1px solid black'> $v2</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</tbody></table>";
+}
 
 $categoria['categoria1'] = ['nome' => "scarpe", 'n_prodotti' => "20", 'fatturato' => "1200"];
 $categoria['categoria2'] = ['nome' => "maglioni", 'n_prodotti' => "12", 'fatturato' => "1800"];
@@ -61,21 +89,7 @@ echo "<hr>";
 foreach ($categoria as $item => $value) {
     $categoria[$item]['anno'] = date('Y');
 }
-
-
-echo "<table style='border: 1px solid black'>
-            <caption><h3>Prodotti</h3></caption>
-            <thead><tr><th>Nome</th><th>Quantità</th><th>Fatturato</th><th>Anno</th></tr></thead>
-            <tbody>";
-foreach ($categoria as $item => $value) {
-    echo "<tr>
-                <td>" . $value['nome'] . "</td> 
-                <td>" . $value['n_prodotti'] . "</td> 
-                <td>" . $value['fatturato'] . "€</td> 
-                <td>" . $value['anno'] . "</td>
-          </tr>";
-}
-echo "</tbody></table>";
+print_as_table($categoria, "Prodotti");
 echo "<hr>";
 
 $anno_corrente = date('Y');
