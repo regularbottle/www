@@ -20,14 +20,16 @@ function alternate_colors(int $colori): string
             return "";
     }
 }
+
 function get_L2_Keys(array $array): array
 {
     $result = array();
-    foreach($array as $sub) {
+    foreach ($array as $sub) {
         $result = array_merge($result, $sub);
     }
     return array_keys($result);
 }
+
 function print_as_table(array $array, string $nome_tabella)
 {
     $chiavi = get_L2_Keys($array);
@@ -35,9 +37,9 @@ function print_as_table(array $array, string $nome_tabella)
     echo "<table style='border: 1px solid black'>
             <caption><h3>$nome_tabella</h3></caption>
             <thead><tr>";
-            for($i = 0; $i<count($chiavi);$i++) {
-               echo "<th>".ucfirst($chiavi[$i])."</th>";
-            }
+    for ($i = 0; $i < count($chiavi); $i++) {
+        echo "<th>" . ucfirst($chiavi[$i]) . "</th>";
+    }
     echo "</tr></thead><tbody>";
     foreach ($array as $v1) {
         echo "<tr>";
@@ -63,7 +65,7 @@ $valore_medio_fatturato = 0;
 $indice_colore = 0;
 
 foreach ($categoria as $item => $value) {
-    echo "<p style='background-color: " . alternate_colors($indice_colore%2) . "'>Nome: " . $value['nome'] . "</p>";
+    echo "<p style='background-color: " . alternate_colors($indice_colore % 2) . "'>Nome: " . $value['nome'] . "</p>";
     $somma_prodotti += $value['n_prodotti'];
     $fatturato[] = [$value['fatturato'], $value['nome']];
     $valore_medio_fatturato += $value['fatturato'];
@@ -95,7 +97,7 @@ echo "<hr>";
 $anno_corrente = date('Y');
 $indice_fatturato = 0;
 
-for ($i = $anno_corrente; $i >= ($anno_corrente - 10); $i--) {
+for ($i = $anno_corrente; $i > ($anno_corrente - 10); $i--) {
     $fatturato_annuo[$i] = $valore_medio_fatturato - 100 * $indice_fatturato;
     $indice_fatturato++;
 }
