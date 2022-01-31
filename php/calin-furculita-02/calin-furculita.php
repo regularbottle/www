@@ -22,8 +22,13 @@ function alternate_colors(int $colori): string
 }
 
 $categoria['categoria1'] = ['nome' => "scarpe", 'n_prodotti' => "20", 'fatturato' => "1200"];
-$categoria['categoria2'] = ['nome' => "maglioni", 'n_prodotti' => "12", 'fatturato' => "800"];
-$categoria['categoria3'] = ['nome' => "pantaloni", 'n_prodotti' => "5", 'fatturato' => "650"];
+$categoria['categoria2'] = ['nome' => "maglioni", 'n_prodotti' => "12", 'fatturato' => "1800"];
+$categoria['categoria3'] = ['nome' => "pantaloni", 'n_prodotti' => "55", 'fatturato' => "2650"];
+$categoria['categoria4'] = ['nome' => "berretti", 'n_prodotti' => "23", 'fatturato' => "650"];
+$categoria['categoria5'] = ['nome' => "camice", 'n_prodotti' => "53", 'fatturato' => "6650"];
+$categoria['categoria6'] = ['nome' => "jeans", 'n_prodotti' => "61", 'fatturato' => "1650"];
+$categoria['categoria7'] = ['nome' => "sciarpe", 'n_prodotti' => "235", 'fatturato' => "7850"];
+$categoria['categoria8'] = ['nome' => "guanti", 'n_prodotti' => "2053", 'fatturato' => "1230"];
 
 $somma_prodotti = 0;
 $valore_medio_fatturato = 0;
@@ -74,7 +79,7 @@ echo "<hr>";
 $anno_corrente = date('Y');
 $indice_fatturato = 0;
 
-for ($i = $anno_corrente; $i > ($anno_corrente - 10); $i--) {
+for ($i = $anno_corrente; $i >= ($anno_corrente - 10); $i--) {
     $fatturato_annuo[$i] = $valore_medio_fatturato - 100 * $indice_fatturato;
     $indice_fatturato++;
 }
@@ -82,7 +87,6 @@ for ($i = $anno_corrente; $i > ($anno_corrente - 10); $i--) {
 foreach ($fatturato_annuo as $item => $value) {
     echo "Per l'anno: " . $item . " il fatturato era di: " . $value . "€<br>";
 }
-
 ?>
 </body>
 </html>
