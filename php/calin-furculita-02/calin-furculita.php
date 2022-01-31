@@ -20,7 +20,6 @@ function alternate_colors(int $colori): string
             return "";
     }
 }
-
 function get_L2_Keys(array $array): array
 {
     $result = array();
@@ -29,7 +28,6 @@ function get_L2_Keys(array $array): array
     }
     return array_keys($result);
 }
-
 function print_as_table(array $array, string $nome_tabella)
 {
     $chiavi = get_L2_Keys($array);
@@ -92,6 +90,7 @@ foreach ($categoria as $item => $value) {
     $categoria[$item]['anno'] = date('Y');
 }
 print_as_table($categoria, "Prodotti");
+
 echo "<hr>";
 
 $anno_corrente = date('Y');
