@@ -83,7 +83,7 @@ body {
 #parallasse {
     width: 100%;
     min-height: 300px;
-    background-image: url("parallasse.jpg");
+    background-image: url("./parallasse.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
