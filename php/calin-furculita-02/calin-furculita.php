@@ -24,11 +24,11 @@ function alternate_colors(int $colori): string
 $categoria['categoria1'] = ['nome' => "scarpe", 'n_prodotti' => "20", 'fatturato' => "1200"];
 $categoria['categoria2'] = ['nome' => "maglioni", 'n_prodotti' => "12", 'fatturato' => "1800"];
 $categoria['categoria3'] = ['nome' => "pantaloni", 'n_prodotti' => "55", 'fatturato' => "2650"];
-$categoria['categoria4'] = ['nome' => "berretti", 'n_prodotti' => "23", 'fatturato' => "650"];
-$categoria['categoria5'] = ['nome' => "camice", 'n_prodotti' => "53", 'fatturato' => "6650"];
-$categoria['categoria6'] = ['nome' => "jeans", 'n_prodotti' => "61", 'fatturato' => "1650"];
-$categoria['categoria7'] = ['nome' => "sciarpe", 'n_prodotti' => "235", 'fatturato' => "7850"];
-$categoria['categoria8'] = ['nome' => "guanti", 'n_prodotti' => "2053", 'fatturato' => "1230"];
+$categoria['categoria33'] = ['nome' => "berretti", 'n_prodotti' => "23", 'fatturato' => "650"];
+$categoria['categoria34'] = ['nome' => "camice", 'n_prodotti' => "53", 'fatturato' => "6650"];
+$categoria['categoria35'] = ['nome' => "jeans", 'n_prodotti' => "61", 'fatturato' => "1650"];
+$categoria['categoria36'] = ['nome' => "sciarpe", 'n_prodotti' => "235", 'fatturato' => "7850"];
+$categoria['categoria37'] = ['nome' => "guanti", 'n_prodotti' => "2053", 'fatturato' => "1230"];
 
 $somma_prodotti = 0;
 $valore_medio_fatturato = 0;
@@ -58,9 +58,11 @@ echo "Il valore medio del fatturato è: " . $valore_medio_fatturato / count($fat
 
 echo "<hr>";
 
-for ($i = 0; $i < count($categoria); $i++) {
-    $categoria['categoria' . ($i + 1)]['anno'] = date('Y');
+foreach ($categoria as $item => $value) {
+    $categoria[$item]['anno'] = date('Y');
 }
+
+
 echo "<table style='border: 1px solid black'>
             <caption><h3>Prodotti</h3></caption>
             <thead><tr><th>Nome</th><th>Quantità</th><th>Fatturato</th><th>Anno</th></tr></thead>
