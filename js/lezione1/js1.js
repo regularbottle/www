@@ -8,7 +8,7 @@ let x = setInterval(function showNameAndTime() {
     let currentSeconds = currentTime.getSeconds();
     currentSeconds = ("0" + currentSeconds).slice(-2);
     document.getElementById("text-change").innerHTML = "Il mio nome è "
-                                                                + document.getElementById("text-get").value
-                                                                + " e questa è l'ora corrente: "
-                                                                + currentHours + ":" + currentMinutes + ":" + currentSeconds;
+        + document.getElementById("text-get").value
+        + " e questa è l'ora corrente: "
+        + currentHours + ":" + currentMinutes + ":" + currentSeconds;
 }, 1000);

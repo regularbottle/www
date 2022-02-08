@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <!--Serve per dirgli di usare i caratteri standard UTF-8 per essere visualizzati correttamente-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!--Serve per dire al browser di occupare tutta il display/viewport del dispositivo-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
     <!--Serve per rendere compatibile il tutto con IE-Edge-->
-    <meta name="author" content="Calin" />
-    <meta name="description" content="Prima Lezione di HTML5" />
+    <meta content="Calin" name="author"/>
+    <meta content="Prima Lezione di HTML5" name="description"/>
     <!--Serve per fare lo snippet di descrizione per i motori di ricerca-->
     <title>HTML5 Lezione 2</title>
-    <link rel="icon" href="favicon.ico" />
+    <link href="favicon.ico" rel="icon"/>
     <!--L'iconcina visualizzata nella TAB-->
     <style>
-      .container {
-        display: flex;
-        justify-content: flex-start;
-      }
-      @media all and (max-width: 800px) {
         .container {
-          justify-content: space-around;
+            display: flex;
+            justify-content: flex-start;
         }
-      }
 
-      @media all and (max-width: 500px) {
-        .container {
-          flex-direction: column;
+        @media all and (max-width: 800px) {
+            .container {
+                justify-content: space-around;
+            }
         }
-      }
 
-      .item {
-        padding-left: 5%;
-        padding-right: 5%;
-      }
+        @media all and (max-width: 500px) {
+            .container {
+                flex-direction: column;
+            }
+        }
 
-      table,
-      th,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align: center;
-        vertical-align: auto;
-      }
-      th {
-        background-color: yellowgreen;
-      }
+        .item {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
 
-      #esercizioTabelle th {
-        background-color: lightsalmon;
-      }
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: auto;
+        }
+
+        th {
+            background-color: yellowgreen;
+        }
+
+        #esercizioTabelle th {
+            background-color: lightsalmon;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <h1>Lezione 2 - I tag di HTML5</h1>
-    <!--Il titolo ha anche importanza semantica per i motori di ricerca-->
-    <div class="container">
-      <div class="item" id="formattazioneTesto">
+<body>
+<h1>Lezione 2 - I tag di HTML5</h1>
+<!--Il titolo ha anche importanza semantica per i motori di ricerca-->
+<div class="container">
+    <div class="item" id="formattazioneTesto">
         <h2>I Titoli</h2>
         <h4>div</h4>
         <p>Il div è un tag di blocco che si...</p>
@@ -71,25 +73,25 @@
         <h3>Personalizzare lo stile</h3>
         <h4>Tag strong/b, em/i e u</h4>
         <p>
-          La personalizzazione dello stile di un testo si può ottenere mediante utilizzo del<br />
-          <strong>grassetto tramite un tag strong oppure b (bold)</strong><br />
-          <em>oppure posso enfatizzare tramite il corsivo con il tag em o i (italic)</em><br />
-          <u>oppure posso anche sottolineare il testo con il tag u</u>
+            La personalizzazione dello stile di un testo si può ottenere mediante utilizzo del<br/>
+            <strong>grassetto tramite un tag strong oppure b (bold)</strong><br/>
+            <em>oppure posso enfatizzare tramite il corsivo con il tag em o i (italic)</em><br/>
+            <u>oppure posso anche sottolineare il testo con il tag u</u>
         </p>
         <h4>Tag blockquote</h4>
         <blockquote>
-          <p>[...] fatti non foste a viver come bruti, ma per seguir virtute e canoscenza</p>
-          <cite>Inferno Canto XXVI - La Divina Commedia</cite>
+            <p>[...] fatti non foste a viver come bruti, ma per seguir virtute e canoscenza</p>
+            <cite>Inferno Canto XXVI - La Divina Commedia</cite>
         </blockquote>
         <h4>Tag cite e q</h4>
         <p>
-          Avrei spronato i miei colleghi a fare di più, li avrei incalzati citando<br />
-          <cite>Dante Alighieri</cite>: <q>Fatti non foste a viver come bruti</q>.
+            Avrei spronato i miei colleghi a fare di più, li avrei incalzati citando<br/>
+            <cite>Dante Alighieri</cite>: <q>Fatti non foste a viver come bruti</q>.
         </p>
         <h4>Tag abbr</h4>
         <p>
-          In questa guida approfondiamo l'<abbr title="Hyper Text Markup Language">HTML</abbr>
-          e ne esploriamo i tag e le potenzialità espressive.
+            In questa guida approfondiamo l'<abbr title="Hyper Text Markup Language">HTML</abbr>
+            e ne esploriamo i tag e le potenzialità espressive.
         </p>
         <h4>Tag sub e sup</h4>
         <p>CO<sub>2</sub> E=mc<sup>2</sup></p>
@@ -99,9 +101,16 @@
         <div><samp>ciao a tutti</samp> è il log in console previsto in output</div>
         <h4>Altri elementi per la formattazione del testo</h4>
         <div>
-          <del>Il testo può essere cancellato</del>, <ins>inserito</ins>, <mark>evidenziato</mark>, può
-          esprimere del valore di tempo <time datetime="2021-11-30">30 Novembre 2021</time><br />
-          <small>oppure può avere un'importanza minore tramite il tag small</small>
+            <del>Il testo può essere cancellato</del>
+            ,
+            <ins>inserito</ins>
+            ,
+            <mark>evidenziato</mark>
+            , può
+            esprimere del valore di tempo
+            <time datetime="2021-11-30">30 Novembre 2021</time>
+            <br/>
+            <small>oppure può avere un'importanza minore tramite il tag small</small>
         </div>
         <h4>Tag pre</h4>
         <pre>
@@ -111,35 +120,35 @@
                 e il browser            la rispetterà fedelmente.</pre
         >
         <h4>Tag address</h4>
-        <address>BlazeIt!<br />Via della Repubblica 420<br />47923 Rimini (RN)</address>
+        <address>BlazeIt!<br/>Via della Repubblica 420<br/>47923 Rimini (RN)</address>
         <h4>HTML Entities</h4>
         <div>il tag &lt;div&gt; è un tag di blocco.</div>
-      </div>
-      <!--fine argomento 1 titoli e formattazione testo-->
+    </div>
+    <!--fine argomento 1 titoli e formattazione testo-->
 
-      <div class="item" id="liste">
+    <div class="item" id="liste">
         <h2>Le Liste ul, ol, dl</h2>
         <h4>ul sono liste NON ordinate</h4>
         <ul style="list-style-type: square">
-          <li>Home</li>
-          <li>Chi siamo</li>
-          <li>Dove siamo</li>
-          <li>Contatti</li>
+            <li>Home</li>
+            <li>Chi siamo</li>
+            <li>Dove siamo</li>
+            <li>Contatti</li>
         </ul>
         <h4>ol sono le liste sono liste ordinate</h4>
         <ol>
-          <li>Punto primo</li>
-          <li>Punto secondo</li>
-          <li>Punto terzo</li>
-          <li>Punto quarto</li>
-          <li>...</li>
+            <li>Punto primo</li>
+            <li>Punto secondo</li>
+            <li>Punto terzo</li>
+            <li>Punto quarto</li>
+            <li>...</li>
         </ol>
         <h4>dl sono le liste di definizione</h4>
         <dl>
-          <dt>il tag dl</dt>
-          <dd>è un tag utilizzato per descrivere una lista di termini</dd>
-          <dt>il tag small</dt>
-          <dd>è un tag che riduce...</dd>
+            <dt>il tag dl</dt>
+            <dd>è un tag utilizzato per descrivere una lista di termini</dd>
+            <dt>il tag small</dt>
+            <dd>è un tag che riduce...</dd>
         </dl>
 
         <!--fine argomento 2 liste-->
@@ -147,91 +156,91 @@
         <h2>Le Tabelle</h2>
         <h3>Tabella Esempio</h3>
         <table id="tabellaEsempio">
-          <caption>
-            Risultati dei controlli ICQRF sui prodotti da DOP, IGP e STG per settore merceologico
-          </caption>
-          <thead>
-          </thead>
-          <tbody>
+            <caption>
+                Risultati dei controlli ICQRF sui prodotti da DOP, IGP e STG per settore merceologico
+            </caption>
+            <thead>
+            </thead>
+            <tbody>
             <tr>
-              <td>Oli e grassi</td>
-              <td>1</td>
+                <td>Oli e grassi</td>
+                <td>1</td>
             </tr>
             <tr>
-              <td>Carne</td>
-              <td>217</td>
+                <td>Carne</td>
+                <td>217</td>
             </tr>
-          </tbody>
-          <tfoot>
+            </tbody>
+            <tfoot>
             <tr>
-              <td>Totale</td>
-              <td>218</td>
+                <td>Totale</td>
+                <td>218</td>
             </tr>
-          </tfoot>
+            </tfoot>
         </table>
 
         <h3>Esercizio sulle tabelle</h3>
         <table id="esercizioTabelle">
-          <caption>
-            Orario IIIB
-          </caption>
-          <thead>
-          </thead>
-          <tbody>
+            <caption>
+                Orario IIIB
+            </caption>
+            <thead>
+            </thead>
+            <tbody>
             <tr>
-              <td>I</td>
-              <td rowspan="3">Italiano</td>
-              <td>Geografia</td>
-              <td>Ed. artistica</td>
-              <td colspan="2">Ed. Musicale</td>
+                <td>I</td>
+                <td rowspan="3">Italiano</td>
+                <td>Geografia</td>
+                <td>Ed. artistica</td>
+                <td colspan="2">Ed. Musicale</td>
             </tr>
             <tr>
-              <td>II</td>
-              <td rowspan="2">Scienze</td>
-              <td rowspan="2">Ed. Fisica</td>
-              <td colspan="2">Matematica</td>
+                <td>II</td>
+                <td rowspan="2">Scienze</td>
+                <td rowspan="2">Ed. Fisica</td>
+                <td colspan="2">Matematica</td>
             </tr>
             <tr>
-              <td>III</td>
-              <td colspan="2">Italiano</td>
+                <td>III</td>
+                <td colspan="2">Italiano</td>
             </tr>
             <tr>
-              <td>IV</td>
-              <td colspan="2">Storia Matematica</td>
-              <td>Geografia</td>
-              <td colspan="2">Ed. tecnica</td>
+                <td>IV</td>
+                <td colspan="2">Storia Matematica</td>
+                <td>Geografia</td>
+                <td colspan="2">Ed. tecnica</td>
             </tr>
-          </tbody>
+            </tbody>
         </table>
-      </div>
-      <!--fine argomento 2 liste e tabelle-->
+    </div>
+    <!--fine argomento 2 liste e tabelle-->
 
-      <div class="item" id="link">
+    <div class="item" id="link">
         <h2>I Link</h2>
         <h4>Una lista di link</h4>
         <ul>
-          <li><a href="https://www.google.com">Vai al motore di ricerca Google</a></li>
-          <li><a href="https://www.yahoo.com">Vai al motore di ricerca Yahoo</a></li>
-          <li><a href="https://www.bing.com">Vai al motore di ricerca Bing</a></li>
-          <li><a href="https://www.duckduckgo.com">Vai al motore di ricerca DuckDuckGo</a></li>
+            <li><a href="https://www.google.com">Vai al motore di ricerca Google</a></li>
+            <li><a href="https://www.yahoo.com">Vai al motore di ricerca Yahoo</a></li>
+            <li><a href="https://www.bing.com">Vai al motore di ricerca Bing</a></li>
+            <li><a href="https://www.duckduckgo.com">Vai al motore di ricerca DuckDuckGo</a></li>
         </ul>
         <h4>Il percorso assoluto e relativo</h4>
         <ul>
-          <li>percorso assoluto: https://www...</li>
-          <li>percorso relativo: href="lezione1.html" = deve essere nella stessa cartella del file</li>
-          <li>href="/lezione1.html" = questo fa riferimento al root(www oppure C:) [/davanti]</li>
-          <li>href="./lezione1.html" = questo fa riferimento alla cartella corrente [./ davanti]</li>
-          <li>href="../lezione1.html" = questo fa riferimento alla cartella superiore [../ davanti]</li>
-          <li>
-            href="../Lezione 1/lezione1.html" = questo fa riferimento alla cartella superiore + sotto-cartella
-            Lezione1 [../~/ davanti]
-          </li>
-          <li>href="Lezione 1/lezione1.html" = questo fa riferimento alla sotto-cartella [~/ davanti]</li>
+            <li>percorso assoluto: https://www...</li>
+            <li>percorso relativo: href="lezione1.html" = deve essere nella stessa cartella del file</li>
+            <li>href="/lezione1.html" = questo fa riferimento al root(www oppure C:) [/davanti]</li>
+            <li>href="./lezione1.html" = questo fa riferimento alla cartella corrente [./ davanti]</li>
+            <li>href="../lezione1.html" = questo fa riferimento alla cartella superiore [../ davanti]</li>
+            <li>
+                href="../Lezione 1/lezione1.html" = questo fa riferimento alla cartella superiore + sotto-cartella
+                Lezione1 [../~/ davanti]
+            </li>
+            <li>href="Lezione 1/lezione1.html" = questo fa riferimento alla sotto-cartella [~/ davanti]</li>
         </ul>
-      </div>
-      <!--fine argomento 3 link-->
     </div>
+    <!--fine argomento 3 link-->
+</div>
 
-    <!--SLIDE 66-->
-  </body>
+<!--SLIDE 66-->
+</body>
 </html>

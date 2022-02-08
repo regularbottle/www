@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <!--Serve per dirgli di usare i caratteri standard UTF-8 per essere visualizzati correttamente-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!--Serve per dire al browser di occupare tutta il display/viewport del dispositivo-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
     <!--Serve per rendere compatibile il tutto con IE-Edge-->
-    <meta name="author" content="Calin" />
-    <meta name="description" content="Prima Lezione di HTML5" />
+    <meta content="Calin" name="author"/>
+    <meta content="Prima Lezione di HTML5" name="description"/>
     <!--Serve per fare lo snippet di descrizione per i motori di ricerca-->
     <title>HTML5 Lezione 2</title>
-    <link rel="icon" href="favicon.ico" />
+    <link href="favicon.ico" rel="icon"/>
     <!--L'iconcina visualizzata nella TAB-->
     <style>
-      .container {
-        display: flex;
-        justify-content: flex-start;
-      }
-      @media all and (max-width: 800px) {
         .container {
-          justify-content: space-around;
+            display: flex;
+            justify-content: flex-start;
         }
-      }
 
-      @media all and (max-width: 500px) {
-        .container {
-          flex-direction: column;
+        @media all and (max-width: 800px) {
+            .container {
+                justify-content: space-around;
+            }
         }
-      }
 
-      .item {
-        padding-left: 5%;
-        padding-right: 5%;
-      }
+        @media all and (max-width: 500px) {
+            .container {
+                flex-direction: column;
+            }
+        }
 
-      table,
-      th,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align: center;
-        vertical-align: auto;
-      }
-      th {
-        background-color: yellowgreen;
-      }
-      #esercizioTabelle th {
-        background-color: lightsalmon;
-      }
+        .item {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: auto;
+        }
+
+        th {
+            background-color: yellowgreen;
+        }
+
+        #esercizioTabelle th {
+            background-color: lightsalmon;
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="item">
+</head>
+<body>
+<div class="container">
+    <div class="item">
         <h2>Link 3A</h2>
 
         <h3 id="mio-titolo" style="margin-top: 100px">Mio Titolo 3A</h3>
-      </div>
     </div>
-  </body>
+</div>
+</body>
 </html>

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>HTML - Lezione 4</title>
 
     <style>
@@ -12,80 +12,81 @@
             float: left;
             width: 100px;
         }
+
         .descriptionLabel {
             width: 90px;
             float: none;
         }
 
-        textarea{
+        textarea {
             width: 171px;
             height: 150px;
         }
     </style>
 </head>
 <body>
-    <form action="inviaData.php" method="post">
-        <fieldset>
-            <legend>Dati Anagrafici</legend>
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" autofocus /><br />
-            <label for="cognome">Cognome: </label>
-            <input type="text" name="cognome" id="cognome" /><br />
-        </fieldset>
-        <fieldset>
-            <legend>Animali Preferiti</legend>
-            <label for="gatto" class="descriptionLabel">Gatto</label>
-            <input type="checkbox" name="gatto" id="gatto">
-            <label for="cane" class="descriptionLabel">Cane</label>
-            <input type="checkbox" name="cane" id="cane">
-            <label for="cavallo" class="descriptionLabel">Cavallo</label>
-            <input type="checkbox" name="cavallo" id="cavallo">
-            <label for="mucca" class="descriptionLabel">Mucca</label>
-            <input type="checkbox" name="mucca" id="mucca">
-        </fieldset>
-        <fieldset>
-            <legend>Dati Residenza</legend>
-            <label for="cap">CAP: </label>
-            <input type="text" name="cap" id="cap" readonly disabled value="47923"><br />
-            <label for="nation">Nazione: </label>
-            <select id="nation">
-                <option selected disabled hidden>Seleziona la Nazione</option>
-                <optgroup label="UE">
-                    <option value="Italia">Italia</option>
-                    <option value="Germania">Germania</option>
-                    <option value="Belgio">Belgio</option>
-                    <option value="Olanda">Olanda</option>
-                </optgroup>
-                <optgroup label="Extra UE">
-                    <option value="Tunisia">Tunisia</option>
-                    <option value="Algeria">Algeria</option>
-                    <option value="Libia">Libia</option>
-                </optgroup>
-            </select>
-        </fieldset>
-        <fieldset>
-            <legend>Altri Dati</legend>
-            <label for="passwordAccedi">Password: </label>
-            <input type="password" name="passwordAccedi" id="passwordAccedi" required /><br />
-            <label for="idCard">Carta d'identità: </label><br><input type="file" name="idCard" id="idCard" /><br />
-            <br>
-            <label for="textArea">Note</label>
-            <textarea id="textArea" name="textArea"></textarea>
-        </fieldset>
-        <section>
-            <h2>Colore Preferito</h2>
-            <label for="rosso" class="descriptionLabel" style="color: red">Rosso</label>
-            <input type="radio" class="colori" name="colori" id="rosso">
-            <label for="verde" class="descriptionLabel" style="color: green">Verde</label>
-            <input type="radio" class="colori" name="colori" id="verde">
-            <label for="blue" class="descriptionLabel" style="color: blue">Blue</label>
-            <input type="radio"  class="colori" name="colori" id="blue"><br>
-            <label for="aScelta" class="descriptionLabel">Scegli</label>
-            <input type="color" name="coloriScelta" id="aScelta"><br>
-        </section>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Inizializza">
-    </form>
-    <!--<script src="script.js"></script>-->
+<form action="inviaData.php" method="post">
+    <fieldset>
+        <legend>Dati Anagrafici</legend>
+        <label for="nome">Nome: </label>
+        <input autofocus id="nome" name="nome" type="text"/><br/>
+        <label for="cognome">Cognome: </label>
+        <input id="cognome" name="cognome" type="text"/><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Animali Preferiti</legend>
+        <label class="descriptionLabel" for="gatto">Gatto</label>
+        <input id="gatto" name="gatto" type="checkbox">
+        <label class="descriptionLabel" for="cane">Cane</label>
+        <input id="cane" name="cane" type="checkbox">
+        <label class="descriptionLabel" for="cavallo">Cavallo</label>
+        <input id="cavallo" name="cavallo" type="checkbox">
+        <label class="descriptionLabel" for="mucca">Mucca</label>
+        <input id="mucca" name="mucca" type="checkbox">
+    </fieldset>
+    <fieldset>
+        <legend>Dati Residenza</legend>
+        <label for="cap">CAP: </label>
+        <input disabled id="cap" name="cap" readonly type="text" value="47923"><br/>
+        <label for="nation">Nazione: </label>
+        <select id="nation">
+            <option disabled hidden selected>Seleziona la Nazione</option>
+            <optgroup label="UE">
+                <option value="Italia">Italia</option>
+                <option value="Germania">Germania</option>
+                <option value="Belgio">Belgio</option>
+                <option value="Olanda">Olanda</option>
+            </optgroup>
+            <optgroup label="Extra UE">
+                <option value="Tunisia">Tunisia</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Libia">Libia</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Altri Dati</legend>
+        <label for="passwordAccedi">Password: </label>
+        <input id="passwordAccedi" name="passwordAccedi" required type="password"/><br/>
+        <label for="idCard">Carta d'identità: </label><br><input id="idCard" name="idCard" type="file"/><br/>
+        <br>
+        <label for="textArea">Note</label>
+        <textarea id="textArea" name="textArea"></textarea>
+    </fieldset>
+    <section>
+        <h2>Colore Preferito</h2>
+        <label class="descriptionLabel" for="rosso" style="color: red">Rosso</label>
+        <input class="colori" id="rosso" name="colori" type="radio">
+        <label class="descriptionLabel" for="verde" style="color: green">Verde</label>
+        <input class="colori" id="verde" name="colori" type="radio">
+        <label class="descriptionLabel" for="blue" style="color: blue">Blue</label>
+        <input class="colori" id="blue" name="colori" type="radio"><br>
+        <label class="descriptionLabel" for="aScelta">Scegli</label>
+        <input id="aScelta" name="coloriScelta" type="color"><br>
+    </section>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Inizializza">
+</form>
+<!--<script src="script.js"></script>-->
 </body>
 </html>

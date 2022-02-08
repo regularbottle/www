@@ -1,44 +1,53 @@
-h1{
+h1 {
     color: #0277BD;
 }
-article#art-1, article#art-3{
+
+article#art-1, article#art-3 {
     background-color: #0277BD;
 }
+
 article#art-1 p, article#art-3 p,
 article#art-1 h1, article#art-1 h2, article#art-1 h3, article#art-1 h4, article#art-1 h5, article#art-1 h6,
-article#art-3 h1, article#art-3 h2, article#art-3 h3, article#art-3 h4, article#art-3 h5, article#art-3 h6
-{
-        color: white;
+article#art-3 h1, article#art-3 h2, article#art-3 h3, article#art-3 h4, article#art-3 h5, article#art-3 h6 {
+    color: white;
 }
-article#art-1 small, article#art-3 small{
+
+article#art-1 small, article#art-3 small {
     color: #E1F5FE;
 }
+
 ul a {
     background-color: #C8E6C9;
 }
-thead th{
+
+thead th {
     color: #0277BD;
 }
-tbody td{
+
+tbody td {
     background-color: #B3E5FC;
     color: #37474F;
 }
+
 tfoot {
-    color: #29B6F6 
+    color: #29B6F6
 }
-article p > strong{
-    color: #FF5722 ;
+
+article p > strong {
+    color: #FF5722;
     text-decoration: underline;
 }
-ul#menu-footer{
+
+ul#menu-footer {
     color: #4CAF50;
 }
+
 article p + a {
     color: #FFC107;
 }
 
-@media screen and (min-width:768px){
-    section#primo-piano article{
+@media screen and (min-width: 768px) {
+    section#primo-piano article {
         max-width: 33%;
         display: inline-block;
     }

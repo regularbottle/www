@@ -2,6 +2,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
 }
+
 div {
     width: 90%;
     margin: 20px auto 16px;
@@ -9,6 +10,7 @@ div {
     flex-direction: column;
     align-items: center;
 }
+
 input {
     border-radius: 10px;
     text-align: center;

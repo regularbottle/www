@@ -2,9 +2,9 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>HTML 5</title>
     <style>
         table,
@@ -83,7 +83,7 @@
         </tbody>
         <tfoot>
         <tr>
-            <td colspan="2"><img src="facebook.png" alt="Logo Facebook" width="325">facebook.com/sararossinutrizionista
+            <td colspan="2"><img alt="Logo Facebook" src="facebook.png" width="325">facebook.com/sararossinutrizionista
             </td>
             <td colspan="2"><a href="https://sararossinutrizionista.it">sararossinutrizionista.it</a></td>
         </tr>
@@ -97,20 +97,20 @@
 <hr>
 <section id="Form">
     <h2>Sezione 2: Form</h2>
-    <form name="anagrafica" action="form.php" method="GET" id="myForm">
+    <form action="form.php" id="myForm" method="GET" name="anagrafica">
         <fieldset>
             <legend>Dati Anagrafici</legend>
-            <label for="surname">Cognome: </label><input type="text" name="surname" id="surname"
-                                                         placeholder="inp-cognome" autocomplete="off"/>
-            <label for="name">Nome: </label><input type="text" name="name" id="name" placeholder="inp-cognome"
-                                                   autocomplete="off"/>
+            <label for="surname">Cognome: </label><input autocomplete="off" id="surname" name="surname"
+                                                         placeholder="inp-cognome" type="text"/>
+            <label for="name">Nome: </label><input autocomplete="off" id="name" name="name" placeholder="inp-cognome"
+                                                   type="text"/>
         </fieldset>
         <fieldset>
             <legend>Dati Residenza</legend>
-            <label for="homeAddress">Indirizzo: </label><input type="text" name="homeAddress" id="homeAddress"/>
-            <label for="homeCAP">CAP: </label><input type="text" name="homeCAP" id="homeCAP"/>
-            <label for="homeLocation">Località: </label><input type="text" name="homeLocation" id="homeLocation"/>
-            <label for="homeProvince">Provincia: </label><input type="text" name="homeProvince" id="homeProvince"/>
+            <label for="homeAddress">Indirizzo: </label><input id="homeAddress" name="homeAddress" type="text"/>
+            <label for="homeCAP">CAP: </label><input id="homeCAP" name="homeCAP" type="text"/>
+            <label for="homeLocation">Località: </label><input id="homeLocation" name="homeLocation" type="text"/>
+            <label for="homeProvince">Provincia: </label><input id="homeProvince" name="homeProvince" type="text"/>
             <label for="nation">Stato: </label>
             <select id="nation">
                 <optgroup label="Europa">
@@ -127,34 +127,34 @@
         </fieldset>
         <fieldset>
             <legend>Dati contatto</legend>
-            <label for="personalEmail">Email: </label><input type="email" id="personalEmail" name="personalEmail"
-                                                             required placeholder="inp-email"/>
-            <label for="telefono">Telefono: </label><input type="tel" id="telefono" name="telefono"
-                                                           placeholder="inp-telefono"/>
+            <label for="personalEmail">Email: </label><input id="personalEmail" name="personalEmail" placeholder="inp-email"
+                                                             required type="email"/>
+            <label for="telefono">Telefono: </label><input id="telefono" name="telefono" placeholder="inp-telefono"
+                                                           type="tel"/>
         </fieldset>
         <fieldset>
             <legend>Dati accesso</legend>
-            <label for="emailAccess">Email: </label><input type="email" id="emailAccess" name="emailAccess" required
-                                                           placeholder="inp-email"/>
-            <label for="passwordAccess">Password: </label><input type="password" name="passwordAccess"
-                                                                 id="passwordAccess" required/>
-            <label for="confirmAccess">Conferma password: </label><input type="password" name="confirmAccess"
-                                                                         id="confirmAccess" required/>
+            <label for="emailAccess">Email: </label><input id="emailAccess" name="emailAccess" placeholder="inp-email" required
+                                                           type="email"/>
+            <label for="passwordAccess">Password: </label><input id="passwordAccess" name="passwordAccess"
+                                                                 required type="password"/>
+            <label for="confirmAccess">Conferma password: </label><input id="confirmAccess" name="confirmAccess"
+                                                                         required type="password"/>
         </fieldset>
         <fieldset>
             <legend>Dati personali</legend>
-            <label for="monthYear">Mese + Anno Attuale: </label><input type="month" name="monthYear" id="monthYear"/>
-            <label for="favColor">Colore Preferito: </label><input type="color" name="favColor" id="favColor"/>
-            <label for="age">Età: </label><input type="number" id="age" name="age" min="18" max="99"/>
-            <label for="personalBlog">Blog Personale (url): </label><input type="url" name="personalBlog"
-                                                                           id="personalBlog" placeholder="inp-url"/>
+            <label for="monthYear">Mese + Anno Attuale: </label><input id="monthYear" name="monthYear" type="month"/>
+            <label for="favColor">Colore Preferito: </label><input id="favColor" name="favColor" type="color"/>
+            <label for="age">Età: </label><input id="age" max="99" min="18" name="age" type="number"/>
+            <label for="personalBlog">Blog Personale (url): </label><input id="personalBlog" name="personalBlog"
+                                                                           placeholder="inp-url" type="url"/>
         </fieldset>
         <fieldset>
             <legend>Dati Gradimento</legend>
-            <label for="grade">Voto</label><input type="range" id="grade" name="grade" min="1" max="10"
-                                                  oninput="this.nextElementSibling.value = this.value"/>
+            <label for="grade">Voto</label><input id="grade" max="10" min="1" name="grade" oninput="this.nextElementSibling.value = this.value"
+                                                  type="range"/>
             <output>5</output>
-            <label for="favSport">Sport Preferito</label><input list="favSports" name="favSport" id="favSport"/>
+            <label for="favSport">Sport Preferito</label><input id="favSport" list="favSports" name="favSport"/>
             <datalist id="favSports">
                 <option value="Calcio">Calcio</option>
                 <option value="Tennis">Tennis</option>
@@ -162,10 +162,10 @@
                 <option value="Nuoto">Nuoto</option>
             </datalist>
             <label for="textArea">Commento</label>
-            <textarea id="textArea" name="textArea" cols="50" rows="5"
-                      placeholder="Inserisci qui i tuoi commenti"></textarea>
+            <textarea cols="50" id="textArea" name="textArea" placeholder="Inserisci qui i tuoi commenti"
+                      rows="5"></textarea>
         </fieldset>
-        <input type="submit" name="submitButton" id="submitButton" value="Submit"/>
+        <input id="submitButton" name="submitButton" type="submit" value="Submit"/>
     </form>
 </section>
 <section id="HTML5TagSemantici">

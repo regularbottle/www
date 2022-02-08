@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 /*#prima-section > div:first-child{
     background-color: aquamarine;
 }
@@ -44,7 +45,7 @@ div{
     height: 50%;
 }*/
 
-#article-uno{
+#article-uno {
     min-height: 160px;
     max-height: 320px;
     border-top: 2px solid red;
@@ -56,27 +57,35 @@ div{
     margin: 5% 5%; /*in % viene calcolato sulla lunghezza, anche il top e bottom!*/
     padding: 16px;
 }
-#article-uno::-webkit-scrollbar{
+
+#article-uno::-webkit-scrollbar {
     display: none;
 }
-.outline{
+
+.outline {
     outline: 3px solid lime;
 }
-.border{
+
+.border {
     border: 1px solid lightblue;
 }
-.bg-red{
+
+.bg-red {
     background-color: red;
 }
-#div-prova{
+
+#div-prova {
     min-height: 160px;
 }
-.b-radius-5{
+
+.b-radius-5 {
     border-radius: 5px;
 }
-.b-top-left-10-5{
+
+.b-top-left-10-5 {
     border-top-left-radius: 10px 5px;
 }
+
 /*#section-tre div{
     text-align: center;
 }
@@ -86,31 +95,36 @@ div{
 #img2{
     width: 100%;
 }*/
-#background div{
+#background div {
     width: 100%;
     min-height: 160px;
     border: 1px solid black;
 }
-#background div:nth-child(1){
+
+#background div:nth-child(1) {
     background-color: chartreuse;
 }
-#background div:nth-child(2){
+
+#background div:nth-child(2) {
     background-image: url(panorama.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-#background div:nth-child(3){
+
+#background div:nth-child(3) {
     background-image: url("./small.png");
     background-repeat: repeat;
 }
-@media screen and (min-width: 992px){
-    #background div{
+
+@media screen and (min-width: 992px) {
+    #background div {
         width: 30%;
         display: inline-block;
     }
+
     #background div:nth-child(2),
-    #background div:nth-child(3){
+    #background div:nth-child(3) {
         margin-left: 1%;
     }
 }

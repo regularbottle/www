@@ -1,162 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Accedi</title>
-  <style>
+    <meta charset="UTF-8"/>
+    <title>Accedi</title>
+    <style>
 
-    label{
-      float: left;
-      width: 200px;
-    }
+        label {
+            float: left;
+            width: 200px;
+        }
 
-    textarea{
-      margin-left: 200px;
-      width: 250px;
-      height: 150px;
-    }
+        textarea {
+            margin-left: 200px;
+            width: 250px;
+            height: 150px;
+        }
 
-    br{
-      clear: left;
-    }
+        br {
+            clear: left;
+        }
 
-    .allButtons{
-      margin-left: 120px;
-      margin-top: 5px;
-      width: 90px;
-    }
+        .allButtons {
+            margin-left: 120px;
+            margin-top: 5px;
+            width: 90px;
+        }
 
-    .descriptionLabel {
-      width: 90px;
-      float: none;
-    }
+        .descriptionLabel {
+            width: 90px;
+            float: none;
+        }
 
-    .boxes{
-      width: 1em;
-    }
+        .boxes {
+            width: 1em;
+        }
 
-    .container {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
+        .container {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
 
-    .container button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-    }
+        .container button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
 
-    .container button:hover {
-      background-color: #ddd;
-    }
+        .container button:hover {
+            background-color: #ddd;
+        }
 
-    .itemContent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-    }
-  </style>
+        .itemContent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
 </head>
 
 <body>
 <div class="container">
-  <button class="itemLinks" id="defaultOpen">
-    Accedi
-  </button>
-  <button class="itemLinks">
-    Registrati
-  </button>
+    <button class="itemLinks" id="defaultOpen">
+        Accedi
+    </button>
+    <button class="itemLinks">
+        Registrati
+    </button>
 </div>
 
-<div id="Accedi" class="itemContent">
-  <h2>Accedi</h2>
-  <form name="accediForm" action="./controllaDati.php" method="POST" id="accediForm">
-    <fieldset>
-      <legend>Accedi</legend>
-      <label for="emailAccedi">Email: </label><input type="email" id="emailAccedi" name="emailAccedi" required /><br />
-      <label for="passwordAccedi">Inserisci la password: </label><input type="password" name="passwordAccedi" id="passwordAccedi" required /><br />
-      <input type="submit" value="Accedi" id="tastoAccedi" class="allButtons"/>
-    </fieldset>
-  </form>
+<div class="itemContent" id="Accedi">
+    <h2>Accedi</h2>
+    <form action="./controllaDati.php" id="accediForm" method="POST" name="accediForm">
+        <fieldset>
+            <legend>Accedi</legend>
+            <label for="emailAccedi">Email: </label><input id="emailAccedi" name="emailAccedi" required
+                                                           type="email"/><br/>
+            <label for="passwordAccedi">Inserisci la password: </label><input id="passwordAccedi" name="passwordAccedi"
+                                                                              required type="password"/><br/>
+            <input class="allButtons" id="tastoAccedi" type="submit" value="Accedi"/>
+        </fieldset>
+    </form>
 </div>
 
-<div id="Registrati" class="itemContent">
-  <h2>Registrati</h2>
-  <form name="anagrafica" action="./salvaDati.php" method="GET" id="anagrafica">
-    <fieldset>
-      <legend>Dati Anagrafici</legend>
-      <label for="name">Inserisci qui il tuo nome: </label><input type="text" name="name" id="name" required /><br />
-      <label for="surname">Inserisci qui il tuo cognome: </label><input type="text" name="surname" id="surname" required /><br />
-      <label>Sesso: </label>
-      <input type="radio" name="gender" id="male" value="Male" /><label for="male" class="descriptionLabel">maschio</label>
-      <input type="radio" name="gender" id="female" value="Female" /><label for="female" class="descriptionLabel">femmina</label><br />
-      <label for="nation">Luogo di nascita:</label>
-      <select id="nation">
-        <optgroup label="UE">
-          <option value="Italia">Italia</option>
-          <option value="Germania">Germania</option>
-          <option value="Belgio">Belgio</option>
-          <option value="Olanda">Olanda</option>
-        </optgroup>
-        <optgroup label="Extra UE">
-          <option value="Tunisia">Tunisia</option>
-          <option value="Algeria">Algeria</option>
-          <option value="Libia">Libia</option>
-        </optgroup>
-      </select>
-      <br />
-      <label for="dateOfBirth">Data di Nascita: </label><input type="date" name="dateOfBirth" id="dateOfBirth" /><br />
-      <label for="idCard">Carta d'identità: </label><input type="file" name="idCard" id="idCard" /><br />
-    </fieldset>
+<div class="itemContent" id="Registrati">
+    <h2>Registrati</h2>
+    <form action="./salvaDati.php" id="anagrafica" method="GET" name="anagrafica">
+        <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <label for="name">Inserisci qui il tuo nome: </label><input id="name" name="name" required
+                                                                        type="text"/><br/>
+            <label for="surname">Inserisci qui il tuo cognome: </label><input id="surname" name="surname" required
+                                                                              type="text"/><br/>
+            <label>Sesso: </label>
+            <input id="male" name="gender" type="radio" value="Male"/><label class="descriptionLabel"
+                                                                             for="male">maschio</label>
+            <input id="female" name="gender" type="radio" value="Female"/><label class="descriptionLabel" for="female">femmina</label><br/>
+            <label for="nation">Luogo di nascita:</label>
+            <select id="nation">
+                <optgroup label="UE">
+                    <option value="Italia">Italia</option>
+                    <option value="Germania">Germania</option>
+                    <option value="Belgio">Belgio</option>
+                    <option value="Olanda">Olanda</option>
+                </optgroup>
+                <optgroup label="Extra UE">
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Libia">Libia</option>
+                </optgroup>
+            </select>
+            <br/>
+            <label for="dateOfBirth">Data di Nascita: </label><input id="dateOfBirth" name="dateOfBirth"
+                                                                     type="date"/><br/>
+            <label for="idCard">Carta d'identità: </label><input id="idCard" name="idCard" type="file"/><br/>
+        </fieldset>
 
-    <fieldset>
-      <legend>Password personale</legend>
-      <label for="password">Inserisci la password: </label><input type="password" name="password" id="password"/>
-    </fieldset>
+        <fieldset>
+            <legend>Password personale</legend>
+            <label for="password">Inserisci la password: </label><input id="password" name="password" type="password"/>
+        </fieldset>
 
-    <fieldset>
-      <legend>Dati Personali</legend>
-      <label for="telefono">Telefono: </label><input type="tel" id="telefono" name="telefono" placeholder="123-456-7890"/><br />
-      <label for="email">Email: </label><input type="email" id="email" name="email" required /><br />
-      <label for="numeriPari">Numero PARI preferito: </label>
-      <input type="number" id="numeriPari" name="numeriPari" value="0" min="0" max="100" step="2" pattern="^\d*[02468]$"/><br />
-      <label for="numeriDispari">Numero DISPARI preferito: </label>
-      <input type="number" id="numeriDispari" name="numeriDispari" value="1" min="1" max="99" step="2" pattern="^\d*[13579]$"/><br />
-      <label>Patente: </label>
-      <input type="checkbox" name="auto" id="auto" value="auto" class="boxes"/>
-      <label for="auto" class="descriptionLabel">auto</label>
-      <input type="checkbox" name="moto" id="moto" value="moto" class="boxes"/>
-      <label for="moto" class="descriptionLabel">moto</label>
-      <input type="checkbox" name="aereo" id="aereo" value="aereo" class="boxes"/>
-      <label for="aereo" class="descriptionLabel">aereo</label> <br />
-      <label for="classe">Classe: </label>
-      <select id="classe">
-        <option selected disabled hidden>Seleziona la classe</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-      <br />
-      <label for="textArea"></label>
-      <textarea id="textArea" name="textArea" placeholder="Inserisci qui i tuoi commenti"></textarea>
-      <br />
-      <label for="comfort">Comfort</label><input type="range" id="comfort" name="comfort" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
-      <label for="posizione">Posizione</label><input type="range" id="posizione" name="posizione" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
-      <label for="prezzo">Prezzo</label><input type="range" id="prezzo" name="prezzo" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
-      <label for="cortesia">Cortesia del personale</label><input type="range" id="cortesia" name="cortesia" min="1" max="5" oninput="this.nextElementSibling.value = this.value"/><output>3</output><br />
-      <input type="submit" name="submitButton" id="submitButton" value="Submit" class="allButtons"/>
-      <input type="reset" name="resetButton" id="resetButton" value="Reset" class="allButtons"/>
-    </fieldset>
-  </form>
+        <fieldset>
+            <legend>Dati Personali</legend>
+            <label for="telefono">Telefono: </label><input id="telefono" name="telefono" placeholder="123-456-7890"
+                                                           type="tel"/><br/>
+            <label for="email">Email: </label><input id="email" name="email" required type="email"/><br/>
+            <label for="numeriPari">Numero PARI preferito: </label>
+            <input id="numeriPari" max="100" min="0" name="numeriPari" pattern="^\d*[02468]$" step="2" type="number"
+                   value="0"/><br/>
+            <label for="numeriDispari">Numero DISPARI preferito: </label>
+            <input id="numeriDispari" max="99" min="1" name="numeriDispari" pattern="^\d*[13579]$" step="2" type="number"
+                   value="1"/><br/>
+            <label>Patente: </label>
+            <input class="boxes" id="auto" name="auto" type="checkbox" value="auto"/>
+            <label class="descriptionLabel" for="auto">auto</label>
+            <input class="boxes" id="moto" name="moto" type="checkbox" value="moto"/>
+            <label class="descriptionLabel" for="moto">moto</label>
+            <input class="boxes" id="aereo" name="aereo" type="checkbox" value="aereo"/>
+            <label class="descriptionLabel" for="aereo">aereo</label> <br/>
+            <label for="classe">Classe: </label>
+            <select id="classe">
+                <option disabled hidden selected>Seleziona la classe</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br/>
+            <label for="textArea"></label>
+            <textarea id="textArea" name="textArea" placeholder="Inserisci qui i tuoi commenti"></textarea>
+            <br/>
+            <label for="comfort">Comfort</label><input id="comfort" max="5" min="1" name="comfort" oninput="this.nextElementSibling.value = this.value"
+                                                       type="range"/>
+            <output>3</output>
+            <br/>
+            <label for="posizione">Posizione</label><input id="posizione" max="5" min="1" name="posizione" oninput="this.nextElementSibling.value = this.value"
+                                                           type="range"/>
+            <output>3</output>
+            <br/>
+            <label for="prezzo">Prezzo</label><input id="prezzo" max="5" min="1" name="prezzo" oninput="this.nextElementSibling.value = this.value"
+                                                     type="range"/>
+            <output>3</output>
+            <br/>
+            <label for="cortesia">Cortesia del personale</label><input id="cortesia" max="5" min="1"
+                                                                       name="cortesia" oninput="this.nextElementSibling.value = this.value"
+                                                                       type="range"/>
+            <output>3</output>
+            <br/>
+            <input class="allButtons" id="submitButton" name="submitButton" type="submit" value="Submit"/>
+            <input class="allButtons" id="resetButton" name="resetButton" type="reset" value="Reset"/>
+        </fieldset>
+    </form>
 </div>
 <script>
-  document.getElementById("defaultOpen").click();
+    document.getElementById("defaultOpen").click();
 </script>
 </body>
 </html>
