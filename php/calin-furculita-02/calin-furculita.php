@@ -5,10 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!--- Stylesheet -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
     <title>Verifica PHP - 31/01/2022</title>
 </head>
 <body>
 <?php
+include '../libreria.php';
 function alternate_colors(int $colori): string
 {
     switch ($colori) {
@@ -19,36 +26,6 @@ function alternate_colors(int $colori): string
         default:
             return "";
     }
-}
-
-function get_L2_Keys(array $array): array
-{
-    $result = array();
-    foreach ($array as $sub) {
-        $result = array_merge($result, $sub);
-    }
-    return array_keys($result);
-}
-
-function print_as_table(array $array, string $nome_tabella)
-{
-    $chiavi = get_L2_Keys($array);
-
-    echo "<table style='border: 1px solid black'>
-            <caption><h3>$nome_tabella</h3></caption>
-            <thead><tr>";
-    for ($i = 0; $i < count($chiavi); $i++) {
-        echo "<th>" . ucfirst($chiavi[$i]) . "</th>";
-    }
-    echo "</tr></thead><tbody>";
-    foreach ($array as $v1) {
-        echo "<tr>";
-        foreach ($v1 as $v2) {
-            echo "<td style='border: 1px solid black'> $v2</td>";
-        }
-        echo "</tr>";
-    }
-    echo "</tbody></table>";
 }
 
 $categoria['categoria1'] = ['nome' => "scarpe", 'n_prodotti' => "20", 'fatturato' => "1200"];
@@ -97,6 +74,7 @@ echo "<hr>";
 
 $anno_corrente = date('Y');
 $indice_fatturato = 0;
+$fatturato_annuo = array();
 
 for ($i = $anno_corrente; $i > ($anno_corrente - 10); $i--) {
     $fatturato_annuo[$i] = $valore_medio_fatturato - 100 * $indice_fatturato;
@@ -107,5 +85,10 @@ foreach ($fatturato_annuo as $item => $value) {
     echo "Per l'anno: " . $item . " il fatturato era di: " . $value . "€<br>";
 }
 ?>
+
+<!-- Bootstrap Bundle with Popper -->
+<script crossorigin="anonymous"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

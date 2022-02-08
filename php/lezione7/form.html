@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+    <title>Form</title>
+</head>
+<body>
+<div class="container">
+    <form action="invia-dati.php" enctype="multipart/form-data" method="get">
+        <div class="mb-3">
+            <label class="form-label" for="cap">Cap:</label>
+            <input class="form-control" id="cap" name="cap" type="text" value="47921">
+            <label class="form-label" for="localita">Localita:</label>
+            <input class="form-control" id="localita" name="localita" type="text" value="Rimini">
+            <label class="form-label" for="indirizzo">Indirizzo:</label>
+            <input autocomplete="off" class="form-control" id="indirizzo" name="indirizzo" type="text">
+            <label class="form-label" for="abitazione">Tipo di Abitazione:</label>
+            <select class="form-control" id="abitazione" name="abitazione" tabindex="3">
+                <optgroup label="Casa indipendente">
+                    <option value="Villa a Schiera">Villa a Schiera</option>
+                    <option value="Casa Unifamiliare">Casa Unifamiliare</option>
+                    <option value="Bifamiliare">Bifamiliare</option>
+                </optgroup>
+                <optgroup label="Condominio">
+                    <option value="Condominio <= 5 unità">Condominio <= 5 unità</option>
+                    <option value="Condominio > 5 unità">Condominio > 5 unità</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="mb-3">
+            <p>Animale Preferito:</p>
+            <input class="form-check-input" id="gatto" name="gatto" type="checkbox">
+            <label class="form-check-label" for="gatto">Gatto</label>
+            <input class="form-check-input" id="cane" name="cane" type="checkbox">
+            <label class="form-check-label" for="cane">Cane</label>
+            <input class="form-check-input" id="cavallo" name="cavallo" type="checkbox">
+            <label class="form-check-label" for="cavallo">Cavallo</label>
+            <input class="form-check-input" id="mucca" name="mucca" type="checkbox">
+            <label class="form-check-label" for="mucca">Mucca</label>
+        </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+<script crossorigin="anonymous"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
