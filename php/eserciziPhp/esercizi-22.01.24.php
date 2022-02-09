@@ -66,8 +66,8 @@ $corso1 = array (‘nome’=>”IFTS”, ‘inizio’=>”2021-09-30”,’coord
 $corso2 = array (‘nome’=>”Analista Programmatore”, ‘inizio’=>”2022-02-01”,’coordinatore’=>”Rossi”,
 ‘n_partecipanti’=>”12”);
 $corsi = array($corso1, $corso2);
-6. Elencare tutti i nomi dei corsi e le rispettive date di inizio.
-7. Per i corsi che devono ancora iniziare, nell’elenco del punto 1 inserire un link alla pagina di iscrizione
+6. Elencare tutti i nomi dei corsi e le rispettive date d'inizio.
+7. Per i corsi che devono ancora iniziare, nell’elenco del punto 1 inserire un link alla pagina d'iscrizione
 “./iscrizione.php”.
 8. Esiste almeno un corso coordinato da “Rossi”? Se sì, in quale data inizia il corso più vecchio? In
     quale anno?
@@ -102,7 +102,6 @@ if ($ricerca_coordinatore_bool == true) {
     echo "Rossi è coordinatore di un corso e il corso più vecchio inizia il: " . $ricerca_data[0] . "<br>";
 }
 
-$max = 0;
 sort($ricerca_partecipanti);
 
 $n_partecipanti_max = $ricerca_partecipanti[count($ricerca_partecipanti) - 1];

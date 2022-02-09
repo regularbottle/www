@@ -1,15 +1,35 @@
 <?php
-$cap = $_GET['cap'];
-$localita = $_GET['localita'];
-$indirizzo = $_GET['indirizzo'];
-$abitazione = $_GET['abitazione'];
+$nome = $_REQUEST['nome'];
+$sesso = $_REQUEST['sesso'];
+$cap = $_REQUEST['cap'];
+$localita = $_REQUEST['localita'];
+$indirizzo = $_REQUEST['indirizzo'];
+$abitazione = $_REQUEST['abitazione'];
 
-echo $cap."<br>";
-echo $localita."<br>";
-echo $indirizzo."<br>";
-echo $abitazione."<br>";
-try{if ($_GET['gatto'] == true) echo "Il tuo animale preferito è: Gatto<br>";} catch (Exception $e) {echo "";}
-try{if ($_GET['cane'] == true) echo "Il tuo animale preferito è: Cane<br>";} catch (Exception $e) {echo "";}
-try{if ($_GET['cavallo'] == true) echo "Il tuo animale preferito è: Cavallo<br>";} catch (Exception $e) {echo "";}
-try{if ($_GET['mucca'] == true) echo "Il tuo animale preferito è: Mucca<br>";} catch (Exception $e) {echo "";}
+echo "Ciao $nome, ecco i dati che hai compilato:<br>";
+if ($sesso == 'f') echo "Sesso: Femmina<br>"; else echo "Sesso: Maschio<br>";
+echo "CAP: " . $cap . "<br>";
+echo "Città: " . $localita . "<br>";
+echo "Indirizzo: " . $indirizzo . "<br>";
+echo "Tipo di abitazione: " . $abitazione . "<br>";
+$animali = ['gatto', 'cane', 'cavallo', 'mucca'];
+echo "I tuoi animali preferiti:<ul>";
+foreach ($animali as $animale) {
+    if (array_key_exists($animale, $_REQUEST)) echo "<li>" . ucfirst($animale) . "</li>";
+}
+echo "</ul>";
 
+foreach ($_FILES as $key => $file) {
+    $from = $file['tmp_name'];
+    $to = $file['name'];
+    if (move_uploaded_file($from, $to)) echo "File/s caricato/i con successo<br>";
+    else echo "Errore durante il caricamento<br>";
+
+    $tmp_file = fopen($file['tmp_name'], "r");
+    if ($tmp_file) {
+        while (($line = fgets($tmp_file)) !== false) {
+            echo $line . "<br>";
+        }
+        fclose($tmp_file);
+    } else echo "ERROR while reading";
+}
