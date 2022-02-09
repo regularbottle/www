@@ -25,7 +25,7 @@ foreach ($_FILES as $key => $file) {
     if (move_uploaded_file($from, $to)) echo "File/s caricato/i con successo<br>";
     else echo "Errore durante il caricamento<br>";
 
-    $tmp_file = fopen($file['tmp_name'], "r");
+    $tmp_file = fopen($file['name'], "r");
     if ($tmp_file) {
         while (($line = fgets($tmp_file)) !== false) {
             echo $line . "<br>";
