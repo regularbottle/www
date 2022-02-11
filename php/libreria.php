@@ -56,6 +56,24 @@ function print_as_table(array $array, string $nome_tabella)
     echo "</tbody></table>";
 }
 
+function print_as_table_Cities(array $array)
+{
+    $chiavi = ["Paese", "Location", "Città"];
+
+    echo "<div class='table-responsive'><table class='table table-responsive table-bordered table-hover table-primary table-striped table-sm'><tr>";
+    for ($i = 0; $i < count($chiavi); $i++) {
+        echo "<th>" . ucfirst($chiavi[$i]) . "</th>";
+    }
+    echo "</tr>";
+    for ($i = 0; $i < 30; $i++) {
+        echo "<tr>
+                        <td>" . $array[$i]['Paese'] . "</td>
+                        <td>" . $array[$i]['Location'] . "</td>
+                        <td>" . $array[$i]['Nome'] . "</td></tr>";
+    }
+    echo "</table></div>";
+}
+
 function month(int $mese): string
 {
     switch ($mese) {
