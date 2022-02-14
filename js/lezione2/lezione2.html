@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS / Lezione 2</title>
+</head>
+<body>
+<script>
+    //Esercizio 1
+    for (let i = 20; i >= 0; i--) {
+        if (!(i % 2)) {
+            console.log(i);
+        }
+    }
+    //Esercizio 2
+    for (let i = 1; i <= 10; i++) {
+        switch (i) {
+            case 1:
+                console.log('Uno');
+                break;
+            case 2:
+                console.log('Due');
+                break;
+            case 3:
+                console.log('Tre');
+                break;
+            case 4:
+                console.log('Quattro');
+                break;
+            case 5:
+                console.log('Cinque');
+                break;
+            case 6:
+                console.log('Sei');
+                break;
+            case 7:
+                console.log('Sette');
+                break;
+            case 8:
+                console.log('Otto');
+                break;
+            case 9:
+                console.log('Nove');
+                break;
+            case 10:
+                console.log('Dieci');
+                break;
+            default:
+                console.log();
+        }
+    }
+    //Esercizio 3
+    let numero = 2;
+    for (let i = 1; i <= 10; i++) {
+        console.log(i + "*" + numero + "=" + (i * numero));
+    }
+    //Esercizio 4
+    numero = 1;
+    for (let i = 1; i <= 10; i++) {
+        let row = "";
+        for (let i = 1; i <= 10; i++) {
+            row += numero * i + " ";
+        }
+        console.log(row);
+        numero++;
+    }
+    //Esercizio 5
+    let a = [3, 5, 10, 2, 8]
+    let media = 0;
+    for (let i = 0; i < a.length; i++) {
+        media += a[i];
+    }
+    media /= a.length;
+    console.log(media);
+    let row = "";
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] < media) {
+            row += a[i] + ' ';
+        }
+    }
+    console.log("Elementi minori della media: " + row);
+</script>
+</body>
+</html>
