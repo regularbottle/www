@@ -93,7 +93,7 @@ foreach ($corsi as $key => $value) {
 //4. Qual è il corso con la valutazione maggiore?
 $massimo = [];
 foreach ($corsi as $key => $value) {
-    $massimo[] = [$value->getValutazione() , $value->getNome() ];
+    $massimo[] = [$value->getValutazione() , $value->getNome()];
 }
 rsort($massimo);
 echo "Il corso con la Valutazione maggiore è stato: ";
@@ -102,6 +102,6 @@ echo $massimo[0][1] . " con un voto di: " . $massimo[0][0] . "<br>";
 foreach ($corsi as $key => $value) {
     echo "Con " . $value->getStudenti() . " studenti e " . $value->getPosti()
                 . " posti, la percentuale di partecipazione al corso "
-                . $value->getNome() . " e' stata del: "
+                . $value->getNome() . " è stata del: "
                 . number_format($value->partecipazione(), 2) . "%" . "<br>";
 }

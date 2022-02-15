@@ -79,7 +79,6 @@
         }
     }
     console.log("Elementi minori della media: " + row);
-
     //Esercizio 6
     function numero_primo(n) {
         for (let i = 2, s = Math.sqrt(n); i <= s; i++)
@@ -98,38 +97,29 @@
     }
 
     primi_n_primi(23);
-
-    /*Esercizio 7
-Scrivere una funzione che calcoli la somma dei primi N interi.
-Esempio:
-Input: 5
-Output: 15
-N.B.
-Opzionale scrivere una funzione ricorsiva.*/
+    //Esercizio 7
     function somma_n(n) {
         if (n <= 0) return 0;
         else return n + somma_n(n - 1);
     }
 
-    console.log(somma_n(5));
-    /*Esercizio 8
-    Scrivi una funzione che prenda in input una stringa e restituisca TRUE se è palindroma, FALSE se non lo è.
-    Nel controllo scarta gli spazi e i segni di punteggiatura.
-    Esempio:
-    Input: i topi non avevano nipoti
-    Output: true
-    Consigli:Puoi eliminare spazi e segni di punteggiatura usando le espressioni regolari o il metodo del tipo stringa chiamato replace, in questo modo: str.replace(/\W/g, "").*/
+    function somma_n_iterativo(n) {
+        let numero = 0;
+        for (let i = 0; i<=n; i++) {
+            numero += (n - i);
+        }
+        return numero;
+    }
+
+    console.log(somma_n(6));
+    console.log(somma_n_iterativo(6));
+    //Esercizio 8
     let str = "i topi non avevano nipoti";
     str = str.replace(/[^A-Z0-9]+/ig, "");
     let strReverse = str.split("").reverse().join("");
-    if (str === strReverse) console.log("La frase e' palindroma");
-    else console.log("La frase non e' palindroma");
-
-    /*Esercizio 9
-    Scrivi una funzione che calcoli la vicinanza tra tre numeri: A, B e N, e restituisca:
-    - 0 Se A e B sono equidistanti da N
-    - 1 Se B è più vicino a N rispetto ad A
-    - -1 Se A è più vicino a N rispetto a B*/
+    if (str === strReverse) console.log("true");
+    else console.log("false");
+    //Esercizio 9
     function distance(A, B, N) {
         if (Math.abs(A - N) === Math.abs(B - N)) return 0;
         if (Math.abs(A - N) > Math.abs(B - N)) return -1;
@@ -138,7 +128,7 @@ Opzionale scrivere una funzione ricorsiva.*/
 
     console.log(distance(0, 20, 10))
     console.log(distance(2, 20, 10))
-    console.log(distance(0, 18, 10))
+    console.log(distance(-4, -5, 10))
 </script>
 </body>
 </html>
