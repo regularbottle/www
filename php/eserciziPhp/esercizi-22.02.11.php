@@ -68,7 +68,7 @@ class Corso
 $ap = new Corso('Analista Programmatore', 12);
 $ifts = new Corso('IFTS', 20);
 $plumbing = new Corso('Plumbing', 223);
-$piping = new Corso('Piping', 11);
+$piping = new Corso('Piping', 10);
 $pizzaiolo = new Corso('Pizzaiolo', 666);
 
 //1. assegnare i voti random a ogni corso (in numero non superiore al n. di posti)
