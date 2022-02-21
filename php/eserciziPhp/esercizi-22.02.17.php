@@ -40,7 +40,9 @@ echo "<hr>";
 data di soggiorno (nel formato gg/mm/aaaa)*/
 $anno = date("Y") - 1;
 foreach ($commenti as $key) {
-    echo $key['nome'] . " in data " . date_db2user($key['data']) . "<a href=\./esercizi-22.02.17-dettaglio.php?nome=" . $key['nome'] . "> Dettagli </a><br>";
+    echo $key['nome'] . " in data " . date_db2user($key['data']) .
+        "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-dettaglio.php?nome=" . str_replace(" ", "%20", $key['nome']) .
+        "> Dettagli </a><br>";
 }
 echo "<hr>";
 /*4. Elencare le tipologie di vacanza specificando quanti commenti sono presenti per
