@@ -17,11 +17,11 @@
             <input class="form-control" id="name" name="nome" type="text">
             <p>Sesso:</p>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="sesso" id="sessoM" value="M">
+                <input class="form-check-input" id="sessoM" name="sesso" type="radio" value="M">
                 <label class="form-check-label" for="sessoM">Maschio</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="sesso" id="sessoF" value="F">
+                <input class="form-check-input" id="sessoF" name="sesso" type="radio" value="F">
                 <label class="form-check-label" for="sessoF">Femmina</label>
             </div>
             <label class="form-label" for="cap">Cap:</label>
@@ -56,9 +56,9 @@
         </div>
         <div class="mb-3">
             <p>Carica documento d'identità:</p>
-            <input class="form-control" type="file" name="documentoIdentita" id="documentoIdentita">
+            <input class="form-control" id="documentoIdentita" name="documentoIdentita" type="file">
         </div>
-            <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
 <script crossorigin="anonymous"

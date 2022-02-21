@@ -79,6 +79,7 @@
         }
     }
     console.log("Elementi minori della media: " + row);
+
     //Esercizio 6
     function numero_primo(n) {
         for (let i = 2, s = Math.sqrt(n); i <= s; i++)
@@ -97,6 +98,7 @@
     }
 
     primi_n_primi(23);
+
     //Esercizio 7
     function somma_n(n) {
         if (n <= 0) return 0;
@@ -105,7 +107,7 @@
 
     function somma_n_iterativo(n) {
         let numero = 0;
-        for (let i = 0; i<=n; i++) {
+        for (let i = 0; i <= n; i++) {
             numero += (n - i);
         }
         return numero;
@@ -119,6 +121,7 @@
     let strReverse = str.split("").reverse().join("");
     if (str === strReverse) console.log("true");
     else console.log("false");
+
     //Esercizio 9
     function distance(A, B, N) {
         if (Math.abs(A - N) === Math.abs(B - N)) return 0;

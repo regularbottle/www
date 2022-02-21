@@ -127,14 +127,16 @@
         </fieldset>
         <fieldset>
             <legend>Dati contatto</legend>
-            <label for="personalEmail">Email: </label><input id="personalEmail" name="personalEmail" placeholder="inp-email"
+            <label for="personalEmail">Email: </label><input id="personalEmail" name="personalEmail"
+                                                             placeholder="inp-email"
                                                              required type="email"/>
             <label for="telefono">Telefono: </label><input id="telefono" name="telefono" placeholder="inp-telefono"
                                                            type="tel"/>
         </fieldset>
         <fieldset>
             <legend>Dati accesso</legend>
-            <label for="emailAccess">Email: </label><input id="emailAccess" name="emailAccess" placeholder="inp-email" required
+            <label for="emailAccess">Email: </label><input id="emailAccess" name="emailAccess" placeholder="inp-email"
+                                                           required
                                                            type="email"/>
             <label for="passwordAccess">Password: </label><input id="passwordAccess" name="passwordAccess"
                                                                  required type="password"/>
@@ -151,7 +153,8 @@
         </fieldset>
         <fieldset>
             <legend>Dati Gradimento</legend>
-            <label for="grade">Voto</label><input id="grade" max="10" min="1" name="grade" oninput="this.nextElementSibling.value = this.value"
+            <label for="grade">Voto</label><input id="grade" max="10" min="1" name="grade"
+                                                  oninput="this.nextElementSibling.value = this.value"
                                                   type="range"/>
             <output>5</output>
             <label for="favSport">Sport Preferito</label><input id="favSport" list="favSports" name="favSport"/>

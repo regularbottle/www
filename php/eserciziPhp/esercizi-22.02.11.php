@@ -1,4 +1,5 @@
 <?php
+
 class Corso
 {
     const FINANZIAMENTO = "Il corso è finanziato con i fondi del Unione Europea";
@@ -96,8 +97,8 @@ echo "<hr>";
 //4. Qual è il corso con la valutazione maggiore?
 $massimo = [];
 foreach ($corsi as $key => $value) {
-    $massimo[] = [$value->getValutazione() , $value->getNome()];
-    echo  $value->getNome() . " : " .  $value->getValutazione() . "<br>";
+    $massimo[] = [$value->getValutazione(), $value->getNome()];
+    echo $value->getNome() . " : " . $value->getValutazione() . "<br>";
 }
 rsort($massimo);
 echo "<br>Il corso con la Valutazione maggiore è stato ";
@@ -108,7 +109,7 @@ echo "<hr>";
 //5. Qual è la partecipazione media dei corsi?
 foreach ($corsi as $key => $value) {
     echo "Con " . $value->getStudenti() . " studenti e " . $value->getPosti()
-                . " posti, la percentuale di partecipazione al corso "
-                . $value->getNome() . " è stata del: "
-                . number_format($value->partecipazione(), 2) . "%" . "<br>";
+        . " posti, la percentuale di partecipazione al corso "
+        . $value->getNome() . " è stata del: "
+        . number_format($value->partecipazione(), 2) . "%" . "<br>";
 }

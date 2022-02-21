@@ -135,7 +135,8 @@
             <input id="numeriPari" max="100" min="0" name="numeriPari" pattern="^\d*[02468]$" step="2" type="number"
                    value="0"/><br/>
             <label for="numeriDispari">Numero DISPARI preferito: </label>
-            <input id="numeriDispari" max="99" min="1" name="numeriDispari" pattern="^\d*[13579]$" step="2" type="number"
+            <input id="numeriDispari" max="99" min="1" name="numeriDispari" pattern="^\d*[13579]$" step="2"
+                   type="number"
                    value="1"/><br/>
             <label>Patente: </label>
             <input class="boxes" id="auto" name="auto" type="checkbox" value="auto"/>
@@ -155,20 +156,24 @@
             <label for="textArea"></label>
             <textarea id="textArea" name="textArea" placeholder="Inserisci qui i tuoi commenti"></textarea>
             <br/>
-            <label for="comfort">Comfort</label><input id="comfort" max="5" min="1" name="comfort" oninput="this.nextElementSibling.value = this.value"
+            <label for="comfort">Comfort</label><input id="comfort" max="5" min="1" name="comfort"
+                                                       oninput="this.nextElementSibling.value = this.value"
                                                        type="range"/>
             <output>3</output>
             <br/>
-            <label for="posizione">Posizione</label><input id="posizione" max="5" min="1" name="posizione" oninput="this.nextElementSibling.value = this.value"
+            <label for="posizione">Posizione</label><input id="posizione" max="5" min="1" name="posizione"
+                                                           oninput="this.nextElementSibling.value = this.value"
                                                            type="range"/>
             <output>3</output>
             <br/>
-            <label for="prezzo">Prezzo</label><input id="prezzo" max="5" min="1" name="prezzo" oninput="this.nextElementSibling.value = this.value"
+            <label for="prezzo">Prezzo</label><input id="prezzo" max="5" min="1" name="prezzo"
+                                                     oninput="this.nextElementSibling.value = this.value"
                                                      type="range"/>
             <output>3</output>
             <br/>
             <label for="cortesia">Cortesia del personale</label><input id="cortesia" max="5" min="1"
-                                                                       name="cortesia" oninput="this.nextElementSibling.value = this.value"
+                                                                       name="cortesia"
+                                                                       oninput="this.nextElementSibling.value = this.value"
                                                                        type="range"/>
             <output>3</output>
             <br/>

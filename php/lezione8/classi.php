@@ -1,10 +1,13 @@
 <?php
-class Esempio {
+
+class Esempio
+{
     public $testo = "Un testo di esempio";
     public $numero1;
     public $numero2;
 
-    function __construct($testo) {
+    function __construct($testo)
+    {
         $this->testo = $testo;
     }
 }

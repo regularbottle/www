@@ -6,6 +6,6 @@ La pagina partenza scrive la data di arrivo, il numero di giorni e la data di pa
 echo "Dettagli per il cliente: " . $_GET['nome'] . "<br>";
 echo "Data di arrivo: " . date_db2user($_GET['data']) . " giorni di permanenza: " . $_GET['giorni'];
 $date = $_GET['data'];
-echo " il giorno di partenza è " . date_db2user(date('Y-m-d', strtotime($date. ' + ' . $_GET['giorni'] . ' days')));
+echo " il giorno di partenza è " . date_db2user(date('Y-m-d', strtotime($date . ' + ' . $_GET['giorni'] . ' days')));
 
 

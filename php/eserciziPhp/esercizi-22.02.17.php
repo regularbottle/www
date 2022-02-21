@@ -32,7 +32,7 @@ foreach ($_POST as $key => $value) {
 
 /*2. Creare un nuovo array con i dati inseriti nel form secondo lo schema utilizzato
 nell’array $commento1 e $commento2, poi aggiungerlo all’array $commenti*/
-$commento1 = ['nome' => "Mario Rossi", 'data' => "2022-01-10", 'giorni' => random_int(1, 365), 'tipologia' => "privata", 'commenti' => "Ciao come va"];
+$commento1 = ['nome' => "Mario Rossi", 'data' => date('Y-m-d'), 'giorni' => random_int(1, 365), 'tipologia' => "privata", 'commenti' => "Ciao come va"];
 $commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => random_int(1, 365), 'tipologia' => $_POST['tipologia'], 'commenti' => "Hello"];
 $commenti = [$commento1, $commento2, $_POST];
 echo "<hr>";
@@ -42,7 +42,7 @@ $anno = date("Y") - 1;
 foreach ($commenti as $key) {
     echo $key['nome'] . " in data " . date_db2user($key['data']) .
         "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-dettaglio.php?nome=" . str_replace(" ", "%20", $key['nome']) .
-        "&commenti=". str_replace(" ", "%20", $key['commenti']) ."> Dettagli </a><br>";
+        "&commenti=" . str_replace(" ", "%20", $key['commenti']) . "> Dettagli </a><br>";
 }
 echo "<hr>";
 /*4. Elencare le tipologie di vacanza specificando quanti commenti sono presenti per
@@ -76,5 +76,5 @@ foreach ($commenti as $key) {
         "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-partenza.php?" .
         "nome=" . str_replace(" ", "%20", $key['nome']) .
         "&data=" . str_replace(" ", "%20", $key['data']) .
-        "&giorni=". str_replace(" ", "%20", $key['giorni']) ."> Partenza </a><br>";
+        "&giorni=" . str_replace(" ", "%20", $key['giorni']) . "> Partenza </a><br>";
 }

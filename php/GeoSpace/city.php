@@ -36,9 +36,9 @@ class City
 
     public function getCity(): array
     {
-        return $array = [ "Index" => $this->index, "Paese" => $this->paese, "Location" => $this->location,
-                          "Longitudine" => $this->longitudine, "Latitudine" => $this->latitudine, "LongitudineAlt" => $this->longitudineAlt,
-                          "LatitudineAlt" => $this->latitudineAlt, "Nome" => $this->nome];
+        return $array = ["Index" => $this->index, "Paese" => $this->paese, "Location" => $this->location,
+            "Longitudine" => $this->longitudine, "Latitudine" => $this->latitudine, "LongitudineAlt" => $this->longitudineAlt,
+            "LatitudineAlt" => $this->latitudineAlt, "Nome" => $this->nome];
     }
 }
 
