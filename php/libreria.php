@@ -12,6 +12,14 @@ function date_db2user($date): string
     return $d . "/" . $m . "/" . $y;
 }
 
+function date_user2db($date): string
+{
+    $d = substr($date, 0, 2);
+    $m = substr($date, 3, 2);
+    $y = substr($date, 7, 4);
+    return $y . "-" . $m . "-" . $d;
+}
+
 function from_date($date, $particle): string
 {
     switch ($particle) {
@@ -125,5 +133,20 @@ function day(int $giorno): string
             return "Sabato";
         default:
             return "";
+    }
+}
+
+function nrDaysMonth(int $mese): int
+{
+    switch ($mese) {
+        case 11:
+        case 4:
+        case 6:
+        case 9:
+            return 30;
+        case 2:
+            if (!(date("y") % 4)) return 29; else return 28;
+        default:
+            return 31;
     }
 }

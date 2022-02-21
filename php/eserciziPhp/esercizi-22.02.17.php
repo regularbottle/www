@@ -32,8 +32,8 @@ foreach ($_POST as $key => $value) {
 
 /*2. Creare un nuovo array con i dati inseriti nel form secondo lo schema utilizzato
 nell’array $commento1 e $commento2, poi aggiungerlo all’array $commenti*/
-$commento1 = ['nome' => "Mario Rossi", 'data' => "2022-01-10", 'giorni' => 4, 'tipologia' => "privata", 'commenti' => "Ciao come va"];
-$commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => 2, 'tipologia' => $_POST['tipologia'], 'commenti' => "Hello"];
+$commento1 = ['nome' => "Mario Rossi", 'data' => "2022-01-10", 'giorni' => random_int(1, 365), 'tipologia' => "privata", 'commenti' => "Ciao come va"];
+$commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => random_int(1, 365), 'tipologia' => $_POST['tipologia'], 'commenti' => "Hello"];
 $commenti = [$commento1, $commento2, $_POST];
 echo "<hr>";
 /*3. Elencare tutti i nomi delle persone che hanno inserito un commento e la rispettiva
@@ -53,7 +53,7 @@ foreach ($commenti as $key => $value) {
     $no_tipologie[$value['tipologia']]++;
 }
 foreach ($no_tipologie as $key => $value) {
-    if ($value) echo "$key -> $value <br>";
+    if ($value) echo ucfirst($key) . "-> $value <br>";
 }
 echo "<hr>";
 /*5. Nell’elenco del punto 3, vicino a ogni nome, inserire un link alla pagina di
@@ -66,3 +66,13 @@ in ingresso: un array bidimensionale e una stringa che corrisponde alla chiave d
 cui restituire i valori sommati function somma_elementi ($a, $chiave)*/
 
 echo "Giorni Totali: " . giorni_totali($commenti, 'giorni');
+
+echo "<hr>";
+/*7 Elencare le date di soggiorno ed inserire un link alla pag. partenza.php
+a cui inviare la data di arrivo e il numero di giorni
+La pagina partenza scrive la data di arrivo, il numero di giorni e la data di partenza (cercare soluzioni on-line)*/
+foreach ($commenti as $key) {
+    echo $key['nome'] .
+        "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-partenza.php?data=" . str_replace(" ", "%20", $key['data']) .
+        "&giorni=". str_replace(" ", "%20", $key['giorni']) ."> Partenza </a><br>";
+}
