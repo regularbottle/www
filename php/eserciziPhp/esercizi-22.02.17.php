@@ -32,8 +32,8 @@ foreach ($_POST as $key => $value) {
 
 /*2. Creare un nuovo array con i dati inseriti nel form secondo lo schema utilizzato
 nell’array $commento1 e $commento2, poi aggiungerlo all’array $commenti*/
-$commento1 = ['nome' => "Mario Rossi", 'data' => "2022-01-10", 'giorni' => 4, 'tipologia' => "privata"];
-$commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => 2, 'tipologia' => $_POST['tipologia']];
+$commento1 = ['nome' => "Mario Rossi", 'data' => "2022-01-10", 'giorni' => 4, 'tipologia' => "privata", 'commenti' => "Ciao come va"];
+$commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => 2, 'tipologia' => $_POST['tipologia'], 'commenti' => "Hello"];
 $commenti = [$commento1, $commento2, $_POST];
 echo "<hr>";
 /*3. Elencare tutti i nomi delle persone che hanno inserito un commento e la rispettiva
@@ -42,7 +42,7 @@ $anno = date("Y") - 1;
 foreach ($commenti as $key) {
     echo $key['nome'] . " in data " . date_db2user($key['data']) .
         "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-dettaglio.php?nome=" . str_replace(" ", "%20", $key['nome']) .
-        "> Dettagli </a><br>";
+        "&commenti=". str_replace(" ", "%20", $key['commenti']) ."> Dettagli </a><br>";
 }
 echo "<hr>";
 /*4. Elencare le tipologie di vacanza specificando quanti commenti sono presenti per
