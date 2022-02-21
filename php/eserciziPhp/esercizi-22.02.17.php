@@ -73,6 +73,8 @@ a cui inviare la data di arrivo e il numero di giorni
 La pagina partenza scrive la data di arrivo, il numero di giorni e la data di partenza (cercare soluzioni on-line)*/
 foreach ($commenti as $key) {
     echo $key['nome'] .
-        "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-partenza.php?data=" . str_replace(" ", "%20", $key['data']) .
+        "<a href=\./www/php/eserciziPhp/esercizi-22.02.17-partenza.php?" .
+        "nome=" . str_replace(" ", "%20", $key['nome']) .
+        "&data=" . str_replace(" ", "%20", $key['data']) .
         "&giorni=". str_replace(" ", "%20", $key['giorni']) ."> Partenza </a><br>";
 }
