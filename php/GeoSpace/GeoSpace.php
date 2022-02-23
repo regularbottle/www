@@ -30,9 +30,9 @@
             print_as_table_Cities($cities->getCityList()); ?>
         </section>
         <section class="col-12 col-md-2 col-sm text-center">
-            <input class="btn btn-primary" type="button" value="Calcola Distanza">
+            <input class="btn btn-primary" type="button" value="Calcola Distanza" onclick="calculateDistance()">
             <p>Distanza Lossodromica</p>
-            <p>88,02Km </p>
+            <p id="distanzaLossodromica">88,02Km </p>
             <p>Distanza Ortodromica</p>
             <p>98,02Km </p>
         </section>
@@ -48,6 +48,12 @@
         </section>
     </div>
 </div>
+<!-- JavaScript -->
+<script>
+    function calculateDistance() {
+        document.getElementById("distanzaLossodromica").innerHTML = (40 + 34) + "Km";
+    }
+</script>
 <!-- Bootstrap Bundle with Popper -->
 <script crossorigin="anonymous"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
