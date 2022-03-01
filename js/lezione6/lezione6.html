@@ -16,7 +16,7 @@
     <input id="cognome" name="cognome" type="text"><br>
     <label for="telefono">Telefono:</label>
     <input id="telefono" name="telefono" type="text"><br>
-    <button id="aggiungi">Aggiungi Contatto</button>
+    <button id="aggiungi" onclick="aggiungiContattoForm()">Aggiungi Contatto</button>
 </div>
 <script>
     class Contatto {
@@ -72,10 +72,9 @@
             }
             for (let i = 0; i < this.database.length; i++) {
                 let contatto = this.database[i];
-                data.push("<li "
-                    + ((i % 2 === 0) ? 'style="background-color:#ccc">' : 'style="background-color:#ddd">')
+                data.push("<li " + ((i % 2 === 0) ? 'style="background-color:#ccc">' : 'style="background-color:#ddd">')
                     + contatto.nome + " " + contatto.cognome + " " + contatto.telefono
-                    + " <button id='cancella' onclick='cancellaContattoForm()'>Cancella</button>"
+                    + " <button id='cancella' name='"+ i +"' onclick='cancellaContattoForm(this.name)'>Cancella</button>"
                     + "</li>");
             }
             return data;
@@ -120,9 +119,12 @@
     let contatto1 = new Contatto("Lorenzo", "Pace", "3000000009");
     let rubrica = new Rubrica();
     rubrica.aggiungiContatto(contatto1);
+    let data = rubrica.stampaContatti('az');
+    for (let i = 0; i < data.length; i++) {
+        document.getElementById("list").innerHTML += data[i];
+    }
 
-    let button = document.getElementById("aggiungi")
-    button.onclick = function aggiungiContattoForm() {
+    function aggiungiContattoForm() {
         document.getElementById("list").innerHTML = "";
         if (rubrica !== undefined) {
             let nome = document.getElementById("nome").value;
@@ -135,10 +137,10 @@
             document.getElementById("list").innerHTML += data[i];
         }
     }
-    function cancellaContattoForm() {
+    function cancellaContattoForm(index) {
         document.getElementById("list").innerHTML = "";
         if (rubrica !== undefined) {
-            rubrica.eliminaContatto(0);
+            rubrica.eliminaContatto(index);
         }
         let data = rubrica.stampaContatti('az');
         for (let i = 0; i < data.length; i++) {
