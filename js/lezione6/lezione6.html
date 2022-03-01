@@ -107,16 +107,16 @@
         }
     }
 
-    let contatto1 = new Contatto("Calin", "Furculita", "3898873929");
-    let contatto2 = new Contatto("Marco", "Battello", "3894473929");
-    let contatto3 = new Contatto("Alex", "Cherif", "3898863929");
-    let contatto4 = new Contatto("Silvia", "Cesari", "3838873929");
+    let contatto1 = new Contatto("Lorenzo", "Pace", "3000000009");
+    let contatto2 = new Contatto("Marco", "Rossi", "3111111119");
+    let contatto3 = new Contatto("Alex", "Bianchi", "3222222229");
+    let contatto4 = new Contatto("Silvia", "Neri", "3333333339");
     let rubrica = new Rubrica();
     rubrica.aggiungiContatto(contatto1);
     rubrica.aggiungiContatto(contatto2);
     rubrica.aggiungiContatto(contatto3);
     rubrica.aggiungiContatto(contatto4);
-    let data = rubrica.stampaContatti("az");
+    let data = rubrica.stampaContatti('az');
     for (let i = 0; i < data.length; i++) {
         document.getElementById("list").innerHTML += data[i];
     }
