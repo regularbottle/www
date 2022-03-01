@@ -24,7 +24,6 @@ use Ramsey\Uuid\Rfc4122\FieldsInterface as Rfc4122FieldsInterface;
 use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
 use ValueError;
-
 use function assert;
 use function bin2hex;
 use function preg_match;
@@ -256,168 +255,16 @@ class Uuid implements UuidInterface
      *     for converting timestamps extracted from a UUID to unix timestamps
      */
     public function __construct(
-        Rfc4122FieldsInterface $fields,
+        Rfc4122FieldsInterface   $fields,
         NumberConverterInterface $numberConverter,
-        CodecInterface $codec,
-        TimeConverterInterface $timeConverter
-    ) {
+        CodecInterface           $codec,
+        TimeConverterInterface   $timeConverter
+    )
+    {
         $this->fields = $fields;
         $this->codec = $codec;
         $this->numberConverter = $numberConverter;
         $this->timeConverter = $timeConverter;
-    }
-
-    /**
-     * @psalm-return non-empty-string
-     */
-    public function __toString(): string
-    {
-        return $this->toString();
-    }
-
-    /**
-     * Converts the UUID to a string for JSON serialization
-     */
-    public function jsonSerialize(): string
-    {
-        return $this->toString();
-    }
-
-    /**
-     * Converts the UUID to a string for PHP serialization
-     */
-    public function serialize(): string
-    {
-        return $this->getFields()->getBytes();
-    }
-
-    /**
-     * @return array{bytes: string}
-     */
-    public function __serialize(): array
-    {
-        return ['bytes' => $this->serialize()];
-    }
-
-    /**
-     * Re-constructs the object from its serialized form
-     *
-     * @param string $serialized The serialized PHP string to unserialize into
-     *     a UuidInterface instance
-     *
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
-     */
-    public function unserialize($serialized): void
-    {
-        if (strlen($serialized) === 16) {
-            /** @var Uuid $uuid */
-            $uuid = self::getFactory()->fromBytes($serialized);
-        } else {
-            /** @var Uuid $uuid */
-            $uuid = self::getFactory()->fromString($serialized);
-        }
-
-        $this->codec = $uuid->codec;
-        $this->numberConverter = $uuid->numberConverter;
-        $this->fields = $uuid->fields;
-        $this->timeConverter = $uuid->timeConverter;
-    }
-
-    /**
-     * @param array{bytes: string} $data
-     */
-    public function __unserialize(array $data): void
-    {
-        // @codeCoverageIgnoreStart
-        if (!isset($data['bytes'])) {
-            throw new ValueError(sprintf('%s(): Argument #1 ($data) is invalid', __METHOD__));
-        }
-        // @codeCoverageIgnoreEnd
-
-        $this->unserialize($data['bytes']);
-    }
-
-    public function compareTo(UuidInterface $other): int
-    {
-        $compare = strcmp($this->toString(), $other->toString());
-
-        if ($compare < 0) {
-            return -1;
-        }
-
-        if ($compare > 0) {
-            return 1;
-        }
-
-        return 0;
-    }
-
-    public function equals(?object $other): bool
-    {
-        if (!$other instanceof UuidInterface) {
-            return false;
-        }
-
-        return $this->compareTo($other) === 0;
-    }
-
-    /**
-     * @psalm-return non-empty-string
-     */
-    public function getBytes(): string
-    {
-        return $this->codec->encodeBinary($this);
-    }
-
-    public function getFields(): FieldsInterface
-    {
-        return $this->fields;
-    }
-
-    public function getHex(): Hexadecimal
-    {
-        return new Hexadecimal(str_replace('-', '', $this->toString()));
-    }
-
-    public function getInteger(): IntegerObject
-    {
-        return new IntegerObject($this->numberConverter->fromHex($this->getHex()->toString()));
-    }
-
-    /**
-     * @psalm-return non-empty-string
-     */
-    public function toString(): string
-    {
-        return $this->codec->encode($this);
-    }
-
-    /**
-     * Returns the factory used to create UUIDs
-     */
-    public static function getFactory(): UuidFactoryInterface
-    {
-        if (self::$factory === null) {
-            self::$factory = new UuidFactory();
-        }
-
-        return self::$factory;
-    }
-
-    /**
-     * Sets the factory used to create UUIDs
-     *
-     * @param UuidFactoryInterface $factory A factory that will be used by this
-     *     class to create UUIDs
-     */
-    public static function setFactory(UuidFactoryInterface $factory): void
-    {
-        // Note: non-strict equality is intentional here. If the factory is configured differently, every assumption
-        //       around purity is broken, and we have to internally decide everything differently.
-        // phpcs:ignore SlevomatCodingStandard.Operators.DisallowEqualOperators.DisallowedNotEqualOperator
-        self::$factoryReplaced = ($factory != new UuidFactory());
-
-        self::$factory = $factory;
     }
 
     /**
@@ -438,7 +285,7 @@ class Uuid implements UuidInterface
      */
     public static function fromBytes(string $bytes): UuidInterface
     {
-        if (! self::$factoryReplaced && strlen($bytes) === 16) {
+        if (!self::$factoryReplaced && strlen($bytes) === 16) {
             $base16Uuid = bin2hex($bytes);
 
             // Note: we are calling `fromString` internally because we don't know if the given `$bytes` is a valid UUID
@@ -476,7 +323,7 @@ class Uuid implements UuidInterface
      */
     public static function fromString(string $uuid): UuidInterface
     {
-        if (! self::$factoryReplaced && preg_match(LazyUuidFromString::VALID_REGEX, $uuid) === 1) {
+        if (!self::$factoryReplaced && preg_match(LazyUuidFromString::VALID_REGEX, $uuid) === 1) {
             assert($uuid !== '');
 
             return new LazyUuidFromString(strtolower($uuid));
@@ -500,9 +347,10 @@ class Uuid implements UuidInterface
      */
     public static function fromDateTime(
         DateTimeInterface $dateTime,
-        ?Hexadecimal $node = null,
-        ?int $clockSeq = null
-    ): UuidInterface {
+        ?Hexadecimal      $node = null,
+        ?int              $clockSeq = null
+    ): UuidInterface
+    {
         return self::getFactory()->fromDateTime($dateTime, $node, $clockSeq);
     }
 
@@ -577,11 +425,12 @@ class Uuid implements UuidInterface
      *     version 2 UUID
      */
     public static function uuid2(
-        int $localDomain,
+        int            $localDomain,
         ?IntegerObject $localIdentifier = null,
-        ?Hexadecimal $node = null,
-        ?int $clockSeq = null
-    ): UuidInterface {
+        ?Hexadecimal   $node = null,
+        ?int           $clockSeq = null
+    ): UuidInterface
+    {
         return self::getFactory()->uuid2($localDomain, $localIdentifier, $node, $clockSeq);
     }
 
@@ -657,8 +506,162 @@ class Uuid implements UuidInterface
      */
     public static function uuid6(
         ?Hexadecimal $node = null,
-        ?int $clockSeq = null
-    ): UuidInterface {
+        ?int         $clockSeq = null
+    ): UuidInterface
+    {
         return self::getFactory()->uuid6($node, $clockSeq);
+    }
+
+    /**
+     * @psalm-return non-empty-string
+     */
+    public function __toString(): string
+    {
+        return $this->toString();
+    }
+
+    /**
+     * @psalm-return non-empty-string
+     */
+    public function toString(): string
+    {
+        return $this->codec->encode($this);
+    }
+
+    /**
+     * Converts the UUID to a string for JSON serialization
+     */
+    public function jsonSerialize(): string
+    {
+        return $this->toString();
+    }
+
+    /**
+     * @return array{bytes: string}
+     */
+    public function __serialize(): array
+    {
+        return ['bytes' => $this->serialize()];
+    }
+
+    /**
+     * Converts the UUID to a string for PHP serialization
+     */
+    public function serialize(): string
+    {
+        return $this->getFields()->getBytes();
+    }
+
+    public function getFields(): FieldsInterface
+    {
+        return $this->fields;
+    }
+
+    /**
+     * @param array{bytes: string} $data
+     */
+    public function __unserialize(array $data): void
+    {
+        // @codeCoverageIgnoreStart
+        if (!isset($data['bytes'])) {
+            throw new ValueError(sprintf('%s(): Argument #1 ($data) is invalid', __METHOD__));
+        }
+        // @codeCoverageIgnoreEnd
+
+        $this->unserialize($data['bytes']);
+    }
+
+    /**
+     * Re-constructs the object from its serialized form
+     *
+     * @param string $serialized The serialized PHP string to unserialize into
+     *     a UuidInterface instance
+     *
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
+     */
+    public function unserialize($serialized): void
+    {
+        if (strlen($serialized) === 16) {
+            /** @var Uuid $uuid */
+            $uuid = self::getFactory()->fromBytes($serialized);
+        } else {
+            /** @var Uuid $uuid */
+            $uuid = self::getFactory()->fromString($serialized);
+        }
+
+        $this->codec = $uuid->codec;
+        $this->numberConverter = $uuid->numberConverter;
+        $this->fields = $uuid->fields;
+        $this->timeConverter = $uuid->timeConverter;
+    }
+
+    /**
+     * Returns the factory used to create UUIDs
+     */
+    public static function getFactory(): UuidFactoryInterface
+    {
+        if (self::$factory === null) {
+            self::$factory = new UuidFactory();
+        }
+
+        return self::$factory;
+    }
+
+    /**
+     * Sets the factory used to create UUIDs
+     *
+     * @param UuidFactoryInterface $factory A factory that will be used by this
+     *     class to create UUIDs
+     */
+    public static function setFactory(UuidFactoryInterface $factory): void
+    {
+        // Note: non-strict equality is intentional here. If the factory is configured differently, every assumption
+        //       around purity is broken, and we have to internally decide everything differently.
+        // phpcs:ignore SlevomatCodingStandard.Operators.DisallowEqualOperators.DisallowedNotEqualOperator
+        self::$factoryReplaced = ($factory != new UuidFactory());
+
+        self::$factory = $factory;
+    }
+
+    public function equals(?object $other): bool
+    {
+        if (!$other instanceof UuidInterface) {
+            return false;
+        }
+
+        return $this->compareTo($other) === 0;
+    }
+
+    public function compareTo(UuidInterface $other): int
+    {
+        $compare = strcmp($this->toString(), $other->toString());
+
+        if ($compare < 0) {
+            return -1;
+        }
+
+        if ($compare > 0) {
+            return 1;
+        }
+
+        return 0;
+    }
+
+    /**
+     * @psalm-return non-empty-string
+     */
+    public function getBytes(): string
+    {
+        return $this->codec->encodeBinary($this);
+    }
+
+    public function getInteger(): IntegerObject
+    {
+        return new IntegerObject($this->numberConverter->fromHex($this->getHex()->toString()));
+    }
+
+    public function getHex(): Hexadecimal
+    {
+        return new Hexadecimal(str_replace('-', '', $this->toString()));
     }
 }

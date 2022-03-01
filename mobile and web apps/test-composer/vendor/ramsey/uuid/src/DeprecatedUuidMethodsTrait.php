@@ -22,10 +22,8 @@ use Ramsey\Uuid\Exception\DateTimeException;
 use Ramsey\Uuid\Exception\UnsupportedOperationException;
 use Ramsey\Uuid\Rfc4122\FieldsInterface as Rfc4122FieldsInterface;
 use Throwable;
-
 use function str_pad;
 use function substr;
-
 use const STR_PAD_LEFT;
 
 /**
@@ -127,13 +125,13 @@ trait DeprecatedUuidMethodsTrait
     }
 
     /**
-     * @deprecated In ramsey/uuid version 5.0.0, this will be removed.
-     *     It is available at {@see UuidV1::getDateTime()}.
-     *
      * @return DateTimeImmutable An immutable instance of DateTimeInterface
      *
      * @throws UnsupportedOperationException if UUID is not time-based
      * @throws DateTimeException if DateTime throws an exception/error
+     * @deprecated In ramsey/uuid version 5.0.0, this will be removed.
+     *     It is available at {@see UuidV1::getDateTime()}.
+     *
      */
     public function getDateTime(): DateTimeInterface
     {
@@ -151,15 +149,15 @@ trait DeprecatedUuidMethodsTrait
                 . str_pad($time->getMicroseconds()->toString(), 6, '0', STR_PAD_LEFT)
             );
         } catch (Throwable $e) {
-            throw new DateTimeException($e->getMessage(), (int) $e->getCode(), $e);
+            throw new DateTimeException($e->getMessage(), (int)$e->getCode(), $e);
         }
     }
 
     /**
+     * @return string[]
      * @deprecated Use {@see UuidInterface::getFields()} to get a
      *     {@see FieldsInterface} instance.
      *
-     * @return string[]
      */
     public function getFieldsHex(): array
     {

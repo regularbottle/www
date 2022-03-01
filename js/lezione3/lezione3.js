@@ -8,10 +8,12 @@ console.log(Calciatore);
 
 let objVuoto = {};
 let objPieno = {"nome": "Giusseppe"};
+
 function isEmpty(obj) {
     return !('nome' in obj);
 
 }
+
 console.log(isEmpty(objVuoto));
 console.log(isEmpty(objPieno));
 
@@ -26,15 +28,15 @@ const calciatori = [
 ];
 
 
-function stampaGiocatori(calciatori){
-    if (calciatori.length === 0){
+function stampaGiocatori(calciatori) {
+    if (calciatori.length === 0) {
         console.log("L'array è vuoto");
         return;
     }
 
     for (let i = 0; i < calciatori.length; i++) {
         const calciatore = calciatori[i];
-        if (calciatore.maglia === 10){
+        if (calciatore.maglia === 10) {
             console.log(calciatore.nome + " " + calciatore.cognome);
         }
     }

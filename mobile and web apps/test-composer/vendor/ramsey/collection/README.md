@@ -20,9 +20,8 @@ ramsey/collection is a PHP library for representing and manipulating collections
 
 Much inspiration for this library came from the [Java Collections Framework][java].
 
-This project adheres to a [code of conduct](CODE_OF_CONDUCT.md).
-By participating in this project and its community, you are expected to
-uphold this code.
+This project adheres to a [code of conduct](CODE_OF_CONDUCT.md). By participating in this project and its community, you
+are expected to uphold this code.
 
 ## Installation
 
@@ -39,11 +38,11 @@ Examples of how to use this framework can be found in the
 
 ## Contributing
 
-Contributions are welcome! Before contributing to this project, familiarize
-yourself with [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome! Before contributing to this project, familiarize yourself
+with [CONTRIBUTING.md](CONTRIBUTING.md).
 
-To develop this project, you will need [PHP](https://www.php.net) 7.3 or greater
-and [Composer](https://getcomposer.org).
+To develop this project, you will need [PHP](https://www.php.net) 7.3 or greater and [Composer](https://getcomposer.org)
+.
 
 After cloning this repository locally, execute the following commands:
 
@@ -56,27 +55,25 @@ Now, you are ready to develop!
 
 ## Coordinated Disclosure
 
-Keeping user information safe and secure is a top priority, and we welcome the
-contribution of external security researchers. If you believe you've found a
-security issue in software that is maintained in this repository, please read
+Keeping user information safe and secure is a top priority, and we welcome the contribution of external security
+researchers. If you believe you've found a security issue in software that is maintained in this repository, please read
 [SECURITY.md][] for instructions on submitting a vulnerability report.
 
 ## ramsey/collection for Enterprise
 
 Available as part of the Tidelift Subscription.
 
-The maintainers of ramsey/collection and thousands of other packages are working
-with Tidelift to deliver commercial support and maintenance for the open source
-packages you use to build your applications. Save time, reduce risk, and improve
-code health, while paying the maintainers of the exact packages you use.
+The maintainers of ramsey/collection and thousands of other packages are working with Tidelift to deliver commercial
+support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and
+improve code health, while paying the maintainers of the exact packages you use.
 [Learn more.](https://tidelift.com/subscription/pkg/packagist-ramsey-collection?utm_source=undefined&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## Copyright and License
 
 The ramsey/collection library is copyright © [Ben Ramsey](https://benramsey.com)
-and licensed for use under the terms of the
-MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
+and licensed for use under the terms of the MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
 
 
 [java]: http://docs.oracle.com/javase/8/docs/technotes/guides/collections/index.html
+
 [security.md]: https://github.com/ramsey/collection/blob/master/SECURITY.md

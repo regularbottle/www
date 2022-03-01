@@ -20,7 +20,6 @@ use Ramsey\Uuid\Exception\InvalidUuidStringException;
 use Ramsey\Uuid\Rfc4122\FieldsInterface;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
-
 use function hex2bin;
 use function implode;
 use function str_replace;
@@ -89,25 +88,6 @@ class StringCodec implements CodecInterface
         return $this->builder->build($this, $this->getBytes($encodedUuid));
     }
 
-    public function decodeBytes(string $bytes): UuidInterface
-    {
-        if (strlen($bytes) !== 16) {
-            throw new InvalidArgumentException(
-                '$bytes string should contain 16 characters.'
-            );
-        }
-
-        return $this->builder->build($this, $bytes);
-    }
-
-    /**
-     * Returns the UUID builder
-     */
-    protected function getBuilder(): UuidBuilderInterface
-    {
-        return $this->builder;
-    }
-
     /**
      * Returns a byte string of the UUID
      */
@@ -133,6 +113,25 @@ class StringCodec implements CodecInterface
             );
         }
 
-        return (string) hex2bin($parsedUuid);
+        return (string)hex2bin($parsedUuid);
+    }
+
+    public function decodeBytes(string $bytes): UuidInterface
+    {
+        if (strlen($bytes) !== 16) {
+            throw new InvalidArgumentException(
+                '$bytes string should contain 16 characters.'
+            );
+        }
+
+        return $this->builder->build($this, $bytes);
+    }
+
+    /**
+     * Returns the UUID builder
+     */
+    protected function getBuilder(): UuidBuilderInterface
+    {
+        return $this->builder;
     }
 }

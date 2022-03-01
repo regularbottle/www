@@ -3,6 +3,7 @@ class Calcolatrice {
         this.numero1 = numero1;
         this.numero2 = numero2;
     }
+
     somma = function () {
         return this.numero1 + this.numero2;
     }

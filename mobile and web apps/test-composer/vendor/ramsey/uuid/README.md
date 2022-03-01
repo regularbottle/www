@@ -14,20 +14,18 @@
     <a href="https://shepherd.dev/github/ramsey/uuid"><img src="https://img.shields.io/endpoint?style=flat-square&url=https%3A%2F%2Fshepherd.dev%2Fgithub%2Framsey%2Fuuid%2Fcoverage" alt="Psalm Type Coverage"></a>
 </p>
 
-ramsey/uuid is a PHP library for generating and working with universally unique
-identifiers (UUIDs).
+ramsey/uuid is a PHP library for generating and working with universally unique identifiers (UUIDs).
 
-This project adheres to a [code of conduct](CODE_OF_CONDUCT.md).
-By participating in this project and its community, you are expected to
-uphold this code.
+This project adheres to a [code of conduct](CODE_OF_CONDUCT.md). By participating in this project and its community, you
+are expected to uphold this code.
 
 Much inspiration for this library came from the [Java][javauuid] and
 [Python][pyuuid] UUID libraries.
 
 ## Installation
 
-The preferred method of installation is via [Composer][]. Run the following
-command to install the package and add it as a requirement to your project's
+The preferred method of installation is via [Composer][]. Run the following command to install the package and add it as
+a requirement to your project's
 `composer.json`:
 
 ```bash
@@ -42,8 +40,7 @@ See the documentation for a thorough upgrade guide:
 
 ## Documentation
 
-Please see <https://uuid.ramsey.dev> for documentation, tips, examples, and
-frequently asked questions.
+Please see <https://uuid.ramsey.dev> for documentation, tips, examples, and frequently asked questions.
 
 ## Contributing
 
@@ -52,32 +49,36 @@ Contributions are welcome! To contribute, please familiarize yourself with
 
 ## Coordinated Disclosure
 
-Keeping user information safe and secure is a top priority, and we welcome the
-contribution of external security researchers. If you believe you've found a
-security issue in software that is maintained in this repository, please read
+Keeping user information safe and secure is a top priority, and we welcome the contribution of external security
+researchers. If you believe you've found a security issue in software that is maintained in this repository, please read
 [SECURITY.md][] for instructions on submitting a vulnerability report.
 
 ## ramsey/uuid for Enterprise
 
 Available as part of the Tidelift Subscription.
 
-The maintainers of ramsey/uuid and thousands of other packages are working with
-Tidelift to deliver commercial support and maintenance for the open source
-packages you use to build your applications. Save time, reduce risk, and improve
+The maintainers of ramsey/uuid and thousands of other packages are working with Tidelift to deliver commercial support
+and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve
 code health, while paying the maintainers of the exact packages you use.
 [Learn more.](https://tidelift.com/subscription/pkg/packagist-ramsey-uuid?utm_source=undefined&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## Copyright and License
 
-The ramsey/uuid library is copyright © [Ben Ramsey](https://benramsey.com/) and
-licensed for use under the MIT License (MIT). Please see [LICENSE][] for more
-information.
+The ramsey/uuid library is copyright © [Ben Ramsey](https://benramsey.com/) and licensed for use under the MIT License (
+MIT). Please see [LICENSE][] for more information.
 
 [rfc4122]: http://tools.ietf.org/html/rfc4122
+
 [conduct]: https://github.com/ramsey/uuid/blob/main/CODE_OF_CONDUCT.md
+
 [javauuid]: http://docs.oracle.com/javase/6/docs/api/java/util/UUID.html
+
 [pyuuid]: http://docs.python.org/3/library/uuid.html
+
 [composer]: http://getcomposer.org/
+
 [contributing.md]: https://github.com/ramsey/uuid/blob/main/CONTRIBUTING.md
+
 [security.md]: https://github.com/ramsey/uuid/blob/main/SECURITY.md
+
 [license]: https://github.com/ramsey/uuid/blob/main/LICENSE

@@ -1,18 +1,18 @@
 {
-    "name": "enaip/calin",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Enaip\\Calin\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Regular",
-            "email": "calin.furculita@gmail.com"
-        }
-    ],
-    "require": {
-        "ramsey/uuid": "^4.2"
+  "name": "enaip/calin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Enaip\\Calin\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Regular",
+      "email": "calin.furculita@gmail.com"
+    }
+  ],
+  "require": {
+    "ramsey/uuid": "^4.2"
+  }
 }

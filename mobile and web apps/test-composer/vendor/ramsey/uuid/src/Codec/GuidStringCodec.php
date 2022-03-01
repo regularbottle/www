@@ -16,7 +16,6 @@ namespace Ramsey\Uuid\Codec;
 
 use Ramsey\Uuid\Guid\Guid;
 use Ramsey\Uuid\UuidInterface;
-
 use function bin2hex;
 use function substr;
 
@@ -36,12 +35,6 @@ class GuidStringCodec extends StringCodec
         return $this->getBuilder()->build($this, $this->swapBytes($bytes));
     }
 
-    public function decodeBytes(string $bytes): UuidInterface
-    {
-        // Specifically call parent::decode to preserve correct byte order
-        return parent::decode(bin2hex($bytes));
-    }
-
     /**
      * Swaps bytes according to the GUID rules
      */
@@ -51,5 +44,11 @@ class GuidStringCodec extends StringCodec
             . $bytes[5] . $bytes[4]
             . $bytes[7] . $bytes[6]
             . substr($bytes, 8);
+    }
+
+    public function decodeBytes(string $bytes): UuidInterface
+    {
+        // Specifically call parent::decode to preserve correct byte order
+        return parent::decode(bin2hex($bytes));
     }
 }

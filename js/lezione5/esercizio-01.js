@@ -8,49 +8,49 @@ calcolaArea
  */
 
 class FiguraGeometrica {
-    constructor(forma){
+    constructor(forma) {
         this.forma = forma;
         this.latiFigura = [];
     }
- 
-    set forma(forma){
+
+    set forma(forma) {
         if (forma === "cerchio"
             || forma === "triangolo"
             || forma === "quadrato"
-            || forma === "rettangolo"){
-                this._forma = forma;
-            }else{
-                this._forma = null;
-            }
+            || forma === "rettangolo") {
+            this._forma = forma;
+        } else {
+            this._forma = null;
+        }
     }
- 
-    aggiungiLato(lunghezza){
-        if (typeof(lunghezza) === "number"
-        && lunghezza > 0){
+
+    aggiungiLato(lunghezza) {
+        if (typeof (lunghezza) === "number"
+            && lunghezza > 0) {
             this.latiFigura.push(lunghezza);
         }
     }
- 
-    calcoloPerimetro(){
+
+    calcoloPerimetro() {
         if (this.latiFigura.length >= 3
-            || this.latiFigura.length <= 4){
+            || this.latiFigura.length <= 4) {
             let somma = 0;
-            for(let i=0; i<this.latiFigura.length; i++){
+            for (let i = 0; i < this.latiFigura.length; i++) {
                 somma = somma + this.latiFigura[i];
             }
             return somma;
         }
         return undefined;
     }
- 
-    calcoloArea(){
+
+    calcoloArea() {
         if (this._forma !== "quadrato"
-        && this._forma !== "rettangolo"){
+            && this._forma !== "rettangolo") {
             return 0;
         }
 
         let result;
-        switch(this._forma){
+        switch (this._forma) {
             case "quadrato":
                 result = this.latiFigura[0] * this.latiFigura[0];
                 break;
@@ -64,59 +64,60 @@ class FiguraGeometrica {
         return result;
     }
 }
- 
+
 class Quadrato extends FiguraGeometrica {
-    constructor(lunghezzaLato){
+    constructor(lunghezzaLato) {
         super("quadrato");
         let i = 0;
-        while(i < 4){
+        while (i < 4) {
             super.aggiungiLato(lunghezzaLato);
             i++;
         }
     }
 }
- 
+
 class Rettangolo extends FiguraGeometrica {
-    constructor(lunghezzaLatoA, lunghezzaLatoB){
+    constructor(lunghezzaLatoA, lunghezzaLatoB) {
         super("rettangolo");
         let i = 0;
-        while(i < 2){
+        while (i < 2) {
             super.aggiungiLato(lunghezzaLatoA);
             super.aggiungiLato(lunghezzaLatoB);
             i++;
         }
     }
 }
- 
+
 class Triangolo extends FiguraGeometrica {
-    constructor(lunghezzaLato, altezzaTriangolo){
+    constructor(lunghezzaLato, altezzaTriangolo) {
         super("triangolo");
         this.lunghezzaLato = lunghezzaLato;
         this.altezzaTriangolo = altezzaTriangolo;
         let i = 0;
-        while(i < 3){
+        while (i < 3) {
             super.aggiungiLato(lunghezzaLato);
             i++;
         }
     }
- 
-    calcoloArea(){
-        return (this.altezzaTriangolo * this.lunghezzaLato)/2;
+
+    calcoloArea() {
+        return (this.altezzaTriangolo * this.lunghezzaLato) / 2;
     }
 }
- 
+
 class Cerchio extends FiguraGeometrica {
     pigreco = 3.14;
-    constructor(r){
+
+    constructor(r) {
         super("cerchio");
         this.r = r;
     }
- 
-    calcoloArea(){
+
+    calcoloArea() {
         return this.r * this.r * this.pigreco;
     }
- 
-    calcoloPerimetro(){
+
+    calcoloPerimetro() {
         return (this.r + this.r) * this.pigreco;
     }
 }
