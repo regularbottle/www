@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
     //GET http://localhost:8000/api/users
     public function readAll() {
-        return response('readAll');
+        $users = User::get();
+        return response()->json($users);
     }
 
     //POST http://localhost:8000/api/users
