@@ -1,10 +1,22 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+    <title>Verifica PHP - 09/03/2022</title>
+</head>
+<body>
+<div class="container">
 <?php
 include '../libreria.php';
-function is_passed ($data, $giorni): bool
+function is_passed($data, $giorni): bool
 {
-    $dateToday = time();
-    $data_passata = strtotime($data);
-    $tempo_passato = ($dateToday - $data_passata) / (60 * 60 * 24);
+    $tempo_passato = (time() - strtotime($data)) / (60 * 60 * 24);
     if ($tempo_passato < $giorni)
         return true;
     else
@@ -42,16 +54,14 @@ if ($isEmpty == 0) {
 
 echo "<hr>";
 
-$dateToday = time();
 $i = 0;
 foreach ($articoli as $key) {
-   $data_articolo = strtotime($key['data_articolo']);
-   $tempo_passato = ($dateToday - $data_articolo) / (60 * 60 * 24);
-   if ($tempo_passato <= 30) {
-       $articoli[$i]['isNew'] = 1;
-   }
-   $distanceFromToday[] = [$tempo_passato, $key['titolo_articolo']];
-   $i++;
+    $tempo_passato = (time() - strtotime($key['data_articolo'])) / (60 * 60 * 24);
+    if (is_passed($key['data_articolo'], 30)) {
+        $articoli[$i]['isNew'] = 1;
+    }
+    $distanceFromToday[] = [$tempo_passato, $key['titolo_articolo']];
+    $i++;
 }
 sort($distanceFromToday);
 echo "L'articolo più recente è \"" . $distanceFromToday[0][1] . "\"";
@@ -61,10 +71,10 @@ echo "<hr>";
 foreach ($articoli as $key) {
     if (isset($key['isNew'])) {
         if ($key['isNew'] == 1) {
-        echo "<span style='color:red'>NEW</span> ";
+            echo "<span style='color:red'>NEW</span> ";
         }
     }
-    echo $key['titolo_articolo'] .  ": " . $key['testo_articolo'] ."</br>".
+    echo $key['titolo_articolo'] . ": " . $key['testo_articolo'] . "</br>" .
         "<a href=./aritcolo.php?nome=" . str_replace(" ", "%20", $key['titolo_articolo']) . "> Dettagli </a><br>";
 }
 
@@ -72,9 +82,9 @@ echo "<hr>";
 
 $data = "2022-03-01";
 $giorniFunzione = 30;
-echo "La data ". date_db2user($data);
+echo "La data " . date_db2user($data);
 if (is_passed($data, $giorniFunzione))
-     echo " e' ";
+    echo " e' ";
 else
     echo " non e' ";
 echo " più recente di " . $giorniFunzione;
@@ -90,4 +100,11 @@ foreach ($articoli as $key) {
 }
 
 echo "Nel mese di " . $mese_corrente . " sono stati pubblicati " . $articoliPubblicatiMese . " articoli";
-
+?>
+</div>
+<!-- Bootstrap Bundle with Popper -->
+<script crossorigin="anonymous"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
