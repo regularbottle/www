@@ -31,7 +31,7 @@
     foreach ($records as $key => $value) {
         echo "Nome Hotel: " . $value['name'] . "<br>" .
             "Valutazione: " . $value['stars'] . "\u{2B50}" . "<br>" .
-            "Indirizzo: " . $value['address'];
+            "Indirizzo: " . $value['address'] . "<hr>" ;
     }
     ?>
 </div>
