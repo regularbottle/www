@@ -17,7 +17,7 @@ include '../libreria.php';
 function is_passed($data, $giorni): bool
 {
     $tempo_passato = (time() - strtotime($data)) / (60 * 60 * 24);
-    if ($tempo_passato < $giorni)
+    if ($tempo_passato <= $giorni)
         return true;
     else
         return false;
@@ -37,14 +37,14 @@ foreach ($_REQUEST as $key => $value) {
     }
 }
 if ($isEmpty == 0) {
-    $articolo_nuovo = ['titolo_articolo' => $_REQUEST['titolo_articolo'], 'data_articolo' => $_REQUEST['data_articolo'], 'testo_articolo' => $_REQUEST['testo_articolo']];
+    $newArticle = ['titolo_articolo' => $_REQUEST['titolo_articolo'], 'data_articolo' => $_REQUEST['data_articolo'], 'testo_articolo' => $_REQUEST['testo_articolo']];
     foreach ($articoli as $key) {
-        if ($key['titolo_articolo'] == $articolo_nuovo['titolo_articolo']) {
+        if ($key['titolo_articolo'] == $newArticle['titolo_articolo']) {
             $isNewArticle = 1;
         }
     }
     if ($isNewArticle == 0) {
-        $articoli[] = $articolo_nuovo;
+        $articoli[] = $newArticle;
     }
     foreach ($articoli as $key) {
         echo "L'articolo con titolo: " . $key['titolo_articolo'] . " pubblicato in data " . date_db2user($key['data_articolo']) .
@@ -56,11 +56,11 @@ echo "<hr>";
 
 $i = 0;
 foreach ($articoli as $key) {
-    $tempo_passato = (time() - strtotime($key['data_articolo'])) / (60 * 60 * 24);
+    $timePassed = (time() - strtotime($key['data_articolo'])) / (60 * 60 * 24);
     if (is_passed($key['data_articolo'], 30)) {
         $articoli[$i]['isNew'] = 1;
     }
-    $distanceFromToday[] = [$tempo_passato, $key['titolo_articolo']];
+    $distanceFromToday[] = [$timePassed, $key['titolo_articolo']];
     $i++;
 }
 sort($distanceFromToday);
@@ -80,26 +80,26 @@ foreach ($articoli as $key) {
 
 echo "<hr>";
 
-$data = "2022-03-01";
-$giorniFunzione = 30;
-echo "La data " . date_db2user($data);
-if (is_passed($data, $giorniFunzione))
+$exampleDate = "2022-03-01";
+$exampleDays = 30;
+echo "La data " . date_db2user($exampleDate);
+if (is_passed($exampleDate, $exampleDays))
     echo " e' ";
 else
     echo " non e' ";
-echo " più recente di " . $giorniFunzione;
+echo " più recente di " . $exampleDays;
 
 echo "<hr>";
 
-$articoliPubblicatiMese = 0;
-$anno_corrente = from_date(date("Y-m-d"), "year");
-$mese_corrente = month(from_date(date("Y-m-d"), "month"));
+$pubblishedArticlesCurrentMonth = 0;
+$currentYear = from_date(date("Y-m-d"), "year");
+$currentMonth = month(from_date(date("Y-m-d"), "month"));
 foreach ($articoli as $key) {
-    if (is_passed($key['data_articolo'], date('j')) && from_date($key['data_articolo'], "year") == $anno_corrente)
-        $articoliPubblicatiMese++;
+    if (is_passed($key['data_articolo'], date('j')) && from_date($key['data_articolo'], "year") == $currentYear)
+        $pubblishedArticlesCurrentMonth++;
 }
 
-echo "Nel mese di " . $mese_corrente . " sono stati pubblicati " . $articoliPubblicatiMese . " articoli";
+echo "Nel mese di " . $currentMonth . " sono stati pubblicati " . $pubblishedArticlesCurrentMonth . " articoli";
 ?>
 </div>
 <!-- Bootstrap Bundle with Popper -->
