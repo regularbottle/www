@@ -32,8 +32,11 @@ foreach ($_POST as $key => $value) {
 
 /*2. Creare un nuovo array con i dati inseriti nel form secondo lo schema utilizzato
 nell’array $commento1 e $commento2, poi aggiungerlo all’array $commenti*/
-$commento1 = ['nome' => "Mario Rossi", 'data' => date('Y-m-d'), 'giorni' => random_int(1, 365), 'tipologia' => "privata", 'commenti' => "Ciao come va"];
-$commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => random_int(1, 365), 'tipologia' => $_POST['tipologia'], 'commenti' => "Hello"];
+try {
+    $commento1 = ['nome' => "Mario Rossi", 'data' => date('Y-m-d'), 'giorni' => random_int(1, 365), 'tipologia' => "privata", 'commenti' => "Ciao come va"];
+    $commento2 = ['nome' => "Giovanni Verdi", 'data' => "2021-12-30", 'giorni' => random_int(1, 365), 'tipologia' => $_POST['tipologia'], 'commenti' => "Hello"];
+} catch (Exception $e) {
+}
 $commenti = [$commento1, $commento2, $_POST];
 echo "<hr>";
 /*3. Elencare tutti i nomi delle persone che hanno inserito un commento e la rispettiva
