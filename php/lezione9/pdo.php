@@ -22,7 +22,7 @@
 
     try {
         $connessione = new PDO($dsn, $user, $pass);
-        $st = $connessione->prepare("SELECT * FROM hotels");
+        $st = $connessione->prepare("SELECT * FROM laravel.hotels");
         $st->execute();
         $records = $st->fetchAll(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
