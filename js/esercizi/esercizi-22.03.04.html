@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+    <title>Esercizio</title>
+</head>
+<body>
+<div class="container mt-3" id="esercizio1">
+    <button class="btn btn-primary" id="invio" onclick="printTabellina()">Invio</button>
+    <div id="tabellina"></div>
+</div>
+<hr>
+<div class="container" id="esercizio2">
+    <label class="form-label" for="operando1">Operando 1: </label>
+    <input class="form-control" id="operando1" name="operando1" type="text"><br>
+    <label class="form-label" for="operando2">Operando 2: </label>
+    <input class="form-control" id="operando2" name="operando2" type="text"><br>
+    <div class="container text-center" id="button-group-calc">
+    <button class="btn btn-primary" id="plus" onclick="calcolatrice('sum')">+</button>
+    <button class="btn btn-primary" id="minus" onclick="calcolatrice('difference')">-</button>
+    <button class="btn btn-primary" id="divide" onclick="calcolatrice('divide')">/</button>
+    <button class="btn btn-primary" id="multiply" onclick="calcolatrice('multiply')">*</button>
+    </div>
+    <br>
+    <h2 class="text-center" id="result">Risultato:</h2>
+</div>
+<hr>
+<div class="container" id="esercizio3">
+    <label class="form-label" for="cognome">Cognome: </label>
+    <input class="form-control" id="cognome" maxlength="40" name="cognome" type="text"><br>
+    <label class="form-label" for="nome">Nome: </label>
+    <input class="form-control" id="nome" maxlength="30" name="nome" type="text"><br>
+    <label class="form-label" for="email">Email: </label>
+    <input class="form-control" id="email" maxlength="30" name="email" type="text"><br>
+    <label class="form-label" for="telefono">Telefono: </label>
+    <input class="form-control" id="telefono" maxlength="15" name="telefono" type="text"><br>
+    <button class="btn btn-primary" id="invio-dati" onclick="controllo()">Controllo</button>
+    <br>
+    <div id="controllo-dati"></div>
+</div>
+<hr>
+<div class="container" id="esercizio4">
+    <ul class="list-group text-center">
+        <li id="carosello1" class="list-group-item"><img  class="img-fluid" src="./img/1000x500.jpg" alt="cinque"></li>
+        <li id="carosello2" class="list-group-item" style="display: none"><img  class="img-fluid" src="./img/1000x200.jpg" alt="due"></li>
+        <li id="carosello3" class="list-group-item" style="display: none"><img  class="img-fluid" src="./img/1000x100.jpg" alt="uno"></li>
+    </ul>
+    <div class="container text-center" id="button-group">
+    <button class="btn btn-primary" id="immagine-indietro" onclick="carosello('indietro')">Indietro</button>
+    <button class="btn btn-primary" id="immagine-avanti" onclick="carosello('avanti')">Avanti</button>
+    </div>
+</div>
+<hr>
+<div class="container" id="esercizio5">
+
+</div>
+
+
+<button class="btn btn-primary" id="Hide" onclick="hideEx()">Hide All</button>
+<!-- JS Scripts file -->
+<script src="scripts.js"></script>
+<!-- Bootstrap Bundle with Popper -->
+<script crossorigin="anonymous"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
