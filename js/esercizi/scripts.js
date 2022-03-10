@@ -140,12 +140,11 @@ function controllo() {
 let indice = 0;
 
 function carosello(azione) {
-    let li = [document.getElementById("carosello1"),
-        document.getElementById("carosello2"),
-        document.getElementById("carosello3")]
+    let ul = document.getElementById("list-carosello");
+    let li = ul.getElementsByTagName("li");
     switch (azione) {
         case "avanti":
-            if (indice < 2) {
+            if (indice < li.length - 1) {
                 indice++;
                 li[indice].removeAttribute("style");
                 li[indice - 1].setAttribute('style', 'display: none');
@@ -161,7 +160,7 @@ function carosello(azione) {
                 li[indice].removeAttribute("style");
                 li[indice + 1].setAttribute('style', 'display: none');
             } else {
-                indice = 2;
+                indice = li.length - 1;
                 li[indice].removeAttribute("style");
                 li[0].setAttribute('style', 'display: none');
             }
