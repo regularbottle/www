@@ -14,18 +14,18 @@ function nr_cifre(intero) {
     return "1 cifra";
 }
 
-console.log(nr_cifre(-654));
+console.log(nr_cifre(654));
 
 function odd_even(intero) {
     return ((intero % 2) ? "dispari" : "pari");
 }
 
-console.log(odd_even(1));
+console.log(odd_even(6));
 
 function tempo(secondi) {
     let date = new Date(null);
     date.setSeconds(secondi);
-    return date.toISOString().substr(11, 8);
+    return date.toISOString().substring(11, 19);
 }
 
 console.log(tempo(54000));
@@ -44,5 +44,5 @@ function transpose(matrix) {
     return matrix_transpose;
 }
 
-matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]];
+matrix = [[1, 2], [5, 6], [9, 10], [13, 14], [99, 100]];
 console.log(transpose(matrix));

@@ -1,36 +1,44 @@
-let hotel = {
-    nome: "Hotel Cola",
-    stelle: "5",
-    indirizzo: "Via Bolzano 12",
-    recensione: "Si sta molto bene qui!"
+let hotel;
+let ristorante;
+
+function readTextFile(file, tipologia) {
+    let rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status === 0) {
+                if (tipologia === "hotel") {
+                    hotel = JSON.parse(rawFile.responseText);
+                } else {
+                    ristorante = JSON.parse(rawFile.responseText);
+                }
+            }
+        }
+    }
+    rawFile.send(null);
 }
 
-let ristorante = {
-    nome: "Dalla Lella",
-    stelle: "4.7",
-    indirizzo: "Via Genova 11",
-    recensione: "Si mangia molto bene qui!"
-}
+readTextFile("./hotels.json", "hotel")
+readTextFile("./ristoranti.json", "ristorante")
 
 function print_data() {
-    let div = document.getElementById("hotel");
-    div = div.getElementsByTagName("span");
-    div[0].innerText = "Hotel: " + hotel.nome;
-    div[1].innerText = "Stelle: " + hotel.stelle + "\u{2B50}";
-    div[2].innerText = "Indirizzo: " + hotel.indirizzo;
-
-    let div2 = document.getElementById("ristoranti");
-    div2 = div2.getElementsByTagName("span");
-    div2[0].innerText = "Ristorante: " + ristorante.nome;
-    div2[1].innerText = "Stelle: " + ristorante.stelle + "\u{2B50}";
-    div2[2].innerText = "Indirizzo: " + ristorante.indirizzo;
+    document.getElementById("hotel").innerHTML = "<h2>Hotel<h2>"
+    for (let elements in hotel) {
+        let span = document.createElement("span")
+        span.innerHTML += "Hotel: " + hotel[elements].nome + "<br>";
+        span.innerHTML += "Stelle: " + hotel[elements].stelle + "\u{2B50}" + "<br>";
+        span.innerHTML += "Indirizzo: " + hotel[elements].indirizzo + "<br>";
+        document.getElementById("hotel").appendChild(span)
+    }
+    document.getElementById("hotel").innerHTML += "<button class=\"btn btn-info btn-sm\" onClick=\"valutazione('hotel')\">Valutazioni</button>";
 }
 
 function valutazione(tipologia) {
     if (tipologia === "hotel") {
+        document.getElementById("nomeRec").innerText = (hotel.nome)
         document.getElementById("recensione").innerText = hotel.recensione;
-    }
-    else {
+    } else {
+        document.getElementById("nomeRec").innerText = (ristorante.nome)
         document.getElementById("recensione").innerText = ristorante.recensione;
     }
 }

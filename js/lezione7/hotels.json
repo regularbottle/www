@@ -1,0 +1,13 @@
+[{
+  "nome": "Hotel Cola",
+  "stelle": "5",
+  "indirizzo": "Via Bolzano 12",
+  "recensione": "Si sta molto bene qui!"
+},
+  {
+    "nome": "Hotel Villa Claudia",
+    "stelle": "4.3",
+    "indirizzo": "Via Genova 12",
+    "recensione": "Si sta ok qui!"
+  }
+]

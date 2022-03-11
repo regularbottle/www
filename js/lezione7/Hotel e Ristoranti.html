@@ -13,13 +13,7 @@
 <body>
 <div class="container">
     <div class="row justify-content-between">
-        <div class="col-4" id="hotel">
-            <h2>Hotel</h2>
-            <span id="nomeHotel">Hotel: </span><br>
-            <span id="stelleHotel">Stelle: </span><br>
-            <span id="indirizzoHotel">Indirizzo: </span><br>
-            <button class="btn btn-info btn-sm" onclick="valutazione('hotel')">Valutazioni</button>
-        </div>
+        <div class="col-4" id="hotel"></div>
         <div class="col-4" id="ristoranti">
             <h2>Ristorante</h2>
             <span id="nomeRistorante">Ristorante: </span><br>
@@ -29,15 +23,17 @@
         </div>
     </div>
 </div>
-<div class="container" id="buttonGroup">
+<div class="container mt-3" id="buttonGroup">
     <div class="row justify-content-center">
-        <button class="btn btn-primary mt-3 col-4" onclick="print_data()">Retrieve Data</button>
+        <button class="btn btn-primary col-4" onclick="print_data()">Retrieve Data</button>
     </div>
 </div>
-<div class="container" id="recensioni">
+<div class="container mt-3" id="recensioni">
     <div class="row justify-content-center">
-    <h3 id="nomeHotelRec"></h3>
-    <p class="form-label text-center" id="recensione"></p>
+        <div class="column col-8">
+        <h3 class="col-4" id="nomeRec"></h3>
+        <span class="col-4" id="recensione"></span>
+        </div>
     </div>
 </div>
 <script src="scripts.js"></script>
