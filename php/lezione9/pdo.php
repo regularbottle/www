@@ -33,6 +33,23 @@
             "Valutazione: " . $value['stars'] . "\u{2B50}" . "<br>" .
             "Indirizzo: " . $value['address'] . "<hr>" ;
     }
+
+    try {
+        $nome = 'Holiday Inn';
+        $sql = "INSERT INTO laravel.hotels (name, stars, address, created_at, updated_at) VALUES ('Holiday Inn', 3, 'Via Roma 155', 'date(\"Y-m-d H:i:s\")', 'date(\"Y-m-d H:i:s\")')";
+        //2 PREPARE
+        $st = $connessione->prepare($sql);
+        //3 BIND
+        $st->bindParam('name', $name);
+        $st->bindParam('stars', $stars);
+        $st->bindParam('address', $address);
+        $st->bindParam('created_at', $created_at);
+        $st->bindParam('updated_at', $updated_at);
+        //4 EXECUTE
+        $st->execute();
+    } catch (PDOException $e) {
+        die("Errore durante la connessione al database!: " . $e->getMessage());
+    }
     ?>
 </div>
 <!-- Bootstrap Bundle with Popper -->
