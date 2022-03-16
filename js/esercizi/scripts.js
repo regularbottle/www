@@ -138,7 +138,6 @@ function controllo() {
 }
 
 let indice = 0;
-
 function carosello(azione) {
     let ul = document.getElementById("list-carosello");
     let li = ul.getElementsByTagName("li");
