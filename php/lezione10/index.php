@@ -1,13 +1,12 @@
 <?php
-include_once "C:\Users\Regular\PhpstormProjects\www\php\connection.php";
+include_once "../connection.php";
 $where = "";
 if ($_POST) {
+    //PREPARE FOR CERCA
     if (array_key_exists('cerca', $_POST)) {
-        //cerca i record con $_POST['cerca']
-        $where = " WHERE brand LIKE '%{$_POST['cerca']}%' 
-                   OR model LIKE '%{$_POST['cerca']}%'  ";
+        $where = " ";
     }
-
+    //INSERT
     if (array_key_exists('model', $_POST)) {
         try {
             $sql = "INSERT INTO laravel.cars (model, brand, engine_size) 
@@ -27,11 +26,14 @@ if ($_POST) {
             die("Errore durante la connessione al database!: " . $e->getMessage());
         }
     }
+    //ORDER BY
 } else if ($_GET && $_GET['order']) {
     $order = $_GET['order'];
-}
+    $direction = (($_GET['direction'] ?? 'ASC') == 'ASC') ? 'DESC' : 'ASC';
+}   //INSTANZIO ORDER
 if (!isset($order)) {
     $order = 'brand';
+    $direction = 'DESC';
 }
 ?>
 <!doctype html>
@@ -67,9 +69,9 @@ if (!isset($order)) {
 <div class="container mt-3">
     <div class="row g-3">
         <h2>Elenco Macchine</h2>
-        <form action="index.php" class="row g-3" method="POST" enctype="multipart/form-data">
-            <div class="col-md-8">
-                <label for="cerca"></label><input class="form-control" type="text" name="cerca" id="cerca" required>
+        <form action="index.php" class="row" method="POST" enctype="multipart/form-data">
+            <div class="col-md-6">
+                </label><input class="form-control" type="text" name="cerca" id="cerca" required>
             </div>
             <div class="col-md-4">
                 <input class="btn btn-primary" type="submit" value="Cerca">
@@ -77,8 +79,18 @@ if (!isset($order)) {
         </form>
         <?php
         try {
-            $sql = "SELECT * FROM laravel.cars $where ORDER BY $order DESC";
-            $st = $connessione->prepare($sql);
+            if ($where == "") {
+                //STAMPA NORMALE
+                $sql = "SELECT * FROM laravel.cars ORDER BY $order $direction";
+                $st = $connessione->prepare($sql);
+            } else {
+                //CERCA
+                echo "<h4>Ecco i risultati per: " . ucfirst($_POST['cerca']) . "</h4>";
+                $sql = "SELECT * FROM laravel.cars WHERE brand LIKE :cerca OR model LIKE :cerca ORDER BY $order $direction";
+                $cerca = "%" . $_POST['cerca'] . "%";
+                $st = $connessione->prepare($sql);
+                $st->bindParam('cerca', $cerca);
+            }
             $st->execute();
             $records = $st->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -88,12 +100,13 @@ if (!isset($order)) {
         <table class='table col-12'>
             <thead>
             <tr>
-                <th scope='col'><a href="index.php?order=brand">Brand</a></th>
-                <th scope='col'><a href="index.php?order=model">Model</a></th>
-                <th scope='col'><a href="index.php?order=engine_size">Engine Size</a></th>
+                <th scope='col'><a href="index.php?order=brand&direction=<?php echo $direction; ?>">Brand</a></th>
+                <th scope='col'><a href="index.php?order=model&direction=<?php echo $direction; ?>">Model</a></th>
+                <th scope='col'><a href="index.php?order=engine_size&direction=<?php echo $direction; ?>">Engine
+                        Size</a></th>
             </tr>
             </thead>
-            <tbody>"
+            <tbody>
             <?php
             foreach ($records as $key => $value) {
                 echo "<tr>

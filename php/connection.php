@@ -1,5 +1,5 @@
 <?php
-include_once 'C:\Users\Regular\PhpstormProjects\www\php\config.php';
+include_once 'config.php';
 try {
 
     $connessione = new PDO($dsn, $user, $pass);
