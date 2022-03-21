@@ -1,5 +1,8 @@
 <?php
-setcookie('lingua', 'it', time() + 60 * 60); //1 ora
+
+session_start();
+//$_SESSION['ses_var'] = "pippo";
+var_dump($_SESSION);
 include_once "../connection.php";
 include_once "../libreria.php";
 $where = "";
@@ -14,7 +17,9 @@ if ($_POST) {
     if (array_key_exists('email_user', $_POST)) {
         try {
             $sql = "SELECT * FROM laravel.users WHERE email LIKE :email AND password LIKE :password ORDER BY $order $direction";
-            $st = $connessione->prepare($sql);
+            if (!empty($connessione)) {
+                $st = $connessione->prepare($sql);
+            }
             $st->bindParam('email', $_POST['email_user']);
             $st->bindParam('password', $_POST['password_user']);
             $st->execute();
