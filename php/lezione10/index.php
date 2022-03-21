@@ -71,7 +71,7 @@ if (!isset($order)) {
         <h2>Elenco Macchine</h2>
         <form action="index.php" class="row" method="POST" enctype="multipart/form-data">
             <div class="col-md-6">
-                </label><input class="form-control" type="text" name="cerca" id="cerca" required>
+                <input class="form-control" type="text" name="cerca" id="cerca" required>
             </div>
             <div class="col-md-4">
                 <input class="btn btn-primary" type="submit" value="Cerca">
