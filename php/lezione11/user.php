@@ -1,6 +1,7 @@
 <?php
-include_once "connection.php";
-include_once "libreria.php";
+setcookie('lingua', 'it', time() + 60 * 60); //1 ora
+include_once "../connection.php";
+include_once "../libreria.php";
 $where = "";
 $not_exists = 'false';
 $auth = 'false';
@@ -67,7 +68,7 @@ if ($_POST) {
 </head>
 <body>
 <div class="container mt-3">
-    <form action="index.php" class="row g-3" role="form" method="POST" enctype="multipart/form-data">
+    <form action="user.php" class="row g-3" role="form" method="POST" enctype="multipart/form-data">
         <div class="form-group col-md-4">
             <label class="form-label" for="email_user">Email</label>
             <input class="form-control" name="email_user" id="email_user" required type="text">
@@ -124,97 +125,6 @@ if ($_POST) {
             echo "</div>";
         }
         ?>
-        <h2>Elenco Utenti</h2>
-        <table class='table col-12'>
-            <?php
-            echo "<h3> Il numero di persone nel database sono: " . $numero_utenti . "<br>";
-            if ($not_exists == 'true') {
-                echo "L'Email o la password inseriti non sono validi <br></h3>";
-            }
-            ?>
-            <thead>
-            <tr>
-                <th scope='col'><a href="index.php?order=lastname&direction=<?php echo $direction; ?>">Firstname</a>
-                </th>
-                <th scope='col'><a href="index.php?order=firstname&direction=<?php echo $direction; ?>">Lastname</a>
-                </th>
-                <th scope='col'><a href="index.php?order=created_at&direction=<?php echo $direction; ?>">Data
-                        Creazione</a></th>
-                <th scope='col'>Created anno corrente?</a></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            if (array_key_exists('email_user',$_POST)) {
-                $records = $records_accesso;
-            }
-            foreach ($records as $key => $value) {
-                if (same_year($value['updated_at']) == 'true') {
-                    echo "<tr>
-                    <td>" . $value['lastname'] . "</td>
-                    <td>" . $value['firstname'] . "</td>
-                    <td>" . date_db2user($value['created_at']) . "</td>
-                    <td>" . same_year($value['created_at']) . "</td>
-                  </tr>";
-                } else {
-                    echo "<tr>
-                    <td><a href='./cambio_password.php?id={$value['id']}'>" . $value['lastname'] . "</a></td>
-                    <td>" . $value['firstname'] . "</td>
-                    <td>" . date_db2user($value['created_at']) . "</td>
-                    <td>" . same_year($value['created_at']) . "</td>
-                  </tr>";
-                }
-            }
-            ?>
-            </tbody>
-        </table>
-    </div>
-</div>
-<div class="container mt-3">
-    <div class="row g-3">
-        <h2>Elenco Utenti più vecchi di 5 anni e meno vecchi di 1 anno</h2>
-        <?php
-        try {
-            $data_cinque_anni = date('Y-m-d H:i:s', strtotime('-5 years'));
-            $data_un_anno = date('Y-m-d H:i:s', strtotime('-1 years'));
-            $sql = "SELECT * FROM laravel.users WHERE created_at < :cinque_anni AND updated_at > :un_anno ORDER BY $order $direction";
-            $st = $connessione->prepare($sql);
-            $st->bindParam('cinque_anni', $data_cinque_anni);
-            $st->bindParam('un_anno', $data_un_anno);
-            $st->execute();
-            $records = $st->fetchAll(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            die("Errore durante la connessione al database!: " . $e->getMessage());
-        }
-        ?>
-        <table class='table col-12'>
-            <thead>
-            <tr>
-                <th scope='col'><a href="index.php?order=lastname&direction=<?php echo $direction; ?>">Firstname</a>
-                </th>
-                <th scope='col'><a href="index.php?order=firstname&direction=<?php echo $direction; ?>">Lastname</a>
-                </th>
-                <th scope='col'><a href="index.php?order=created_at&direction=<?php echo $direction; ?>">Data
-                        Creazione</a></th>
-                <th scope='col'><a href="index.php?order=created_at&direction=<?php echo $direction; ?>">Data
-                        Aggiornamento</a></th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            foreach ($records as $key => $value) {
-                echo "<tr>
-                    <td>" . $value['lastname'] . "</td>
-                    <td>" . $value['firstname'] . "</td>
-                    <td>" . date_db2user($value['created_at']) . "</td>
-                    <td>" . date_db2user($value['updated_at']) . "</td>
-                  </tr>";
-            }
-            ?>
-            </tbody>
-        </table>
-    </div>
-</div>
 <!-- Bootstrap Bundle with Popper -->
 <script crossorigin="anonymous"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

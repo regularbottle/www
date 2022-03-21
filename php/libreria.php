@@ -150,3 +150,11 @@ function nrDaysMonth(int $mese): int
             return 31;
     }
 }
+
+function same_year ($timestamp) {
+    if (from_date($timestamp, 'year') == date('Y')) {
+        return 'true';
+    } else{
+        return 'false';
+    }
+}
