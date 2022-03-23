@@ -1,0 +1,5 @@
+<h1>Contatore</h1>
+
+<input type="text" #testoInput>
+<button [style.color] = "colore" (click)="aggiungiContatore(testoInput.value)">Genera</button>
+<app-conta (cancella)="rimuoviContatore($event)" *ngFor="let frase of contatori" [titolo]="frase"></app-conta>

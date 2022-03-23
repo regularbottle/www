@@ -1,0 +1,20 @@
+div {
+    width: 235px;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.green{
+    background-color: aquamarine;
+}
+
+.yellow {
+    background-color: burlywood;
+}
+
+.red {
+    background-color: indianred;
+}
