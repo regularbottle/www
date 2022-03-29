@@ -1,0 +1,9 @@
+<input type="text" #inputImpegno>
+<button (click)="aggiungiImpegno(inputImpegno.value)">Aggiungi</button>
+
+<app-lista-item
+        (cancellaImpegno)="catturaEvento($event)"
+        *ngFor="let impegno of listaImpegni; let i = index"
+        [testo]="impegno"
+        [indice]="i">
+</app-lista-item>
