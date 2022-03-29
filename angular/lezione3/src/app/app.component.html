@@ -1,3 +1,13 @@
-<p>Lista Cose</p>
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Lista Cose</span>
+</mat-toolbar>
 
-<app-lista></app-lista>
+<ul>
+    <li><a href="javascript:void" [routerLink]="['']">Pagina Principale</a></li>
+    <li><a href="javascript:void" [routerLink]="['commento']">Pagina dei Commenti</a></li>
+</ul>
+
+<router-outlet></router-outlet>
