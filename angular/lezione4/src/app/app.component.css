@@ -1,0 +1,9 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.card {
+    max-width: 400px;
+    margin: 10px auto auto;
+    align-items: center;
+    justify-content: center;
+}
