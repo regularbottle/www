@@ -12,11 +12,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MioformComponent} from './mioform/mioform.component';
+import {FormcompletoComponent} from './formcompleto/formcompleto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MioformComponent
+    MioformComponent,
+    FormcompletoComponent
   ],
   imports: [
     BrowserModule,
