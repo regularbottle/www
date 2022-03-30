@@ -4,34 +4,6 @@
     <mat-card-content>
         <form class="form">
             <mat-form-field class="full-width" appearance="fill">
-                <mat-label>Company (disabled)</mat-label>
-                <input matInput disabled value="Google">
-            </mat-form-field>
-            <p>
-                <mat-form-field class="half-width" appearance="fill">
-                    <mat-label>First name</mat-label>
-                    <input matInput>
-                </mat-form-field>
-                <mat-form-field class="half-width" appearance="fill">
-                    <mat-label>Last Name</mat-label>
-                    <input matInput>
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field class="full-width" appearance="fill">
-                    <mat-label>Address</mat-label>
-                    <textarea matInput placeholder="Ex. Via Valturio 4"></textarea>
-                </mat-form-field>
-            </p>
-            <mat-form-field class="half-width" appearance="fill">
-                <mat-label>City</mat-label>
-                <input matInput placeholder="Ex. Rimini">
-            </mat-form-field>
-            <mat-form-field class="half-width" appearance="fill">
-                <mat-label>Region</mat-label>
-                <input matInput placeholder="Ex. Emilia-Romagna">
-            </mat-form-field>
-            <mat-form-field class="full-width" appearance="fill">
                 <mat-label>Email</mat-label>
                 <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
                        placeholder="Ex. pat@example.com">

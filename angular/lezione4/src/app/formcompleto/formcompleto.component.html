@@ -1,1 +1,53 @@
-<p>formcompleto works!</p>
+<mat-card class="card" [formGroup]="MioformGroup">
+    <mat-card-title>Form Reattivo</mat-card-title>
+    <mat-card-subtitle>Un modo per non fare errori</mat-card-subtitle>
+    <mat-card-content>
+        <form class="form">
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Company (disabled)</mat-label>
+                <input matInput disabled value="Google">
+            </mat-form-field>
+            <p>
+                <mat-form-field class="half-width" appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field class="half-width" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput formControlName="name">
+                    <mat-error *ngIf="MioformGroup.get('name')?.hasError('minlength')">
+                        Name must be at least 3 charachters
+                    </mat-error>
+                    <mat-error *ngIf="MioformGroup.get('name')?.hasError('required')">
+                        Last Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Age</mat-label>
+                <input type="" matInput formControlName="age">
+                <mat-error *ngIf="MioformGroup.get('age')?.hasError('min')">
+                    Age must be at least 18
+                </mat-error>
+                <mat-error *ngIf="MioformGroup.get('age')?.hasError('required')">
+                    Age is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <p>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput placeholder="Ex. Via Valturio 4"></textarea>
+                </mat-form-field>
+            </p>
+            <mat-form-field class="half-width" appearance="fill">
+                <mat-label>City</mat-label>
+                <input matInput placeholder="Ex. Rimini">
+            </mat-form-field>
+            <mat-form-field class="half-width" appearance="fill">
+                <mat-label>Region</mat-label>
+                <input matInput placeholder="Ex. Emilia-Romagna">
+            </mat-form-field>
+            <button mat-raised-button color="accent" [disabled]="MioformGroup.invalid">Invia</button>
+        </form>
+    </mat-card-content>
+</mat-card>
