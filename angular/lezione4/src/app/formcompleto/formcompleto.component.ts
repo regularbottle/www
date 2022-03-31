@@ -12,8 +12,9 @@ export class FormcompletoComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.MioformGroup = this.fb.group({
-      age: [18, [Validators.required], Validators.min(18)],
-      name: ['', [Validators.required, Validators.minLength(3)]]
+      firstName: ['', [Validators.required, Validators.minLength(3)]],
+      lastName: ['', [Validators.required, Validators.minLength(3)]],
+      age: [18, [Validators.required, Validators.min(13)]]
     })
   }
 
